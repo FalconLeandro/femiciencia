@@ -1,0 +1,43 @@
+@import '../base/mixins';
+@import '../base/variables';
+@import '../base/extends';
+
+/*quienes somos*/
+
+main{
+    .equipo-div1{
+        @extend %sub-headings;
+    }
+    section{
+        div{
+            div{
+                .integrante {
+                    @include integrante (flex, center, 1% 0 1% 0, center);
+                    .image-integrante{
+                        width: 150px;
+                        height: 150px;
+                    }
+                    .img-integrante-sm{
+                        margin-bottom: 2%;
+                    }
+                    .text-integrante{
+                        margin: 0 2% 0 2%;
+                        padding: 2%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.integrante{
+    background-color: $color-green-bg2;
+    &:hover{
+        background-color: $color-green-bg3;
+    }
+}
+    

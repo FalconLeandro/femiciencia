@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-femiciencia-nunezsada-desafiogithub",
+  "version": "1.0.0",
+  "description": "<h3 align=\"center\">Estudiante de desarrollo web</h3>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MFlorenciaNS/desafio-coder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MFlorenciaNS/desafio-coder/issues"
+  },
+  "homepage": "https://github.com/MFlorenciaNS/desafio-coder#readme"
+}

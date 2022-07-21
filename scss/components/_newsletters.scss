@@ -1,0 +1,73 @@
+/*newsletters*/
+@import '../base/variables';
+@import '../base/extends';
+
+main {
+    .news-div1{
+        @extend %sub-headings;
+    }
+    section{
+        div{
+            .columna-1{
+                    &:hover{
+                        background-color: #C0D9BE;
+                    }
+                    .link-newsletters{
+                        color: $color-violet-femi;
+                        text-decoration: none;
+                        font-weight: bold;
+                        
+                    }
+                    padding: 2%;
+            }
+        }
+    }
+}
+
+.body-news-individuales{
+    background-color: $color-lilac-background;
+    main{
+        .news-ind-div1{
+            display: flex;
+            align-items: baseline;
+            margin-top: 1em;
+            border-bottom: 1em solid $color-violet-femi;
+            margin-bottom: 2%;
+        }
+        section {
+            div{
+                .columna-news {
+                    .preguntas-news {
+                        text-align: center;
+                        font-weight: bold;                
+                    }
+                    .linea-divisoria{
+                        height: 3px;
+                        background-color: $color-green-femi;                
+                    }
+                }
+            }
+        }
+        .boton-news-div{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            margin-bottom: 5%;
+            margin-top: 3%;
+            @media screen and (max-width: 480px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center; 
+                width: 70%;
+            }
+
+            .boton-news-img{
+                &:hover {
+                    transform: scale(1.2);
+                    transition: all 1s;                
+                }
+                
+            }
+        }
+    }
+}

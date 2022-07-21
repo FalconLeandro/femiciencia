@@ -1,0 +1,407 @@
+* {
+    margin:0 ;
+    padding: 0;
+}
+
+/* Fonts */
+:root{
+    --font-paragraph: 'Roboto', sans-serif;
+    --font-heading: 'Arimo', sans-serif;
+}
+
+/* Colors */
+:root{
+    --violet-femi: #874F9D;
+    --green-femi: #3FB6B0;
+    --green-yellow-femi: #4FAC24;
+    --green-background: #D3E4CD;
+    --lilac-background: #D9D7F1;
+    --dark-violet: #4A005D;
+}
+
+/* Header */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu */
+
+.text-menu{
+    color: var(--violet-femi);
+    font-family: var(--font-heading);
+    font-size: 18 px;
+    text-decoration: none;    
+}
+
+li{
+    margin: 0 3%;
+}
+
+.logo-femiciencia{
+    margin: 10%;
+}
+
+.collapse-femi { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.navbar-femi{
+    margin-right: 10%; 
+}
+
+.navbar-light .navbar-toggler {
+    background-color: var(--green-background);
+    border-color: var(--green-femi);
+    border-width: 3px;
+}
+
+.navbar-light .navbar-toggler  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(63, 182, 176, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+/* Body */
+body{
+    background-color: var(--green-background) ;
+}
+
+/* Texts */
+p{
+    font-family: var(--font-paragraph);
+    font-size: 15px;
+}
+
+/* Headings */
+.newsletters-heading, .podcast-heading, .integrantes-heading, .contacto-heading, .heading-post, .index-heading{
+    font-family: var(--font-heading);
+    color: var(--violet-femi);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 1%
+}
+
+.newsletters-heading-2, .integrantes-heading-2{
+    font-family: var(--font-heading);
+    font-size: 28px;
+    color: var(--green-yellow-femi)
+}
+
+/* Footer */
+footer{
+    margin: 1% 3% 1% 3%;
+
+}
+.footer-text{
+    font-weight: bold;
+    text-align: center;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1%;
+}
+
+.footer-dev{
+    margin-bottom: 1%;
+    margin-right: 1%;
+    font-weight: bold;
+    text-align: end;
+}
+
+.logo-social{
+    width: 95%;
+}
+
+.footer-dev>.heart{
+    display: inline-flex;
+    animation-name: beatHeart;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+@keyframes beatHeart {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    40% {
+      transform: scale(1);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+/*Footer mobile*/
+@media screen and (max-width: 480px) {
+    .footer-text{
+        font-size: 13px;
+    }
+    .footer-dev{
+        margin-bottom: 1%;
+        margin-right: 1%;
+        font-weight: bold;
+        text-align: center;
+        font-size: 13px;
+    }
+    .logo-social{
+        width: 70%;
+    }
+}
+/*Footer: tablet*/
+@media screen and (min-width: 481px) and (max-width: 980px){
+    .logo-social{
+        width: 85%;
+    }  
+}
+  
+
+/*Pages*/
+
+/*Page: Index*/
+
+/*Index Main*/
+/*Description*/
+.index-section { 
+    background-color: var(--lilac-background);
+    padding: 2%;
+    margin: 3%;
+    border: 2px dotted var(--violet-femi);
+}
+
+.index-heading {
+    color: var(--green-femi);
+    margin-bottom: 2%;
+    text-align: center;
+}
+.index-text{
+    text-align: justify ;
+}
+
+/*Posts*/
+
+.post-image{
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    
+}
+
+.post-image:hover{
+    transform: scale(1.06);
+    transition: all 1s;
+}
+
+/*Page: Quienes somos*/
+
+.section-integrantes{
+    margin: 2% 3% 2% 3%;
+}
+
+.integrante { 
+    display: flex;
+    flex-direction: row; 
+    margin: 1% 0 1% 0; 
+    align-items: center; 
+}
+
+.integrante-1, .integrante-3, .integrante-5, .integrante-7{
+    background-color: #C0D9BE;
+}
+    
+.integrante-2, .integrante-4, .integrante-6{
+    background-color: #ADCEAE;
+}
+
+.image-integrante{
+    width: 150px;
+    height: 150px;
+    
+}
+
+.text-integrante{
+    margin: 0 2% 0 2%;
+    padding: 2%;
+}
+
+/*Page: Podcast*/
+
+.podcast-div{ 
+    margin: 2% 3%;
+}
+.podcast-div>iframe{
+    width: 100%;
+}
+
+/*Page: Newsletters*/
+.section-newsletters {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        margin: 2%;
+        }
+        
+.newsletter-1 { grid-area: 1 / 1 / 2 / 2; }
+.newsletter-2 { grid-area: 1 / 2 / 2 / 3; }
+.newsletter-3 { grid-area: 2 / 1 / 3 / 2; }
+.newsletter-4 { grid-area: 2 / 2 / 3 / 3; }
+.newsletter-5 { grid-area: 3 / 1 / 4 / 2; }
+.newsletter-6 { grid-area: 3 / 2 / 4 / 3; }
+
+.newsletter-div{
+    padding: 2%;
+}
+.newsletters-heading-2{
+    margin-bottom: 1%;
+}
+
+/*Page: Contacto*/
+
+/*Contacto con freefrontend*/
+
+.get-in-touch {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+  
+}
+.get-in-touch .title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3em;
+    line-height: 48px;
+    padding-bottom: 48px;
+    color: var(--violet-femi);
+    background: #5543ca;
+    background: -moz-linear-gradient(left,var(--violet-femi)  0%,var(--green-femi) 100%) !important;
+    background: -webkit-linear-gradient(left,var(--violet-femi)  0%,var(--green-femi) 100%) !important;
+    background: linear-gradient(to right,var(--green-femi) 0%,var(--violet-femi)  100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+  
+.contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+}
+.contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: #5543ca;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+}
+.contact-form .input-text:focus {
+    outline: none;
+}
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+}
+.contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #5543ca;
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out; 
+    -webkit-transform: .2s ease-in-out;
+}
+.contact-form .submit-btn {
+    display: inline-block;
+    background-color: #000;
+    background-image: linear-gradient(125deg,var(--violet-femi),var(--green-femi));
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width:200px;
+    cursor: pointer;
+}
+
+
+
+/*General media queries*/
+/*Main headings & texts size: mobile*/
+@media screen and (max-width: 480px){
+    .newsletters-heading, .podcast-heading, .integrantes-heading, .contacto-heading, .heading-post, .index-heading {
+        font-family: var(--font-heading);
+        color: var(--violet-femi);
+        font-size: 25px;
+        text-align: center; 
+    }  
+    .index-heading {
+        font-family: var(--font-heading);
+        font-size: 20px;
+        color: var(--green-femi);
+        margin-bottom: 2%;
+        text-align: center;
+    }
+
+    .index-text{
+        text-align: justify;
+        font-size: 16px;
+    }
+    .text-integrante>p, .newsletter-div>p {
+        font-size: 16px;
+    }
+    .integrantes-heading-2{
+        font-family: var(--font-heading);
+        font-size: 25px;
+        color: var(--green-yellow-femi);
+    }
+    .newsletters-heading-2{
+        font-family: var(--font-heading);
+        font-size: 20px;
+        color: var(--green-yellow-femi);
+    }
+}
+
+/*Main headings & texts size: tablet*/
+@media screen and (min-width: 481px) and (max-width: 980px){
+    .newsletters-heading, .podcast-heading, .integrantes-heading, .contacto-heading, .heading-post, .index-heading {
+        font-family: var(--font-heading);
+        color: var(--violet-femi);
+        font-size: 25px;
+        text-align: center; 
+    }
+    .index-heading {
+        font-family: var(--font-heading);
+        font-size: 25px;
+        color: var(--green-femi);
+        margin-bottom: 2%;
+        text-align: center;
+    }
+    .newsletters-heading-2, .integrantes-heading-2{
+        font-family: var(--font-heading);
+        font-size: 25px;
+        color: var(--green-yellow-femi)
+    }
+}
+   
+

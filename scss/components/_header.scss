@@ -1,0 +1,49 @@
+@import '../base/variables';
+@import '../base/mapas';
+@import '../base/extends';
+
+/*header*/
+header {
+    @extend %flexbox-sb;
+    .section-nav{
+        margin-bottom: 2%;
+        nav {
+            .navbar-femi {
+                margin-right: 10%; 
+                .navbar-brand{
+                    .logo-femiciencia{
+                        margin: 10%;
+                        @media screen and (max-width: 480px) {
+                            width: 70%; 
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                            transition: all 1s;    
+                        }
+                    }
+                }
+                .button-femi{
+                    background-color: map-get($header, bg-button);
+                    border-color: map-get($header, border-button);                    
+                    .span-femi {
+                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(63, 182, 176, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+                    }
+                }
+                .collapse-femi{
+                    .navbar-nav{
+                        .nav-item{
+                            margin: 0 3%;
+                            .text-menu{
+                                color: map-get($header, text-menu-color);
+                                font-family: $font-heading;
+                                font-size: map-get($header, text-menu-size);
+                                text-decoration: map-get($header, text-menu-decor);
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
