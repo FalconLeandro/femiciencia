@@ -1,23 +1,31 @@
 @import '../base/variables';
 @import '../base/extends';
 
+
+
 main{
     .index-section{
         margin-bottom: 3%;
         
         .index-div1{
             @extend %sub-headings;
-            .index-text {
-                text-align: justify ;
-            }
+            height: 23px;
         }
         .index-div2{
+            text-align: justify ;
             margin-top: 0;
             padding-top: 3%;
             padding-bottom: 3%;
+            column-count: 2; /* número de columnas */
+            column-gap: 100px; /* ancho de columnas */
+            column-rule: 5px outset #999999; /* separación de columnas */
+            .index-text {
+                margin: auto
+            }
         }
     }
     .index-post-images {
+        
         .post-div1{
             @extend %sub-headings;
         }
