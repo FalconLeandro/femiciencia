@@ -4,6 +4,7 @@
 
 /*header*/
 header {
+    
     @extend %flexbox-sb;
     .section-nav{
         margin-bottom: 2%;
@@ -47,3 +48,8 @@ header {
         }
     }
 }
+
+
+  
+  
+
