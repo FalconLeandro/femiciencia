@@ -102,10 +102,20 @@ header .section-nav nav .navbar-femi .button-femi {
 header .section-nav nav .navbar-femi .button-femi .span-femi {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(63, 182, 176, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a .sub-menu {
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul {
   -webkit-margin-start: -35px;
           margin-inline-start: -35px;
-  font-size: 0.8rem;
+  font-size: 0.8rem; /*start probando*/
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul li {
+  float: none;
+  width: 150px;
+}
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a:hover > ul {
+  display: block;
 }
 header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item .text-menu, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul {
   color: #874F9D;
@@ -113,7 +123,13 @@ header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item .text-
   font-size: 1em;
   text-decoration: none;
   list-style: none;
-  margin: 0 3%;
+  position: relative; /*start probando*/
+}
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item .text-menu .text-menu, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a .text-menu, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul .text-menu {
+  color: #874F9D;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  text-decoration: none;
 }
 
 footer .social-media {
@@ -563,6 +579,10 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
   .heading-t1, .heading-t2 {
     font-size: 45px;
     height: 42px;
+  }
+  .a ul {
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
   }
 }
 .disclaimer {

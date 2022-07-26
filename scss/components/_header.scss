@@ -34,9 +34,20 @@ header {
                     @extend %flexbox-sb;
                     .navbar-nav{
                         
-                        .a .sub-menu{
+                        .a ul {
                             margin-inline-start: -35px;
-                            font-size: 0.8rem;
+                            font-size: 0.8rem;/*start probando*/
+                            display:none;
+                            position:absolute;
+                            top:100%;
+                            li{
+                                float:none;
+                                width:150px
+                            }
+                            
+                        }
+                        .a:hover > ul {
+                            display:block;
                         }
                         .nav-item .text-menu, .a, .a ul{
                             color: map-get($header, text-menu-color);
@@ -44,13 +55,15 @@ header {
                             font-size: map-get($header, text-menu-size);
                             text-decoration: map-get($header, text-menu-decor);
                             list-style: none;
-                            margin: 0 3%;
-                            // .text-menu{
-                            //     color: map-get($header, text-menu-color);
-                            //     font-family: $font-heading;
-                            //     font-size: map-get($header, text-menu-size);
-                            //     text-decoration: map-get($header, text-menu-decor);
-                            // }
+                            // margin: 0 3%;
+                            position:relative;/*start probando*/
+                            
+                            .text-menu{
+                                color: map-get($header, text-menu-color);
+                                font-family: $font-heading;
+                                font-size: map-get($header, text-menu-size);
+                                text-decoration: map-get($header, text-menu-decor);
+                            }
                         }
                     }
                 }

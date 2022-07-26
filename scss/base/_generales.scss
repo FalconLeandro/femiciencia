@@ -105,6 +105,9 @@ p::selection, strong::selection, i::selection, br::selection,h1::selection, h2::
         font-size: 45px;
         height: 42px;
     }
+    .a ul {
+        margin-inline-start: 0px;
+    }
 }
    
 
