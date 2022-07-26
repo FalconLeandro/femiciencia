@@ -9,7 +9,7 @@ main{
         
         .index-div1{
             @extend %sub-headings;
-            height: 23px;
+            position: relative;
         }
         .index-div2{
             text-align: justify ;

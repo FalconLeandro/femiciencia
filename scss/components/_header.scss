@@ -31,15 +31,26 @@ header {
                     }
                 }
                 .collapse-femi{
+                    @extend %flexbox-sb;
                     .navbar-nav{
-                        .nav-item{
+                        
+                        .a .sub-menu{
+                            margin-inline-start: -35px;
+                            font-size: 0.8rem;
+                        }
+                        .nav-item .text-menu, .a, .a ul{
+                            color: map-get($header, text-menu-color);
+                            font-family: $font-heading;
+                            font-size: map-get($header, text-menu-size);
+                            text-decoration: map-get($header, text-menu-decor);
+                            list-style: none;
                             margin: 0 3%;
-                            .text-menu{
-                                color: map-get($header, text-menu-color);
-                                font-family: $font-heading;
-                                font-size: map-get($header, text-menu-size);
-                                text-decoration: map-get($header, text-menu-decor);
-                            }
+                            // .text-menu{
+                            //     color: map-get($header, text-menu-color);
+                            //     font-family: $font-heading;
+                            //     font-size: map-get($header, text-menu-size);
+                            //     text-decoration: map-get($header, text-menu-decor);
+                            // }
                         }
                     }
                 }
