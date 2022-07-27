@@ -18,9 +18,9 @@ main{
             padding-bottom: 3%;
             column-count: 2; /* número de columnas */
             column-gap: 100px; /* ancho de columnas */
-            column-rule: 5px outset #999999; /* separación de columnas */
+            column-rule: 10px outset $color-violet-femi; /* separación de columnas */
             .index-text {
-                margin: auto
+                margin: 0 10%
             }
         }
     }

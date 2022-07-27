@@ -5,7 +5,7 @@ footer .social-media {
   justify-content: center;
 }
 
-header .section-nav nav .navbar-femi .collapse-femi, header {
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a, header .section-nav nav .navbar-femi .collapse-femi, header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -61,7 +61,7 @@ footer .social-media {
   justify-content: center;
 }
 
-header .section-nav nav .navbar-femi .collapse-femi, header {
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a, header .section-nav nav .navbar-femi .collapse-femi, header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -102,10 +102,12 @@ header .section-nav nav .navbar-femi .button-femi {
 header .section-nav nav .navbar-femi .button-femi .span-femi {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(63, 182, 176, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a {
+  position: relative;
+}
 header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul {
-  -webkit-margin-start: -35px;
-          margin-inline-start: -35px;
-  font-size: 0.8rem; /*start probando*/
+  padding-left: 0;
+  /*start probando*/
   display: none;
   position: absolute;
   top: 100%;
@@ -123,12 +125,13 @@ header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item .text-
   font-size: 1em;
   text-decoration: none;
   list-style: none;
-  position: relative; /*start probando*/
+  margin: 0 10px;
+  /*start probando*/
 }
 header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item .text-menu .text-menu, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a .text-menu, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul .text-menu {
   color: #874F9D;
   font-family: "Inter", sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   text-decoration: none;
 }
 
@@ -138,7 +141,7 @@ footer .social-media {
   justify-content: center;
 }
 
-header, header .section-nav nav .navbar-femi .collapse-femi {
+header, header .section-nav nav .navbar-femi .collapse-femi, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -251,7 +254,7 @@ footer .social-media {
   justify-content: center;
 }
 
-header, header .section-nav nav .navbar-femi .collapse-femi {
+header, header .section-nav nav .navbar-femi .collapse-femi, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -281,11 +284,11 @@ main .index-section .index-div2 {
        column-count: 2; /* número de columnas */
   -moz-column-gap: 100px;
        column-gap: 100px; /* ancho de columnas */
-  -moz-column-rule: 5px outset #999999;
-       column-rule: 5px outset #999999; /* separación de columnas */
+  -moz-column-rule: 10px outset #874F9D;
+       column-rule: 10px outset #874F9D; /* separación de columnas */
 }
 main .index-section .index-div2 .index-text {
-  margin: auto;
+  margin: 0 10%;
 }
 main .post-div2 {
   padding-top: 3%;
@@ -307,7 +310,7 @@ footer .social-media {
   justify-content: center;
 }
 
-header, header .section-nav nav .navbar-femi .collapse-femi {
+header, header .section-nav nav .navbar-femi .collapse-femi, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -359,7 +362,7 @@ footer .social-media {
   justify-content: center;
 }
 
-header, header .section-nav nav .navbar-femi .collapse-femi {
+header, header .section-nav nav .navbar-femi .collapse-femi, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -431,7 +434,7 @@ footer .social-media {
   justify-content: center;
 }
 
-header, header .section-nav nav .navbar-femi .collapse-femi {
+header, header .section-nav nav .navbar-femi .collapse-femi, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
