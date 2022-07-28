@@ -1,12 +1,11 @@
 @import 'variables'; 
-* {
-    margin:0;
-    padding:0;
-}
 
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; // suaviza el scroll pero no funciona
     background-color: $color-green-background;
-    
 }
 
 p {
