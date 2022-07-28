@@ -62,11 +62,10 @@ main {
             }
 
             .boton-news-img{
+                transition: all 1s;
                 &:hover {
                     transform: scale(1.2);
-                    transition: all 1s;                
                 }
-                
             }
         }
     }

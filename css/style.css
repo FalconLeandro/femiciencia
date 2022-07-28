@@ -29,7 +29,7 @@ main .contacto-div1, main .news-div1, main .equipo-div1, main .index-post-images
   color: #ffffff;
   border-radius: 5px;
   letter-spacing: 2px;
-  background-color: #E91E63;
+  background-color: #3FB6B0;
   padding: 18px 30px;
   position: fixed;
   bottom: 40px;
@@ -41,9 +41,10 @@ main .contacto-div1, main .news-div1, main .equipo-div1, main .index-post-images
 }
 
 .btn-flotante:hover {
-  background-color: #2c2fa5;
+  background-color: #5CB235;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-7px);
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 600px) {
@@ -77,14 +78,16 @@ main .contacto-div1, main .news-div1, main .equipo-div1, main .index-post-images
 }
 
 /*header*/
+header {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
 header .section-nav {
   margin-bottom: 2%;
 }
-header .section-nav nav .navbar-femi {
-  margin-right: 10%;
-}
 header .section-nav nav .navbar-femi .navbar-brand .logo-femiciencia {
   margin: 10%;
+  transition: all 300ms ease 0ms;
 }
 @media screen and (max-width: 480px) {
   header .section-nav nav .navbar-femi .navbar-brand .logo-femiciencia {
@@ -93,7 +96,6 @@ header .section-nav nav .navbar-femi .navbar-brand .logo-femiciencia {
 }
 header .section-nav nav .navbar-femi .navbar-brand .logo-femiciencia:hover {
   transform: scale(1.1);
-  transition: all 1s;
 }
 header .section-nav nav .navbar-femi .button-femi {
   background-color: rgba(211, 228, 205, 0);
@@ -119,6 +121,9 @@ header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul li {
 header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a:hover > ul {
   display: block;
 }
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .text-menu:hover {
+  color: #5CB235 !important;
+}
 header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item .text-menu, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul {
   color: #874F9D;
   font-family: "Inter", sans-serif;
@@ -129,10 +134,14 @@ header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item .text-
   /*start probando*/
 }
 header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item .text-menu .text-menu, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a .text-menu, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul .text-menu {
-  color: #874F9D;
-  font-family: "Inter", sans-serif;
   font-size: 0.8em;
-  text-decoration: none;
+  transition: all 0.1s;
+}
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item .text-menu .text-menu:hover, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a .text-menu:hover, header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .a ul .text-menu:hover {
+  color: #5CB235 !important;
+}
+header .section-nav nav .navbar-femi .collapse-femi .navbar-nav .nav-item:hover {
+  color: #5CB235 !important;
 }
 
 footer .social-media {
@@ -282,10 +291,10 @@ main .index-section .index-div2 {
   padding-bottom: 3%;
   -moz-column-count: 2;
        column-count: 2; /* número de columnas */
-  -moz-column-gap: 100px;
-       column-gap: 100px; /* ancho de columnas */
-  -moz-column-rule: 10px outset #874F9D;
-       column-rule: 10px outset #874F9D; /* separación de columnas */
+  -moz-column-gap: 0px;
+       column-gap: 0px; /* ancho de columnas */
+  -moz-column-rule: 2px outset #3FB6B0;
+       column-rule: 2px outset #3FB6B0; /* separación de columnas */
 }
 main .index-section .index-div2 .index-text {
   margin: 0 10%;
@@ -298,10 +307,10 @@ main .post-div2 .row-post div .post-image-a .post-image {
   width: 100%;
   margin-top: 3%;
   margin-bottom: 3%;
+  transition: all 300ms ease 0ms;
 }
 main .post-div2 .row-post div .post-image-a .post-image:hover {
-  transform: scale(1.06);
-  transition: all 1s;
+  transform: scale(1.1);
 }
 
 footer .social-media {
@@ -422,9 +431,11 @@ main section div .columna-1 .link-newsletters {
     width: 70%;
   }
 }
+.body-news-individuales main .boton-news-div .boton-news-img {
+  transition: all 1s;
+}
 .body-news-individuales main .boton-news-div .boton-news-img:hover {
   transform: scale(1.2);
-  transition: all 1s;
 }
 
 /*contacto*/
