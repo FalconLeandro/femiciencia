@@ -9,10 +9,16 @@
 /*header*/
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     //font-size: 0.8rem;
+    @media all and (max-width: 980px) {
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
 
     //logo
     a:hover{
@@ -24,12 +30,13 @@ header {
         input{
             display: none; //es el cuadrito del checkbox SIMEPRE invisible
         }
-        .menu-btn {
+        label .menu-btn {
             display: none;//no quiero q sea vea el boton desktop
+            position: absolute;
             width:30px;
             height: 30px;
-            top: 4rem;
-            right: 5rem;
+            top: 2rem;
+            right: 0rem;
             transform: translate(-50%, -50%);
             cursor: pointer;
             @media all and (max-width: 980px) {
@@ -61,47 +68,64 @@ header {
 
 
     //menu nav
-    nav {
+    .menu-nav {
         @media all and (max-width: 980px) { //rsponsive no veo el menu horizontal
-            display: none;
+                display: none;
+                
+                
+                
         }
-    }
-    ul{
+        
+        
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
-        li{
-            list-style: none;
-            padding: 7px;
-            color: #874F9D;
-            a{
-                text-decoration: none;
+            li{
+                list-style: none;
+                padding: 7px;
                 color: #874F9D;
+                @media all and (max-width: 980px){
+                    color: yellow;
+                }
+                a{
+                    text-decoration: none;
+                    color: #874F9D;
+                }
             }
-        }
-        .desplegable{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            &:hover > ul{ // cuando paso el mouse por encima se me muestra el submenu
-                display:block;
-            }
-            .arrow{
-                font-size: 10px;
-                padding: 3px;
-                //order: -1; //esto me mueve el icono antes de la palabra
-            }
-            .sub-menu{
+            .desplegable{
                 display: flex;
-                flex-direction: column;
-                margin-top: 1rem;
-                display:none; // por default esta bloqueado
-                position: absolute; //esto evita que se rompa cuando abre el submenu
-                font-size: 0.6rem;
-                order: 1;
-            }
+                justify-content: space-between;
+                align-items: flex-start;
+                &:hover > ul{ // cuando paso el mouse por encima se me muestra el submenu
+                    display:block;
+                }
+                .arrow{
+                    font-size: 10px;
+                    padding: 3px;
+                    //order: -1; //esto me mueve el icono antes de la palabra
+                }
+                .sub-menu{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 1rem;
+                    display:none; // por default esta bloqueado
+                    position: absolute; //esto evita que se rompa cuando abre el submenu
+                    font-size: 0.6rem;
+                    order: 1;
+                }
+            
         }
     }
+    
+   
+}
+#burguer:checked + .menu-nav{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75vh;
 }
 
 
