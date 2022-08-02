@@ -1,5 +1,5 @@
 /*Logica para crear la cruz del menu burguer*/
-const burguer = document.querySelector(".menu-btn");
+const burguer = document.querySelector(".btn");
 const linea1 = document.querySelector(".linea1");
 const linea2 = document.querySelector(".linea2");
 const linea3 = document.querySelector(".linea3");
