@@ -3,108 +3,139 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-  //  border: 1px solid red; // pa practicar y chequear se saca dsp
 }
 
 /*header*/
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
-    //font-size: 0.8rem;
-
-    //logo
-    a:hover{
-        transform: scale(1.1);
-        transition: all 1s; 
-    }
-
-    //burguer menu-btn
-        input{
-            display: none; //es el cuadrito del checkbox SIMEPRE invisible
+header{
+    background-color: #D3E4CD;
+    width: 100%;
+    height: 160px;
+        /*logo*/
+        a img{
+            position: absolute; //le doy absolute para q no rompa en responsive
+            padding: 2rem;
         }
-        .menu-btn {
-            display: none;//no quiero q sea vea el boton desktop
-            width:30px;
-            height: 30px;
-            top: 4rem;
-            right: 5rem;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-            @media all and (max-width: 980px) {
-                    display: block; // aparece en tablet y celu
+
+        /*menu nav*/
+        nav{
+            /*boton burguer*/
+            input{
+                display: none; //es el cuadrito del checkbox SIMEPRE invisible
             }
 
-            span{        
-                display: block; //lo convierto en bloque
-                width: 100%; // ocupe el tamaño del papa(burguer) de 1.6rem
-                height: 2px;
-                background: #874F9D;
-                margin-top: 6px;
-                transition: all 300ms;
-                transform-origin: 0px 100%; // lo mantiene pegado en en el padre
+            label .btn {
+                display: none;//no quiero q sea vea el boton desktop
+                position: absolute; // le doy absolute para q no rompa en resp
+                width:30px;
+                height: 30px;
+                right: 5rem;
+                top: 3.3rem;
+                cursor: pointer;    
 
-                /*transformacion de la cruz*/
-                &.linea1active {
-                    transform: rotate(45deg) translate(-2px, 1px);
+                span{        
+                    display: block; //lo convierto en bloque
+                    width: 100%; // ocupe el tamaño del papa(.btn) de 30px
+                    height: 2px;
+                    background: #874F9D;
+                    margin-top: 6px;
+                    transition: all 300ms;
+                    transform-origin: 0px 100%; // lo mantiene pegado en en el padre
+
+                    /*transformacion de la cruz*/
+                    &.linea1active {
+                        transform: rotate(45deg) translate(-2px, 1px);
+                    }
+                    &.linea2active { //esta linea desaparece
+                        opacity: 0;
+                        margin-left: -30px;
+                    }
+                    &.linea3active{
+                        transform: rotate(-45deg) translate(-4px, 2px);
+                    }
+                    /* fin transformacion de la cruz*/
                 }
-                &.linea2active { //esta linea desaparece
-                    opacity: 0;
-                    margin-left: -30px;
-                }
-                &.linea3active{
-                    transform: rotate(-45deg) translate(-4px, 2px);
-                }
+                /*fin boton burguer*/
             }
-        }
+            //menu nav
 
-
-    //menu nav
-    nav {
-        @media all and (max-width: 980px) { //rsponsive no veo el menu horizontal
-            display: none;
-        }
-    }
-    ul{
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        li{
-            list-style: none;
-            padding: 7px;
-            color: #874F9D;
-            a{
-                text-decoration: none;
+            ul{
+                float: right; // lo ubico a la derecha de la pantalla 
+                margin-right: 20px;
+                margin-top: 50px;
                 color: #874F9D;
+            
+
+                    li{
+                        display: inline-block;
+                        list-style: none;
+                        padding: 7px;
+                        color: #874F9D;
+                        font-family: Inter, sans-serif;
+                        &:hover{
+                            color:#5CB235;
+                        }
+                        
+                        a{  
+                            font-family: Inter, sans-serif;
+                            text-decoration: none;
+                            color: #874F9D;
+                            &:hover{
+                                color:#5CB235;
+                            }
+                        }
+                    }
+                    .desplegable{
+                        .sub-menu{
+                            display:none; // por default esta bloqueado
+                        }
+                    
+                        &:hover > .sub-menu{ // cuando paso el mouse por encima se me muestra el submenu   
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: unset; //no hereda el del ul (50px)
+                            position: absolute;  //esto evita que se rompa cuando abre el submenu
+                            font-size: 0.6rem;
+                        }
+                        .arrow{
+                            font-size: 10px;
+                            padding: 3px;
+                        }
+                }
             }
-        }
-        .desplegable{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            &:hover > ul{ // cuando paso el mouse por encima se me muestra el submenu
-                display:block;
-            }
-            .arrow{
-                font-size: 10px;
-                padding: 3px;
-                //order: -1; //esto me mueve el icono antes de la palabra
-            }
-            .sub-menu{
-                display: flex;
-                flex-direction: column;
-                margin-top: 1rem;
-                display:none; // por default esta bloqueado
-                position: absolute; //esto evita que se rompa cuando abre el submenu
-                font-size: 0.6rem;
-                order: 1;
-            }
-        }
-    }
+    } 
 }
 
 
+@media all and (max-width: 980px) {
+    body{
+        overflow-y: hidden; // le saco el scroll y a todqa la pagina
+        header nav {
+            #menu-burguer:checked ~ ul{
+                left: 0;
+            }
+            label .btn{
+                display: block;
+            }
+            ul{
+                position: fixed; // lo fijo en toda la pantalla por encima
+                top: 100px; // ocupa toda la pantalla apartir de aca (nav)
+                width: 100%;
+                height: 100vh;
+                background-color: #D3E4CD;
+
+                left: 100%; //con esto lo escondo para q luego aparezcs desde aca
+                text-align: center;
+                transition: all 0.5s;
+                li{
+                    display: block;
+                    margin-top: 6rem;
+                    font-size: 2rem;
+                }
+                
+            }
+        }
+    }
 
 
 
+}

@@ -2,9 +2,10 @@
 @import '../base/mapas';
 @import '../base/extends';
 
+
+
 /*header*/
 header {
-    position: sticky!important;
     @extend %flexbox-sb;
     .section-nav{
         
