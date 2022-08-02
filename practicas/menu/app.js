@@ -14,12 +14,12 @@ function lineaAnimada(){
 /*FIN Logica para crear la cruz del menu burguer*/
 
 /*Logica para activar y desactivar el menu burguer*/
-let btn=document.querySelector('#burguer');
-console.log(btn.checked);
-btn.addEventListener('click',()=>console.log(btn.checked))
-const nav=document.querySelector('nav');
-const navUl=document.querySelector('nav ul');
-let links = document.querySelectorAll("nav a");
+// let btn=document.querySelector('#burguer');
+// console.log(btn.checked);
+// btn.addEventListener('click',()=>console.log(btn.checked))
+// const nav=document.querySelector('nav');
+// const navUl=document.querySelector('nav ul');
+// let links = document.querySelectorAll("nav a");
 
 /*logs para ver si agarre todos los nodos correctamente*/
 // console.log(nav); 
@@ -43,19 +43,20 @@ let links = document.querySelectorAll("nav a");
 //cuando btn = false quiero que el nav sea invisible
 
 // cuando haya un click en un a el btn sea false
-btn.addEventListener('click', () =>{
-    if (btn.checked==true) {
+// btn.addEventListener('click', () =>{
+//     if (btn.checked==true) {
         
-    document.body.style.backgroundColor=  "black";
-    //nav.style.backgroundColor=  "black";
-    nav.style.position=  "absolute";
-    nav.style.top=  "10%";
+//     document.body.style.backgroundColor=  "black";
+//     //nav.style.backgroundColor=  "black";
+//     nav.style.position=  "absolute";
+//     nav.style.top=  "10%";
 
-    navUl.style.display=  "flex";
-    navUl.style.flexDirection=  "column";
-    nav.style.display=  "block";
-    } 
-})
+//     navUl.style.display=  "flex";
+//     navUl.style.flexDirection=  "column";
+//     nav.style.display=  "block";
+//     } 
+// })
+
 
 
 
