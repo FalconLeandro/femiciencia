@@ -2,16 +2,34 @@
 @import '../base/variables';
 @import '../base/extends';
 
-main {
+main{
     .news-div1{
         @extend %sub-headings;
     }
-    section{
-        div{
+    .container{
+        .row{
+            &:hover{
+                background-color: #C0D9BE;
+            }
+            .imagen{
+                
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 500px;
+                    object-fit: cover;
+                }
+                h2{
+                    position: absolute;
+                    top: 80%;
+                    left: 40%;
+                    transform: translate(-50%, -50%);
+                }
+                // agregar width y heigth para las fotos posta (todas igual tamaño)
+                //chequear los id de cada imagen y replicar el codigo
+            }
             .columna-1{
-                    &:hover{
-                        background-color: #C0D9BE;
-                    }
+                    
                     .link-newsletters{
                         color: $color-violet-femi;
                         text-decoration: none;
@@ -19,6 +37,7 @@ main {
                         
                     }
                     padding: 2%;
+                    text-align: justify;
             }
         }
     }

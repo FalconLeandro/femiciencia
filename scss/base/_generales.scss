@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth; // suaviza el scroll pero no funciona
+    
+}
+body{
     background-color: $color-green-background;
 }
 
@@ -54,7 +57,8 @@ p {
 .newsletters-heading-2, .integrantes-heading-2{
     font-family: $font-heading;
     font-size: 28px;
-    color: $color-green-yellow-femi;
+    // color: $color-green-yellow-femi;
+    color: white;
 }
 
 p::selection, strong::selection, i::selection, br::selection,h1::selection, h2::selection, .heart::selection, a::selection, img::selection{
