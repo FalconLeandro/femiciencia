@@ -3,89 +3,232 @@
 @import '../base/extends';
 
 
-
 /*header*/
-header {
-    @extend %flexbox-sb;
-    .section-nav{
-        
-        margin-bottom: 2%;
-        nav {
-            .navbar-femi {
-                
-                .navbar-brand{
-                    .logo-femiciencia{
-                        margin: 10%;
-                        transition: all 300ms ease 0ms;  
-                        @media screen and (max-width: 480px) {
-                            width: 70%; 
-                        }
-                        &:hover{
-                            transform: scale(1.1);  
-                        }
-                    }
-                }
-                .button-femi{
-                    background-color: map-get($header, bg-button);
-                    border-color: map-get($header, border-button);                    
-                    .span-femi {
-                        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(63, 182, 176, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-                    }
-                }
-                .collapse-femi{
-                    @extend %flexbox-sb;
-                    .navbar-nav{
-                        
-                        .a {
-                            @extend %flexbox-sb;
-                            position: relative;
-                            ul {
-                                padding-left: 0;
-                                /*start probando*/
-                                display:none;
-                                position:absolute;
-                                top:100%;
-                                li{
-                                    float:none;
-                                    width:150px
-                                }
-                                
-                            }
-                        }
-                        .a:hover > ul {
-                            display:block;
-                        }
-                        .text-menu:hover{
-                              color:#5CB235!important;
-                            }
-                        .nav-item .text-menu, .a, .a ul{
-                            color: map-get($header, text-menu-color);
-                            font-family: $font-heading;
-                            font-size: map-get($header, text-menu-size);
-                            text-decoration: map-get($header, text-menu-decor);
-                            list-style: none;
-                            margin: 0 10px;
-                            /*start probando*/
-                            
-                            .text-menu{
-                                font-size: .8em;
-                                transition: all 0.1s;
-                                
-                            }
-                            .text-menu:hover{
-                              color:#5CB235!important;
-                            }
-                            
-                            
-                        }
-                        .nav-item:hover{
-                            color:#5CB235!important;
-                        }
-                    }
-                }
+header{
+    background-color: #D3E4CD;
+    width: 100%;
+    height: 160px;
+        /*logo*/
+        a img{
+            position: absolute; //le doy absolute para q no rompa en responsive
+            padding: 2rem;
+        }
+
+        /*menu nav*/
+        nav{
+            /*boton burguer*/
+            input{
+                display: none; //es el cuadrito del checkbox SIMEPRE invisible
             }
 
-        }
-    }
+            label .btn {
+                display: none;//no quiero q sea vea el boton desktop
+                position: absolute; // le doy absolute para q no rompa en resp
+                width:56px;
+                height:43px;
+                right: 2.5rem;
+                top: 3.3rem;
+                cursor: pointer;    
+
+                span{        
+                    display: block; //lo convierto en bloque
+                    width: 100%; // ocupe el tamaño del papa(.btn) de 30px
+                    height: 2px;
+                    background: #874F9D;
+                    margin-top: 6px;
+                    transition: all 300ms;
+                    transform-origin: 0px 100%; // lo mantiene pegado en en el padre
+
+                    /*transformacion de la cruz*/
+                    &.linea1active {
+                        transform: rotate(45deg) translate(-2px, 1px);
+                    }
+                    &.linea2active { //esta linea desaparece
+                        opacity: 0;
+                        margin-left: -30px;
+                    }
+                    &.linea3active{
+                        transform: rotate(-45deg) translate(-4px, 2px);
+                    }
+                    /* fin transformacion de la cruz*/
+                }
+                /*fin boton burguer*/
+            }
+            //menu nav
+
+            ul{
+                float: right; // lo ubico a la derecha de la pantalla 
+                margin-right: 20px;
+                margin-top: 50px;
+                color: #874F9D;
+            
+
+                    li{
+                        display: inline-block;
+                        list-style: none;
+                        padding: 7px;
+                        color: #874F9D;
+                        font-family: Inter, sans-serif;
+                        &:hover{
+                            color:#5CB235;
+                        }
+                        
+                        a{  
+                            font-family: Inter, sans-serif;
+                            text-decoration: none;
+                            color: #874F9D;
+                            &:hover{
+                                color:#5CB235;
+                            }
+                        }
+                    }
+                    .desplegable{
+                        .sub-menu{
+                            display:none; // por default esta bloqueado
+                        }
+                    
+                        &:hover > .sub-menu{ // cuando paso el mouse por encima se me muestra el submenu   
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: unset; //no hereda el del ul (50px)
+                            position: absolute;  //esto evita que se rompa cuando abre el submenu
+                            font-size: 0.6rem;
+                            padding: 0;
+                        }
+                        .arrow{
+                            font-size: 10px;
+                            padding: 3px;
+                        }
+                }
+            }
+    } 
 }
+
+
+@media all and (max-width: 980px) {
+        header nav {
+            #menu-burguer:checked ~ ul{
+                left: 0;
+            & ~ body{
+                overflow-y: hidden; // le saco el scroll y a todqa la pagina
+            }
+            }
+            label .btn{
+                display: block;
+            }
+            ul{
+                position: fixed; // lo fijo en toda la pantalla por encima
+                top: 90px; // ocupa toda la pantalla apartir de aca (nav)
+                width: 100%;
+                height: 100vh;
+                background-color: #D3E4CD;
+                z-index: 100; // lo pongo por encima de todo
+                left: 100%; //con esto lo escondo para q luego aparezcs desde aca
+                text-align: center;
+                transition: all 0.5s;
+                li{
+                    display: block;
+                    margin-top: 6rem;
+                    font-size: 2rem;
+                }
+                
+            }
+        }
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+// /*header*/
+// header {
+//     @extend %flexbox-sb;
+//     .section-nav{
+        
+//         margin-bottom: 2%;
+//         nav {
+//             .navbar-femi {
+                
+//                 .navbar-brand{
+//                     .logo-femiciencia{
+//                         margin: 10%;
+//                         transition: all 300ms ease 0ms;  
+//                         @media screen and (max-width: 480px) {
+//                             width: 70%; 
+//                         }
+//                         &:hover{
+//                             transform: scale(1.1);  
+//                         }
+//                     }
+//                 }
+//                 .button-femi{
+//                     background-color: map-get($header, bg-button);
+//                     border-color: map-get($header, border-button);                    
+//                     .span-femi {
+//                         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(63, 182, 176, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+//                     }
+//                 }
+//                 .collapse-femi{
+//                     @extend %flexbox-sb;
+//                     .navbar-nav{
+                        
+//                         .a {
+//                             @extend %flexbox-sb;
+//                             position: relative;
+//                             ul {
+//                                 padding-left: 0;
+//                                 /*start probando*/
+//                                 display:none;
+//                                 position:absolute;
+//                                 top:100%;
+//                                 li{
+//                                     float:none;
+//                                     width:150px
+//                                 }
+                                
+//                             }
+//                         }
+//                         .a:hover > ul {
+//                             display:block;
+//                         }
+//                         .text-menu:hover{
+//                               color:#5CB235!important;
+//                             }
+//                         .nav-item .text-menu, .a, .a ul{
+//                             color: map-get($header, text-menu-color);
+//                             font-family: $font-heading;
+//                             font-size: map-get($header, text-menu-size);
+//                             text-decoration: map-get($header, text-menu-decor);
+//                             list-style: none;
+//                             margin: 0 10px;
+//                             /*start probando*/
+                            
+//                             .text-menu{
+//                                 font-size: .8em;
+//                                 transition: all 0.1s;
+                                
+//                             }
+//                             .text-menu:hover{
+//                               color:#5CB235!important;
+//                             }
+                            
+                            
+//                         }
+//                         .nav-item:hover{
+//                             color:#5CB235!important;
+//                         }
+//                     }
+//                 }
+//             }
+
+//         }
+//     }
+// }
 

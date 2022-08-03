@@ -27,6 +27,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <!--CDN fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!--CSS-->
     <link rel="stylesheet" href="css/style.css"><!--cambiar a carpeta dedicada-->
     
@@ -38,65 +40,65 @@
     <a class="btn-flotante" href="https://docs.google.com/forms/d/e/1FAIpQLSc8VqwFJJlAEAxdl2mF-Wn6zLK8KfPBBio-UiVipJTwvLGVhA/viewform">SUSCRIBITE</a>   
     <!--Fin pop-up -->   
 
-
-
-    <!--Inicio encabezado-->    
     <header>
 
-                    <!--Inicio menu-->
-        <section class="container-fluid section-nav">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container navbar-femi">
-
-                    <a class="navbar-brand" href="index.html"><img src="media/logo.webp" alt="Logo Femiciencia" class="logo-femiciencia"></a>
-
-                    <button class="navbar-toggler button-femi" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon span-femi"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse collapse-femi container" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="text-menu active" aria-current="page" href="index.html">INICIO</a>
+            <!--logo--> 
+            <a href="index.html"><img src="media/logo.webp" alt="Logo Femiciencia"></a>
+            <!--fin logo--> 
+                
+            <!--menu nav-->
+            <nav>
+            
+                <!--boton burguer-->             
+                    <input type="checkbox" id="menu-burguer">
+                    <label for="menu-burguer">
+                        <div class="btn">
+                            <span class="linea1"></span>
+                            <span class="linea2"></span>
+                            <span class="linea3"></span>
+                        </div>
+                    </label>
+                <!--fin boton burguer--> 
+                
+                <ul>
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
+                    <li >
+                        <a href="pages/newsletters.html">NEWSLETTERS</a>
+                    </li>
+                    <li class="desplegable">PROYECTOS
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                        <ul class="sub-menu">
+                            <li >
+                                <a href="pages/wikiaportes.html">WIKIAPORTES</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="text-menu" href="pages/newsletters.html">NEWSLETTERS</a>
+                            <li >
+                                <a href="pages/descargables.html">DESCARGABLES</a>
                             </li>
-                            <li class="a nav-item">PROYECTOS
-                                <ul class="sub-menu">
-                                    <li class="nav-item">
-                                        <a class="text-menu" href="pages/wikiaportes.html">WIKIAPORTES</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="text-menu" href="pages/descargables.html">DESCARGABLES</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="a nav-item">PRENSA
-                                <ul class="sub-menu">
-                                    <li class="nav-item">
-                                        <a class="text-menu" href="pages/entrevistas.html">ENTREVISTAS</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="text-menu" href="pages/congresos.html">CONGRESOS</a>
-                                    </li>
-                                </ul>
-                            </li>                                                                
-                            <li class="nav-item">
-                                <a class="text-menu" href="pages/equipo.html">EQUIPO</a>
-                            </li>                  
-                            
                         </ul>
-                    </div>
-                </div>
+                    </li>
+                    <li class="desplegable">PRENSA
+                        <i class="fa-solid fa-chevron-down arrow"></i>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="pages/entrevistas.html">ENTREVISTAS</a>
+                            </li>
+                            <li>
+                                <a href="pages/congresos.html">CONGRESOS</a>
+                            </li>
+                        </ul>
+                    </li>      
+                    <li>
+                        <a href="pages/equipo.html">EQUIPO</a>
+                    </li>                  
+                </ul>
             </nav>
-          <!--Fin menu-->
-        </section>
+            <!--fin menu nav -->
         
     </header>
-    <!--Fin encabezado-->  
 
-    <!--Inicio main-->  
+
     <main>
         <!--Inicio sección texto descriptivo-->
         <section class="index-section">
@@ -130,13 +132,13 @@
                 <div class="container index-post-images">
                     <div class="row row-post">
                         <div class="col-lg-4 col-md-4 col-sm-12">
-                            <a href="https://www.instagram.com/p/CNvgNy3BuJe/" target="_blank" class="post-image-a"><img src="media/impostor.webp" alt="síndrome del impostor" class="post-image"></a>
+                            <a href="https://www.instagram.com/p/Cf9r2BzL2DN/?hl=es" target="_blank" class="post-image-a"><img src="media/1.png" alt="síndrome del impostor" class="post-image"></a>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
-                            <a href="https://www.instagram.com/p/CN8VAHnBcur/" target="_blank" class="post-image-a"><img src="media/cienciaandrocentrica.webp" alt="ciencia androcéntrica" class="post-image"></a>
+                            <a href="https://www.instagram.com/p/CfrqTJ6MIa0/?hl=es" target="_blank" class="post-image-a"><img src="media/2.png" alt="ciencia androcéntrica" class="post-image"></a>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
-                            <a href="https://www.instagram.com/p/Cfe7ilSpQrq/" target="_blank" class="post-image-a"><img src="media/dorothy.webp" alt="Dorothy Crowfoot Hodgkin" class="post-image"></a>
+                            <a href="https://www.instagram.com/p/Cfe7ilSpQrq/?hl=es" target="_blank" class="post-image-a"><img src="media/3.png" alt="Dorothy Crowfoot Hodgkin" class="post-image"></a>
                         </div>
                     </div>
                 </div>
