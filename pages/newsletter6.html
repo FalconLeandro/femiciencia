@@ -35,41 +35,65 @@
 <body class="body-news-individuales">
     <!--Inicio encabezado-->    
     <header>
-        <!--Inicio menu-->
-        <section class="container-fluid section-nav">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container navbar-femi">
-
-                    <a class="navbar-brand" href="../index.html"><img src="../media/logo.webp" alt="Logo Femiciencia" class="logo-femiciencia"></a>
-
-                    <button class="navbar-toggler button-femi" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon span-femi"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse collapse-femi container" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="active text-menu" aria-current="page" href="../index.html">INICIO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="text-menu" href="../pages/newsletters.html">NEWSLETTERS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="text-menu" href="../pages/quienessomos.html">EQUIPO</a>
-                            </li>                  
-                            <li class="nav-item">
-                                <a class="text-menu" href="https://docs.google.com/forms/d/e/1FAIpQLSc8VqwFJJlAEAxdl2mF-Wn6zLK8KfPBBio-UiVipJTwvLGVhA/viewform" target="_blank">SUSCRIBITE</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="text-menu" href="../pages/contacto.html">CONTACTO</a>
-                            </li>
-                        </ul>
+        <div class="top-header">
+            <!--logo--> 
+        <a href="index.html"><img src="../media/logo.webp" alt="Logo Femiciencia"></a>
+        <!--fin logo--> 
+        </div>
+        
+            
+        <!--menu nav-->
+        <nav>
+        
+            <!--boton burguer-->             
+                <input type="checkbox" id="menu-burguer">
+                <label for="menu-burguer">
+                    <div class="btn">
+                        <span class="linea1"></span>
+                        <span class="linea2"></span>
+                        <span class="linea3"></span>
                     </div>
-                </div>
-            </nav>
-          <!--Fin menu-->
-        </section>
-    </header>
+                </label>
+            <!--fin boton burguer--> 
+            
+            <ul>
+                <li>
+                    <a href="index.html">INICIO</a>
+                </li>
+                <li >
+                    <a href="pages/newsletters.html">NEWSLETTERS</a>
+                </li>
+                <li class="desplegable">PROYECTOS
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                    <ul class="sub-menu">
+                        <li >
+                            <a href="pages/wikiaportes.html">WIKIAPORTES</a>
+                        </li>
+                        <li >
+                            <a href="pages/descargables.html">DESCARGABLES</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="desplegable">PRENSA
+                    <i class="fa-solid fa-chevron-down arrow"></i>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="pages/entrevistas.html">ENTREVISTAS</a>
+                        </li>
+                        <li>
+                            <a href="pages/congresos.html">CONGRESOS</a>
+                        </li>
+                    </ul>
+                </li>      
+                <li>
+                    <a href="pages/equipo.html">EQUIPO</a>
+                </li>                  
+            </ul>
+        </nav>
+        <!--fin menu nav -->
+    
+</header>
+
     <!--Fin encabezado--> 
 
     <!--Inicio main-->  
