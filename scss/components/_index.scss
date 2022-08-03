@@ -7,8 +7,7 @@
 
 main{
     .index-section{
-        margin-bottom: 10%;
-        padding-top: 10%;
+        margin: 10% 0%;
         .index-div1{
             @extend %sub-headings;
             position: relative;
@@ -21,39 +20,49 @@ main{
             column-count: 2; /* número de columnas */
             column-gap: 0px; /* ancho de columnas */
             column-rule: 2px outset $color-green-femi; /* separación de columnas */
+            @media all and (max-width: 980px) {
+                column-count: 1;
+            }
             .index-text {
-                margin: 0 10%
+                margin: 0 10%;
+                @media all and (max-width: 980px) {
+                    margin: 0;
+                }
             }
         }
     }
-    .index-post-images {
+    .index-post{
+        margin: 10% 0% 3% 0%;
+        .index-post-images {
         
-        .post-div1{
-            @extend %sub-headings;
+            .post-div1{
+                @extend %sub-headings;
+            }
         }
-    }
-    .post-div2{
-        padding-top: 3%;
-        padding-bottom: 3%;
-       
-        .row-post{
-            div {
-                .post-image-a {
-                    .post-image{
-                        width: 100%;
-                        margin-top: 3%;
-                        margin-bottom: 3%;
-                        transition: all 300ms ease 0ms;
-                        &:hover{
-                            background-color: #5CB235; 
-                            box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-                            transform: translateY(-7px);
-                            color: #ffffff;
+        .post-div2{
+            padding-top: 3%;
+            padding-bottom: 3%;
+           
+            .row-post{
+                div {
+                    .post-image-a {
+                        .post-image{
+                            width: 100%;
+                            margin-top: 3%;
+                            margin-bottom: 3%;
+                            transition: all 300ms ease 0ms;
+                            &:hover{
+                                background-color: #5CB235; 
+                                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+                                transform: translateY(-7px);
+                                color: #ffffff;
+                            }
                         }
                     }
                 }
+    
             }
-
         }
     }
+    
 }

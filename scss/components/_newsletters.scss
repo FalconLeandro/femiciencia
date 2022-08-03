@@ -3,6 +3,7 @@
 @import '../base/extends';
 
 main{
+    margin: 10% 0%;
     .news-div1{
         @extend %sub-headings;
     }
@@ -12,7 +13,7 @@ main{
                 background-color: #C0D9BE;
             }
             .imagen{
-                
+                padding-left: 0;
                 position: relative;
                 img{
                     width: 100%;
