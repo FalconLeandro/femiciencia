@@ -75,8 +75,12 @@ header .top-header {
   text-align: center;
 }
 header .top-header a img {
-  size: 1rem;
   padding: 2%;
+}
+@media all and (max-width: 980px) {
+  header .top-header a img {
+    display: flex;
+  }
 }
 header nav {
   /*boton burguer*/
@@ -148,19 +152,34 @@ header nav ul li a:hover, header nav ul li ul li:hover {
   color: #5CB235;
 }
 header nav ul .desplegable .sub-menu {
-  display: none;
-}
-header nav ul .desplegable:hover > .sub-menu {
+  transform: translateY(-5%);
   display: flex;
+  opacity: 0;
+  transition: all 300ms ease-out;
   flex-direction: column;
+  align-items: flex-start;
   margin-top: unset;
   position: absolute;
   font-size: 0.8rem;
   padding: 0;
 }
+header nav ul .desplegable:hover > .sub-menu {
+  transform: translateY(5%);
+  opacity: 1;
+  border-top: 1px solid #5CB235;
+}
 header nav ul .desplegable .arrow {
   font-size: 10px;
   padding: 3px;
+  transition: all 300ms ease-out;
+}
+@media all and (max-width: 980px) {
+  header nav ul .desplegable .arrow {
+    font-size: 1.8rem;
+  }
+}
+header nav ul .desplegable:hover > .arrow {
+  transform: rotate(180deg);
 }
 
 @media all and (max-width: 980px) {
@@ -170,8 +189,8 @@ header nav ul .desplegable .arrow {
   header nav #menu-burguer:checked ~ ul {
     left: 0;
   }
-  header nav #menu-burguer:checked ~ ul ~ body {
-    overflow-y: hidden;
+  header nav #menu-burguer:checked ~ body {
+    overflow: hidden;
   }
   header nav label .btn {
     display: block;
@@ -185,9 +204,9 @@ header nav ul .desplegable .arrow {
     justify-content: space-evenly;
     align-items: center;
     position: fixed;
-    top: 16vh;
+    top: 0vh;
     width: 100%;
-    height: 84vh;
+    height: 100vh;
     background-color: #D3E4CD;
     z-index: 100;
     left: 100%;
@@ -265,9 +284,30 @@ footer .social-media .fa-square-instagram {
 
 .footer-dev > .heart {
   display: inline-flex;
-  animation-name: beatHeart;
-  animation-duration: 0.8s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: beatHeart;
+          animation-name: beatHeart;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes beatHeart {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes beatHeart {
@@ -361,13 +401,17 @@ main .index-section .index-div2 {
   margin-top: 0;
   padding-top: 3%;
   padding-bottom: 3%;
-  column-count: 2; /* número de columnas */
-  column-gap: 0px; /* ancho de columnas */
-  column-rule: 2px outset #3FB6B0; /* separación de columnas */
+  -moz-column-count: 2;
+       column-count: 2; /* número de columnas */
+  -moz-column-gap: 0px;
+       column-gap: 0px; /* ancho de columnas */
+  -moz-column-rule: 2px outset #3FB6B0;
+       column-rule: 2px outset #3FB6B0; /* separación de columnas */
 }
 @media all and (max-width: 980px) {
   main .index-section .index-div2 {
-    column-count: 1;
+    -moz-column-count: 1;
+         column-count: 1;
   }
 }
 main .index-section .index-div2 .index-text {
@@ -413,33 +457,57 @@ main .news-div1, main .equipo-div1, main .index-section .index-div1, main .index
 }
 
 /*quienes somos*/
-main section div div .integrante {
-  display: flex;
-  flex-direction: center;
-  margin: 1% 0 1% 0;
-  align-items: center;
-}
-main section div div .integrante .image-integrante {
-  width: 150px;
-  height: 150px;
-}
-main section div div .integrante .img-integrante-sm {
-  margin-bottom: 2%;
-}
-main section div div .integrante .text-integrante {
-  margin: 0 2% 0 2%;
-  padding: 2%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.wrapper {
+  margin-top: 50px;
 }
 
-.integrante {
-  background-color: #C0D9BE;
+.team {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
 }
-.integrante:hover {
-  background-color: #ADCEAE;
+
+.team .team_member {
+  background: #fff;
+  margin: 8% 10px 7% 0%;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;
+  position: relative;
+}
+
+.team .team_member h3 {
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role {
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border-radius: 50%;
 }
 
 /*newsletters*/
@@ -470,7 +538,8 @@ main .container .row .imagen {
 main .container .row .imagen img {
   width: 100%;
   height: 500px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .container .row .imagen h2 {
   position: absolute;
@@ -559,10 +628,21 @@ p {
   line-height: 50px;
   font-family: "Inter", sans-serif; /*desde aca*/
   /*Prueba animacion titulos*/
-  animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   position: absolute;
   overflow: hidden;
   height: 48px; /*el height pega el titulo a la linea, regular en querys*/
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    height: 0px;
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-95%);
+  }
 }
 
 @keyframes slide-top {
@@ -586,6 +666,11 @@ p {
   font-family: "Inter", sans-serif;
   font-size: 28px;
   color: white;
+}
+
+p::-moz-selection, strong::-moz-selection, i::-moz-selection, br::-moz-selection, h1::-moz-selection, h2::-moz-selection, .heart::-moz-selection, a::-moz-selection, img::-moz-selection {
+  background-color: #874F9D;
+  color: #D9D7F1;
 }
 
 p::selection, strong::selection, i::selection, br::selection, h1::selection, h2::selection, .heart::selection, a::selection, img::selection {
@@ -632,7 +717,8 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
     height: 42px;
   }
   .a ul {
-    margin-inline-start: 0px;
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
   }
 }
 .disclaimer {

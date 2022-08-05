@@ -1,0 +1,97 @@
+<section class="container">
+
+            <!--Fila 1-->
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="integrante integrante-1">
+                        <img src="../media/ani.webp" alt="Ana Clara Denaro" class="image-integrante d-none d-sm-block">
+                        <div class="text-integrante">
+                            <img src="../media/ani.webp" alt="Ana Clara Denaro" class="image-integrante img-integrante-sm d-block d-sm-none">
+                            <h2 class="integrantes-heading-2">Ani</h2>
+                            <p>Estudié Ciencias Biológicas en la Universidad de San Luis y estoy haciendo el Doctorado en Santa Fe. Está todo bien con esta provincia, excepto por los mosquitos. Estudio contaminación en humedales, soy fundamentalista del mate amargo y ando en bici. Considero que reconocer lo colectivo por sobre lo individual es un gran paso para (re) pensarnos. Un poco por eso, y otro poco por lo curiosa e inquieta que me define, me sumé a este proyecto.</p>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="integrante integrante-1">
+                        <img src="../media/nabi.webp" alt="Nabila Gomez Mansur" class="image-integrante d-none d-sm-block">
+                        <div class="text-integrante">
+                            <img src="../media/nabi.webp" alt="Nabila Gomez Mansur" class="image-integrante img-integrante-sm d-block d-sm-none">
+                            <h2 class="integrantes-heading-2">Nabi</h2>
+                            <p>Mendocina de pura cepa, bióloga molecular de la UNSL. Luego de recibirme decidí hacer un doctorado y obtuve una beca del CONICET para estudiar los mecanismos bioquímicos y moleculares por los que las plantas enfrentan un estrés. Estoy a punto de lograrlo (solo queda terminar de escribir la tesis). En mi tiempo libre me gusta patinar y catar cerveza. Creo que rever el rol histórico de las mujeres y feminidades en la ciencia es fundamental para las generaciones presentes y futuras.</p>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+            <!--Fin fila 1-->
+
+            <!--Fila 2-->
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="integrante integrante-2">
+                        <img src="../media/anto.webp" alt="Antonella Biondi" class="image-integrante d-none d-sm-block">
+                        <div class="text-integrante">
+                            <img src="../media/anto.webp" alt="Antonella Biondi" class="image-integrante img-integrante-sm d-block d-sm-none">
+                            <h2 class="integrantes-heading-2">Anto</h2>
+                            <p>Nací y viví toda mi vida en San Luis. Tras innumerables crisis existenciales y conflictos con el cine estudié periodismo porque quería escribir. Con el tiempo devine feminista (y sonará trillado) pero sostengo que lo personal es político y me posiciono desde ese lado. La relación transdisciplinar entre las distintas áreas del conocimiento -y su divulgación con perspectiva de género- me parecen claves para la construcción de otro universo.</p>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="integrante integrante-2">
+                        <img src="../media/flor.webp" alt="Florencia Nuñez" class="image-integrante d-none d-sm-block">
+                        <div class="text-integrante">
+                            <img src="../media/flor.webp" alt="Florencia Nuñez" class="image-integrante img-integrante-sm d-block d-sm-none">
+                            <h2 class="integrantes-heading-2">Flor</h2>
+                            <p>Soy de San Rafael y estudié Ciencias Biológicas en San Luis. Después de explorar varias áreas de la biología, actualmente fluctúo entre mi doctorado en ciencia ciudadana, la docencia y el diseño para la comunicación científica. Me gusta sacar fotos, especialmente nocturnas. Creo que es importante reflexionar acerca del papel de las feminidades en el ámbito científico y cómo el patriarcado ha influido en él.</p>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+            <!--Fin fila 2-->
+
+            <!--Fila 3-->
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="integrante integrante-1">
+                        <img src="../media/yami.webp" alt="Yamila Riego" class="image-integrante d-none d-sm-block">
+                        <div class="text-integrante">
+                            <img src="../media/yami.webp" alt="Yamila Riego" class="image-integrante img-integrante-sm d-block d-sm-none">
+                            <h2 class="integrantes-heading-2">Yami</h2>
+                            <p>Activista en la lucha por el derecho a la ciudad. Soy parte de Santa Fe en Bici y Argentina en Bici desde donde promovemos el uso de la bici en la ciudad, como medio de movilidad y herramienta de transformación social. Estoy terminando la carrera de Arquitectura en la UNL y desde hace algunos años, pongo mucho empeño en investigar cómo transformar nuestras ciudades para que sean equitativas y amigables para todas las personas. Hace 1 año me interesé en la edición en Wikipedia y en cómo disminuir la brecha de género que existe en ella.</p>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="integrante integrante-1">
+                        <img src="../media/day.webp" alt="Dayana alfaro" class="image-integrante d-none d-sm-block">
+                        <div class="text-integrante">
+                            <img src="../media/day.webp" alt="Dayana alfaro" class="image-integrante img-integrante-sm d-block d-sm-none">
+                            <h2 class="integrantes-heading-2">Day</h2>
+                            <p>Estudié periodismo y ahora estoy cursando una especilización en Comunicación Pública de la Ciencia y Tecnología. Entre la docencia universitaria y el periodismo, siempre anduve cerca de la Ciencia y ahora más que nunca. Para mí, la posta está en lo escrito y en la imagen, es increíble cómo nos permiten interpretar la realidad y producir conocimientos. Vengo a militar a favor de la visibilización del trabajo y presencia académica de las mujeres a lo largo de la historia y a proponer que esto sea un reconocimiento continuo.</p>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+            <!--Fin fila 3-->
+
+            <!--Fila 4-->
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="integrante integrante-2">
+                        <img src="../media/vero.webp" alt="Verónica Pereyra" class="image-integrante d-none d-sm-block">
+                        <div class="text-integrante">
+                            <img src="../media/vero.webp" alt="Verónica Pereyra" class="image-integrante img-integrante-sm d-block d-sm-none">
+                            <h2 class="integrantes-heading-2">Vero</h2>
+                            <p>Trascurrí toda mi vida en la Capital Puntana. Estudié Lic. En Comunicación Social y en el trascurso me sumergí en las profundas mareas del feminismo.
+                            Combato con el pecho al frente las emociones y las trasmuto en creación y arte. Mi intención es componer piezas cargadas de emoción y significado, conectando al ser humano con sus raíces, lo natural y lo salvaje.
+                            Hoy, me interpelo la construcción histórica de los imaginarios alrededor de la figura femenina en el arte, cómo se nos representó, retrató, pintó, esculpió o simbolizó.</p>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+            <!--Fin fila 4-->
+
+        </section>
