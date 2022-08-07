@@ -1,0 +1,7 @@
+@import '../base/variables';
+@import '../base/extends';
+@import '../base/generales';
+
+.congresos-div1{
+    @extend %sub-headings;
+}

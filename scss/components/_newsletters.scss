@@ -1,7 +1,7 @@
-/*newsletters*/
 @import '../base/variables';
 @import '../base/extends';
 
+/*newsletters*/
 main{
     margin: 10% 0%;
     .news-div1{
@@ -9,6 +9,12 @@ main{
     }
     .container{
         .row{
+            &:nth-child(even){
+                .columna-1{
+                    //en las news pares el texto se va a acomodar a la izq
+                    order: -1;
+                }
+            }
             &:hover{
                 background-color: #C0D9BE;
             }
@@ -30,22 +36,22 @@ main{
                 //chequear los id de cada imagen y replicar el codigo
             }
             .columna-1{
-                    
+                padding: 2%;
+                text-align: justify;
                     .link-newsletters{
                         color: $color-violet-femi;
                         text-decoration: none;
-                        font-weight: bold;
-                        
+                        font-weight: bold;      
                     }
-                    padding: 2%;
-                    text-align: justify;
             }
         }
     }
 }
 
+
+
 .body-news-individuales{
-    background-color: $color-lilac-background;
+    background-color: $color-green-background;
     main{
         .news-ind-div1{
             display: flex;
@@ -68,6 +74,8 @@ main{
                 }
             }
         }
+
+
         .boton-news-div{
             display: flex;
             flex-direction: row;
@@ -86,7 +94,7 @@ main{
                 &:hover {
                     transform: scale(1.2);
                 }
-            }
+            } 
         }
     }
 }
