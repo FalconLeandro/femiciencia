@@ -533,6 +533,9 @@ footer .social-media {
 main {
   margin: 10% 0%;
 }
+main .container .row {
+  --bs-gutter-x: 0;
+}
 main .container .row:nth-child(even) .columna-1 {
   order: -1;
 }

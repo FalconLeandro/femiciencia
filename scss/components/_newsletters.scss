@@ -9,6 +9,7 @@ main{
     }
     .container{
         .row{
+            --bs-gutter-x: 0;
             &:nth-child(even){
                 .columna-1{
                     //en las news pares el texto se va a acomodar a la izq
@@ -44,6 +45,7 @@ main{
                         font-weight: bold;      
                     }
             }
+            
         }
     }
 }
