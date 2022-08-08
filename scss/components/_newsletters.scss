@@ -8,7 +8,7 @@ main{
         @extend %sub-headings;
     }
     .container{
-        .row{
+        .news{
             &:nth-child(even){
                 .columna-1{
                     //en las news pares el texto se va a acomodar a la izq
