@@ -1,0 +1,7 @@
+@import '../base/variables';
+@import '../base/extends';
+@import '../base/generales';
+
+.entrevistas-div1{
+    @extend %sub-headings;
+}

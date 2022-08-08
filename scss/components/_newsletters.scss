@@ -8,7 +8,8 @@ main{
         @extend %sub-headings;
     }
     .container{
-        .row{
+          
+        .news{
             --bs-gutter-x: 0;
             &:nth-child(even){
                 .columna-1{

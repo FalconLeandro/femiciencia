@@ -44,7 +44,7 @@ p {
 }
 100% {
         
-      transform: translateY(-95%);
+    transform: translateY(-95%);
 }
 }
 .heading-t2 {
@@ -64,7 +64,7 @@ p {
 p::selection, strong::selection, i::selection, br::selection,h1::selection, h2::selection, .heart::selection, a::selection, img::selection{
     background-color: $color-violet-femi;
     color: $color-lilac-background;
-  }
+}
 
   /*General media queries*/
 /*Main headings & texts size: mobile*/
