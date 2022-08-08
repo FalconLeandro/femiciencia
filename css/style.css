@@ -196,6 +196,9 @@ header nav ul .desplegable:hover > .arrow {
   header nav #menu-burguer:checked ~ body {
     overflow: hidden;
   }
+  header nav #menu-burguer:checked ~ label .btn span {
+    background: #D3E4CD;
+  }
   header nav label .btn {
     display: block;
     right: 1.5rem;
@@ -212,7 +215,7 @@ header nav ul .desplegable:hover > .arrow {
     top: 0vh;
     width: 100%;
     height: 100vh;
-    background-color: #D3E4CD;
+    background-color: #3FB6B0;
     z-index: 98;
     left: 100%;
     transition: all 0.5s;
@@ -222,8 +225,29 @@ header nav ul .desplegable:hover > .arrow {
     font-size: 2em;
     padding-left: 0px;
   }
+  header nav ul li a {
+    color: #D3E4CD;
+  }
   header nav ul .desplegable {
-    font-size: 1.5em;
+    position: relative;
+  }
+  header nav ul .desplegable .sub-menu {
+    height: auto;
+    left: auto;
+    display: none;
+    opacity: 0;
+    transition: all 300ms ease-out;
+    border-top: 1px solid #D3E4CD !important;
+    margin-top: unset;
+    font-size: 0.8em;
+    padding-top: 10px;
+  }
+  header nav ul .desplegable .sub-menu:target {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-8%);
   }
   .arrow {
     display: none;
