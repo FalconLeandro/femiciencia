@@ -11,14 +11,16 @@ header{
         /*logo*/
         .top-header{
             text-align: center;
-            a img{
-                 //le doy absolute para q no rompa en responsive
-                
-                padding: 2%;
-                @media all and (max-width: 980px) {
-                    display: flex;
-                }
+            h1{
+
+                a img{
+                   padding: 2%;
+                   @media all and (max-width: 980px) {
+                       display: flex;
+                   }
+               }
             }
+            
         }
         
         /*menu nav*/
@@ -78,7 +80,7 @@ header{
                     li{
                         display: inline-block;
                         list-style: none;
-                        padding: 7px;
+                        padding-left: 7px;
                         color: #874F9D;
                         font-family: Inter, sans-serif;
                         &:hover{
@@ -89,6 +91,7 @@ header{
                             font-family: Inter, sans-serif;
                             text-decoration: none;
                             color: #874F9D;
+                            padding-left: 0px;
                             @media all and (max-width: 980px) {
                                 font-size: .8em;
                             }
@@ -109,7 +112,7 @@ header{
                             margin-top: unset; //no hereda el del ul (50px)
                             position: absolute;  //esto evita que se rompa cuando abre el submenu
                             font-size: 0.8rem;
-                            padding: 0;
+                            padding-top: 10px;
                         }
                     
                         &:hover > .sub-menu{ // cuando paso el mouse por encima se me muestra el submenu   
@@ -127,7 +130,7 @@ header{
                             }
                         }
                         &:hover > .arrow{
-                            transform: rotate(180deg);
+                            transform: rotate(-180deg);
                         }
                         
                         
@@ -139,23 +142,33 @@ header{
 
 @media all and (max-width: 980px) {
     header{
-        height: 16vh;
+        height: 12vh;
+        div h1 a img{
+            width: 41%;
+            margin: 4%!important;
+        }
         nav {
             #menu-burguer:checked ~ ul{
                 left: 0;
             
             }
             #menu-burguer:checked ~ body{
-                overflow: hidden; // le saco el scroll a todqa la pagina
+                overflow: hidden; // le saco el scroll a toda la pagina
+            }
+            #menu-burguer:checked ~ label .btn span {
+                background: #D3E4CD;
             }
             label .btn{
                 display: block;
+                right: 1.5rem;
+                top: 1.3rem;
+                z-index: 99;
+                
             }
+            
             ul{
-                margin-right: 0;
-                margin-top: 0;
-                padding-left: 0;
                 display: flex;
+                padding: 28% 0%;
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: center;
@@ -163,20 +176,53 @@ header{
                 top: 0vh; // ocupa toda la pantalla apartir de aca (nav)
                 width: 100%;
                 height: 100vh;
-                background-color: #D3E4CD;
-                z-index: 100; // lo pongo por encima de todo
+                background-color: #3FB6B0;
+                z-index: 98; // lo pongo por encima de todo
                 left: 100%; //con esto lo escuendo para q luego aparezcs desde aca
                 transition: all 0.5s;
                 
                 li{
                     display: block;
-                    font-size: 2rem;
+                    font-size: 2em;
+                    padding-left: 0px;
+                    
+                    a{
+                        color: #D3E4CD ;
+                    }
+                }
+                .desplegable{
+                    
+                    position: relative;
+                    .sub-menu{
+                        height: auto;
+                        left: auto;
+                        
+                        display: none;
+                        opacity: 0;
+                         // por default esta bloqueado
+                        transition: all 300ms ease-out;
+                        border-top: 1px solid #D3E4CD!important;
+                        margin-top: unset; //no hereda el del ul (50px)
+                          //esto evita que se rompa cuando abre el submenu
+                        font-size: 0.8em;
+                        padding-top: 10px;
+                        &:target{
+                            display: flex;
+                            opacity: 1;
+                            flex-direction: column;
+                            align-items: center;
+                            transform: translateY(-8%);
+                        }
+                    }
+                    
                 }
                 
             }
         }
     } 
-        
+    .arrow{
+        display: none;
+    }     
     
 
 
