@@ -321,9 +321,30 @@ footer .social-media .fa-square-instagram {
 
 .footer-dev > .heart {
   display: inline-flex;
-  animation-name: beatHeart;
-  animation-duration: 0.8s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: beatHeart;
+          animation-name: beatHeart;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes beatHeart {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes beatHeart {
@@ -417,13 +438,17 @@ main .index-section .index-div2 {
   margin-top: 0;
   padding-top: 3%;
   padding-bottom: 3%;
-  column-count: 2; /* número de columnas */
-  column-gap: 0px; /* ancho de columnas */
-  column-rule: 2px outset #3FB6B0; /* separación de columnas */
+  -moz-column-count: 2;
+       column-count: 2; /* número de columnas */
+  -moz-column-gap: 0px;
+       column-gap: 0px; /* ancho de columnas */
+  -moz-column-rule: 2px outset #3FB6B0;
+       column-rule: 2px outset #3FB6B0; /* separación de columnas */
 }
 @media all and (max-width: 980px) {
   main .index-section .index-div2 {
-    column-count: 1;
+    -moz-column-count: 1;
+         column-count: 1;
   }
 }
 main .index-section .index-div2 .index-text {
@@ -455,6 +480,11 @@ main .index-post .post-div2 .row-post div a img:hover {
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
   transform: translateY(-7px);
   color: #ffffff;
+}
+@media all and (max-width: 980px) {
+  main .index-post .post-div2 .row-post {
+    --bs-gutter-x: 0;
+  }
 }
 
 footer .social-media {
@@ -554,7 +584,8 @@ main .container .news .imagen {
 main .container .news .imagen img {
   width: 100%;
   height: 500px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .container .news .imagen h2 {
   position: absolute;
@@ -657,10 +688,21 @@ p {
   line-height: 50px;
   font-family: "Inter", sans-serif; /*desde aca*/
   /*Prueba animacion titulos*/
-  animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   position: absolute;
   overflow: hidden;
   height: 48px; /*el height pega el titulo a la linea, regular en querys*/
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    height: 0px;
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-95%);
+  }
 }
 
 @keyframes slide-top {
@@ -684,6 +726,11 @@ p {
   font-family: "Inter", sans-serif;
   font-size: 28px;
   color: white;
+}
+
+p::-moz-selection, strong::-moz-selection, i::-moz-selection, br::-moz-selection, h1::-moz-selection, h2::-moz-selection, .heart::-moz-selection, a::-moz-selection, img::-moz-selection {
+  background-color: #874F9D;
+  color: #D9D7F1;
 }
 
 p::selection, strong::selection, i::selection, br::selection, h1::selection, h2::selection, .heart::selection, a::selection, img::selection {
@@ -730,7 +777,8 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
     height: 42px;
   }
   .a ul {
-    margin-inline-start: 0px;
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
   }
 }
 .disclaimer {
@@ -796,7 +844,8 @@ p {
   line-height: 50px;
   font-family: "Inter", sans-serif; /*desde aca*/
   /*Prueba animacion titulos*/
-  animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   position: absolute;
   overflow: hidden;
   height: 48px; /*el height pega el titulo a la linea, regular en querys*/
@@ -823,6 +872,11 @@ p {
   font-family: "Inter", sans-serif;
   font-size: 28px;
   color: white;
+}
+
+p::-moz-selection, strong::-moz-selection, i::-moz-selection, br::-moz-selection, h1::-moz-selection, h2::-moz-selection, .heart::-moz-selection, a::-moz-selection, img::-moz-selection {
+  background-color: #874F9D;
+  color: #D9D7F1;
 }
 
 p::selection, strong::selection, i::selection, br::selection, h1::selection, h2::selection, .heart::selection, a::selection, img::selection {
@@ -869,7 +923,8 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
     height: 42px;
   }
   .a ul {
-    margin-inline-start: 0px;
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
   }
 }
 .disclaimer {
@@ -921,7 +976,8 @@ p {
   line-height: 50px;
   font-family: "Inter", sans-serif; /*desde aca*/
   /*Prueba animacion titulos*/
-  animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   position: absolute;
   overflow: hidden;
   height: 48px; /*el height pega el titulo a la linea, regular en querys*/
@@ -948,6 +1004,11 @@ p {
   font-family: "Inter", sans-serif;
   font-size: 28px;
   color: white;
+}
+
+p::-moz-selection, strong::-moz-selection, i::-moz-selection, br::-moz-selection, h1::-moz-selection, h2::-moz-selection, .heart::-moz-selection, a::-moz-selection, img::-moz-selection {
+  background-color: #874F9D;
+  color: #D9D7F1;
 }
 
 p::selection, strong::selection, i::selection, br::selection, h1::selection, h2::selection, .heart::selection, a::selection, img::selection {
@@ -994,7 +1055,8 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
     height: 42px;
   }
   .a ul {
-    margin-inline-start: 0px;
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
   }
 }
 .disclaimer {
@@ -1032,7 +1094,8 @@ p {
   line-height: 50px;
   font-family: "Inter", sans-serif; /*desde aca*/
   /*Prueba animacion titulos*/
-  animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   position: absolute;
   overflow: hidden;
   height: 48px; /*el height pega el titulo a la linea, regular en querys*/
@@ -1059,6 +1122,11 @@ p {
   font-family: "Inter", sans-serif;
   font-size: 28px;
   color: white;
+}
+
+p::-moz-selection, strong::-moz-selection, i::-moz-selection, br::-moz-selection, h1::-moz-selection, h2::-moz-selection, .heart::-moz-selection, a::-moz-selection, img::-moz-selection {
+  background-color: #874F9D;
+  color: #D9D7F1;
 }
 
 p::selection, strong::selection, i::selection, br::selection, h1::selection, h2::selection, .heart::selection, a::selection, img::selection {
@@ -1105,7 +1173,8 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
     height: 42px;
   }
   .a ul {
-    margin-inline-start: 0px;
+    -webkit-margin-start: 0px;
+            margin-inline-start: 0px;
   }
 }
 .disclaimer {
