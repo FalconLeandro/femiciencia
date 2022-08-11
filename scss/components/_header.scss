@@ -188,6 +188,9 @@ header{
                     
                     a{
                         color: #D3E4CD ;
+                        &:active{
+                            color: #874F9D;
+                        }
                     }
                 }
                 .desplegable{
@@ -216,6 +219,7 @@ header{
                     }
                     
                 }
+                
                 
             }
         }
