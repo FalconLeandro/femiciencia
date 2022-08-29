@@ -1,12 +1,13 @@
-@import 'components/_btn-subscribe';
-@import 'components/header';
 @import 'base/variables';
-@import 'components/footer';
+@import 'base/generales';
+@import 'components/btn-subscribe';
+@import 'components/header';
 @import 'components/index';
+@import 'components/footer';
 @import 'components/quienessomos';
 @import 'components/newsletters';
 @import 'components/congresos';
 @import 'components/descargables';
 @import 'components/entrevistas';
 @import 'components/wikiaportes';
-@import 'base/generales';
+

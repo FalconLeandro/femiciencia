@@ -15,6 +15,15 @@ function lineaAnimada(){
 /*FIN Logica para crear la cruz del menu burguer*/
 
 
+/* NAV */
+
+
+/* FIN NAV */
+
+
+
+
+
 let news = [  
     {
         id:1,

@@ -1,5 +1,3 @@
-@import '../base/variables';
-@import '../base/extends';
 
 /*newsletters*/
 main{
@@ -8,13 +6,13 @@ main{
         @extend %sub-headings;
     }
     .container{
-          
         .news{
             --bs-gutter-x: 0;
+            display: flex;
             &:nth-child(even){
                 .columna-1{
                     //en las news pares el texto se va a acomodar a la izq
-                    order: -1;
+                    order: 1;
                 }
             }
             &:hover{
@@ -22,6 +20,8 @@ main{
             }
             .imagen{
                 padding-left: 0;
+                width: 100%;
+                height: 100%;
                 position: relative;
                 img{
                     width: 100%;

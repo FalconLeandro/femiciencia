@@ -1,7 +1,33 @@
-@import '../base/variables';
-@import '../base/extends';
-@import '../base/generales';
+
 
 .entrevistas-div1{
     @extend %sub-headings;
+}
+.notas{
+    display: flex;
+    
+    .card{
+        height: 50%;
+        width: 50%;
+        @media screen and (max-width: 980px) {
+            height: inherit;
+            width: inherit;
+            }
+        img{
+            opacity: 50%;
+        }
+        .card-img-overlay{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .card-title{
+                font-size: 2.5rem;
+            }
+            .card-text{
+                font-size: 1.5rem;
+            }
+            a{}
+        }
+    }
 }

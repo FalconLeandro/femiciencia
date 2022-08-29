@@ -1,12 +1,13 @@
-@import 'variables'; 
+@import 'extends';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth; // suaviza el scroll pero no funciona
-    
 }
+
+
 body{
     background-color: $color-green-background;
 }
@@ -14,6 +15,14 @@ body{
 p {
     font-family: $font-paragraph;
     font-size: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    &:hover{
+        color: inherit;
+    }
 }
 
 .contacto-heading, .heading-post {
