@@ -559,14 +559,14 @@ main .container .news {
   display: flex;
 }
 main .container .news:nth-child(even) .columna-1 {
-  order: 1;
+  order: -1;
 }
 main .container .news:hover {
   background-color: #C0D9BE;
 }
 main .container .news .imagen {
   padding-left: 0;
-  width: 100%;
+  width: 50%;
   height: 100%;
   position: relative;
 }

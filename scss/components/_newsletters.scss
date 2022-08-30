@@ -12,7 +12,7 @@ main{
             &:nth-child(even){
                 .columna-1{
                     //en las news pares el texto se va a acomodar a la izq
-                    order: 1;
+                    order: -1;
                 }
             }
             &:hover{
@@ -20,7 +20,7 @@ main{
             }
             .imagen{
                 padding-left: 0;
-                width: 100%;
+                width: 50%;
                 height: 100%;
                 position: relative;
                 img{
