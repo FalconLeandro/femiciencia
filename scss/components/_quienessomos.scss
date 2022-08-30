@@ -40,6 +40,7 @@ main{
 // }
 
 .wrapper{
+    padding: 0 10%;
     margin-top: 50px;
   }
   
@@ -49,9 +50,11 @@ main{
     width: auto;
     text-align: center;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+
       .team_member{
       background: #3FB6B0;
-      margin: 8% 10px 7% 0%;
+      margin: 8% 0% 7% 0%;
       width: 300px;
       padding: 20px;
       line-height: 20px;
@@ -75,11 +78,11 @@ main{
   
       .team_img{
         position: absolute;
-        top: -50px;
+        top: -75px;
         left: 50%;
         transform: translateX(-50%);
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         background: #3FB6B0;
         @media only screen and (max-width: 768px) {
@@ -88,8 +91,8 @@ main{
              
         } 
         img{
-          width: 100px;
-          height: 100px;
+          width: 150px;
+          height: 150px;
           padding: 10px;
           border-radius: 50%;
           @media only screen and (max-width: 768px) {
