@@ -626,6 +626,11 @@ main .container .news {
 main .container .news:nth-child(even) .columna-1 {
   order: -1;
 }
+@media screen and (max-width: 992px) {
+  main .container .news:nth-child(even) .columna-1 {
+    order: inherit;
+  }
+}
 main .container .news:hover {
   background-color: #C0D9BE;
 }
@@ -634,6 +639,11 @@ main .container .news .imagen {
   width: 50%;
   height: 100%;
   position: relative;
+}
+@media screen and (max-width: 992px) {
+  main .container .news .imagen {
+    width: 100%;
+  }
 }
 main .container .news .imagen img {
   width: 100%;
@@ -696,6 +706,10 @@ main .container .news .columna-1 .link-newsletters {
   transform: scale(1.2);
 }
 
+body {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .notas {
   display: flex;
 }
@@ -723,4 +737,40 @@ main .container .news .columna-1 .link-newsletters {
 }
 .notas .card .card-img-overlay .card-text {
   font-size: 1.5rem;
-}/*# sourceMappingURL=style.css.map */
+}
+.index-div2 {
+  text-align: justify;
+  line-height: 1.6;
+  margin-top: 0;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  column-count: 2; /* número de columnas */
+  column-gap: 0px; /* ancho de columnas */
+  column-rule: 2px outset #3FB6B0; /* separación de columnas */
+}
+@media all and (max-width: 980px) {
+  .index-div2 {
+    column-count: 1;
+  }
+}
+.index-div2 .index-text {
+  margin: 0 10%;
+}
+@media all and (max-width: 980px) {
+  .index-div2 .index-text {
+    margin: 0;
+  }
+}
+
+.listaWiki {
+  list-style-type: none;
+  text-align: justify;
+  list-style-type: "✔";
+  padding: 0% 7%;
+}
+.listaWiki p {
+  font-size: 1.3rem;
+}
+.listaWiki li {
+  padding: 0.5rem;
+}

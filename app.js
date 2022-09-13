@@ -14,11 +14,26 @@ function lineaAnimada(){
 }
 /*FIN Logica para crear la cruz del menu burguer*/
 
+/*INICIO alerta de descargable*/
 
-/* NAV */
+const alertNoContent = document.querySelector("#alert");
 
+alertNoContent.addEventListener('click', function(){
+    Swal.fire({
+        title:'Sección en construcción',
+        text: 'Proximamente disponible',
+        icon: 'info',
+        iconColor: '#4FAC24',
+        confirmButtonText: '¡Lo espero!',
+        confirmButtonColor: '#4FAC24',
+        color: '#874F9D',
+        background: '#3FB6B0',
+        showCloseButton: true
 
-/* FIN NAV */
+    })
+})
+
+/*FIN alerta de descargable*/
 
 // When the user scrolls the page, execute myFunction
 
@@ -56,7 +71,7 @@ function myFunction() {
 let news = [  
     {
         id:1,
-        img: "https://images.pexels.com/photos/5243591/pexels-photo-5243591.jpeg?cs=srgb&dl=pexels-clement-percheron-5243591.jpg&fm=jpg",
+        img: "/media/ilustraciones/astronomía.png",
         titulo: "I - ASTRONOMÍA",
         contenido: `<p>Lo primero que hicimos cuando decidimos entrevistar a dos astrónomas contemporáneas fue rastrear en Google a sus colegas del pasado, porque honestamente nosotras tampoco las conocíamos. ¿Y adivinen qué? desde <strong>Hipatia de Alejandría</strong> (s. IV - V) - una de las primeras mujeres astrónomas documentada - no encontramos más femeneidades hasta mediados del siglo XVIII (por supuesto sin olvidar a <strong>Fátima de Madrid</strong> - X-XI).  Claro que esto no es casual, porque durante cientos de años pareciera ser que la historia de la ciencia estuvo únicamente escrita por varones. <br><br>
         ¿Dónde estaban las mujeres? ¿En sus casas, relegadas a tareas de cuidado? Esta sería una respuesta válida para la época, pero existieron mujeres que se dedicaron al campo de la astronomía. Por ejemplo: <strong>Maria Eimmart</strong> (contemporánea de Galileo Galilei), <strong>Caroline Lucrecia Herschel</strong> (1759 - 1848), primera astrónoma en cobrar un salario por su profesión, y <strong>Maria Mitchell</strong> (1818 - 1889), una de las pioneras en la lucha por el mismo salario que sus colegas varones - hasta ese momento, cobraba solo un tercio de la remuneración por el mismo trabajo. <br><br>
@@ -96,7 +111,7 @@ let news = [
     },
     {
         id:2,
-        img: "ttps://images.pexels.com/photos/1244705/pexels-photo-1244705.jpeg?cs=srgb&dl=pexels-dominika-roseclay-1244705.jpg&fm=jpg",
+        img: "",
         titulo: "II - FILOSOFÍA",
         contenido: `<p>En esta entrega vamos a hablar de filósofas. Seguro, al pensar en esta ciencia crítica, te remontes a la Grecia antigua, donde esos barbudos canosos que viste en esculturas se paseaban semidesnudos cuestionándose sobre el origen del universo, el cosmos, la naturaleza o la vida después de la muerte. <br><br>
         Probablemente pienses en la filosofía como una asignatura más en universidades y colegios. Quizás te resuenan nombres como Sócrates, Platón, Aristóteles, Pitágoras, Santo Tomás, Descartes, Hegel, Marx, Nietzsche, Camus, Sartre, Foucault, y más recientemente filósofos “rockstars” de la pandemia y las redes sociales como Byung-Chul Han o Žižek. Ahora pensá en alguna filósofa conocida… ¿Alguna vez te preguntaste por qué si decimos “filosofía” solo pensamos en varones? ¿Acaso las feminidades no participamos en la construcción de esta disciplina? ¿Por qué no hay filósofas en los planes de estudio?<br><br>
@@ -144,7 +159,7 @@ let news = [
     },
     {
         id:3,
-        img: "https://images.pexels.com/photos/9574348/pexels-photo-9574348.jpeg",
+        img: "",
         titulo: "III - QUÍMICA",
         contenido: `<p>En esta oportunidad, hablaremos sobre las mujeres y feminidades químicas de ayer y hoy. Sería un poco trillado comenzar este Newsletter hablando de <strong>Marie Sklodowska Curie</strong> (1867 - 1934) -pero adivinen qué: sí, arrancamos por ahí-. ¿Les suena ese nombre? Bueno, ELLA -así, con mayúsculas- fue la primera mujer en ganar no solo uno, sino dos premios Nobel y la única en recibirlos en dos disciplinas científicas distintas. Al primer Nobel lo ganó en la disciplina de física (1903) junto a su esposo Pierre Curie, mientras su segundo galardón fue para química (1911). Sin embargo, Marie Sklodowska Curie fue una privilegiada para la época, ya que las mujeres en ese momento tenían vedado el acceso al conocimiento. <br><br>
         Leyendo la página de Wikipedia que resume la historia de la química de la humanidad nos preguntamos: ¿Hubo otras mujeres destacadas en las ciencias químicas antes de Marie Sklodowska Curie? Por supuesto que sí, de hecho hicieron sus contribuciones al campo antes de la introducción de la química moderna, realizada por <strong>Marie Anne Pierrette Paulze</strong> (1758 - 1836). Ella fue investigadora, ilustradora y coautora del “Tratado de química de Lavoisier”, considerado el primer libro de la ciencia química.
@@ -226,7 +241,7 @@ let news = [
     },
     {
         id:4,
-        img: "https://images.pexels.com/photos/4427506/pexels-photo-4427506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img: "",
         titulo: "IV - CIENCIA POLÍTICA",
         contenido: `<p>En este cuarto encuentro, queremos hablarles sobre aquella ciencia abocada al análisis y estudio de las relaciones de poder, los sistemas políticos y organizativos, las prácticas y teorías gubernamentales a nivel local, estatal, nacional e internacional. En resumen, queremos hablarles de la Ciencia Política -y más aún de mujeres y feminidades en esta ciencia-. <br><br>
         En sus orígenes, la Ciencia Política se nutrió de otras ciencias sociales como la Filosofía, la Economía, la Sociología, la Antropología y el Derecho. También, podemos rastrear y encontrar sus bases en lo que ahora comprendemos como Filosofía Política.  Por tratarse de una ciencia ligada a la práctica política y de gobierno, cuando hablamos de Ciencia Política podemos referirnos tanto a politólogas académicas como a feminidades en puestos de representatividad y activismo político. <br><br>
@@ -292,7 +307,7 @@ let news = [
     },
     {
         id:5,
-        img: "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img: "",
         titulo: "V - ESPECIAL LGBTIQ+",
         contenido:`<p>Todos los 28 de junio se conmemora el Día Internacional del Orgullo LGBTIQ+. Año a año, el hito de la <strong>revuelta de Stonewall</strong> de 1969, es motivo de marchas, movilizaciones y diversos eventos en todos los países del mundo. En Argentina, la primera marcha del Orgullo se realizó el 2 de julio de 1992, con una organización mayoritariamente conformada por la Comunidad Homosexual Argentina (CHA), liderada por Carlos Jáuregui. Nota de color: la estación de subterráneo de la línea H en CABA de calles Pueyrredón y Santa Fe lleva su nombre. <br><br>
         Cuando vemos fotos de la primera marcha del Orgullo LGBTIQ+ realizada en Buenos Aires, vemos también los carteles de organizaciones como Transexuales por el Derecho a la Vida y la Identidad (Transdevi), la Sociedad de Integración Gay Lésbica Argentina (SIGLA), Investigación en Sexualidad e Interacción Social (ISIS), Cuadernos de Existencia Lesbiana y la Iglesia de la Comunidad Metropolitana (ICM). En aquel momento, la mera visibilidad disidente no solo representaba un riesgo político y legal, sino de existencia. Después de todo, el retorno de la democracia y los años subsiguientes nos enseñaron que en épocas de dictadura hubo un ensañamiento especial con integrantes de la comunidad LGBTIQ+.<br><br>
@@ -339,7 +354,7 @@ let news = [
     },
     {
         id:6,
-        img: "https://images.pexels.com/photos/3683041/pexels-photo-3683041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        img: "/media/ilustraciones/medicina.png",
         titulo: "VI - MEDICINA",
         contenido:`<p>Cuando empezamos a escribir este newsletter, lo primero que se nos vino a la mente, fue que a las mujeres y feminidades nos costó ganar nuestro espacio en la Medicina - bueno, como en casi todas las disciplinas-. De hecho, reafirmamos nuestro lugar con base en la lucha de muchxs que nos precedieron en la historia. <br><br>
         Históricamente relegadas a las tareas de cuidado, nos hicieron creer que el amor era base y fundamento para un destino ceñido a la custodia de otrxs. Como dice un libro de texto de 1848 (autor no encontrado) sobre obstetricia: <i>'La cabeza de la mujer era demasiado pequeña para el intelecto, pero lo suficientemente grande para el amor'.</i> -Increíble pero cierto: con bases de ese tipo, mujeres y feminidades no se consideraban aptas para la práctica de la Medicina y las escuelas tampoco las admitían. <br><br>                         
@@ -408,18 +423,26 @@ let news = [
 
 /* INICIO Logica para renderizar las newsletter*/
 
-function renderizarNewsletters(arrayNews) {
+function renderizarNewsletters(news) {
     //const imagen = document.querySelector('.tareas-terminadas');
-    let titulo = document.querySelector('.heading-t2');
-    let contenido = document.querySelector('.columna-news');
+    let imgARenderizar = document.querySelectorAll('.new')
+    let newARenderizar = document.querySelectorAll('.link-newsletters');
+
+    let tituloARenderizar = document.querySelector('.heading-t2');
+    console.log(tituloARenderizar);
+    let contenidoARenderizar = document.querySelector('.columna-news');
+    console.log(contenidoARenderizar);
 
     // limpiamos los nodos
-    titulo.innerHTML = "";
-    contenido.innerHTML = "";
+    tituloARenderizar.innerHTML = "";
+    contenidoARenderizar.innerHTML = "";
 
-    titulo.innerHTML += arrayNews.map( arrayNews => `<p>${arrayNews.titulo}</p>`)
-    contenido.innerHTML += arrayNews.map (arrayNews => `<p>${arrayNews.contenido}</p>`)
+    //imgARenderizar.setAttribute("src", `${arrayNews.img}`)
+    tituloARenderizar.innerHTML += `<h2>${news[0].titulo}</h2>`;
+    contenidoARenderizar.innerHTML += `<p>${news[0].contenido}</p>`;
+
 }
+
 renderizarNewsletters(news);
 
 /* FIN Logica para renderizar las newsletter*/

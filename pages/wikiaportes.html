@@ -18,7 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
     <!--CDN fontawesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+    <!--CDN sweetalert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="../css/style.css">
     <title>Wikiaportes</title>
@@ -30,7 +31,7 @@
     
     <header>
 
-           <!--logo--> 
+    <!--logo--> 
     <div class="top-header">
         <h1>
             <a href="../index.html">
@@ -70,7 +71,7 @@
                         <a href="./wikiaportes.html">WIKIAPORTES</a>
                     </li>
                     <li >
-                        <a href="./descargables.html">DESCARGABLES</a>
+                        <a id="alert">DESCARGABLES</a>
                     </li>
                 </ul>
             </li>
@@ -101,22 +102,46 @@
             <h2 class="heading-t1">WIKIAPORTES</h2>
         </div>
 
-        <p>Wikiaportes de Femiciencia es una sección creada con el fin de visibilizar a aquellas mujeres y disidencias que han formado y forman parte de la historia de las ciencias. Para esto, elegimos una de las enciclopedias más consultadas del mundo: Wikipedia. Esta ofrece una buena oportunidad para hacer aportes en los artículos sobre ciencias y sobre biografías de científicas, al promover el conocimiento libre y colaborativo. Teniendo en cuenta que la información que ofrece este sitio es consultada en muchos ámbitos e instancias educativas, su contenido construye sentido y se vuelve una fuente de referencia. Creemos que es necesario que existan más contribuciones para que Wikipedia se convierta en una enciclopedia más balanceada y justa respecto a las feminidades y mujeres en las ciencias.
-            Nuestros wikiaportes consisten en realizar ediciones y revisiones sobre los artículos de disidencias y feminidades en las ciencias que puedan contener sesgos machistas y prejuicios con raíz en la desigualdad de géneros; generar nuevos artículos biográficos de interés enciclopédico sobre mujeres y disidencias, y verificar y corregir datos que profundizan la brecha de géneros existente en los contenidos (por ejemplo: en artículos biográficos de mujeres donde se destaca cuántos hijos tuvieron, antes que su trayectoria profesional, algo que no ocurre en biografías de varones). También, se traducen al castellano artículos biográficos en inglés y se han agregado categorías como “Mujeres en las ciencias”, “Mujeres en la química” y “Mujeres en las ciencias políticas”, para construir listados que las visibilicen y reúnan. 
-            A continuación dejamos algunos links de páginas en las que hemos trabajado:
-        </p>
-
-        <ul>
-            <li>Creación del artículo biográfico de Fran Bubani  https://es.wikipedia.org/wiki/Fran_Bubani</li>
-            <li>Ediciones en Artículo de la Historia de la Química:  se agregó  a Marie Anne Pierrette Paulze y su referencia interna y externa. Se reemplazó "hombre" por "humano / humanidad", cuando se presentaba como referencia del ser humano. Se agregaron  referencias internas varias. Se sumó a Elizabeth Fullhame y sus referencias externas. Se agregó a Maria La Judia y a Cleopatra, alquimistas, con sus enlaces internos y externos. https://es.wikipedia.org/wiki/Historia_de_la_química </li>
-            <li>Edición con perspectiva de género del artículo de Marie-Anne Pierrette Paulze: se reescribe en su biografía el hecho de que ser esposa de alguien no es parte de su carrera, sino de su vida privada. https://es.wikipedia.org/wiki/Marie-Anne_Pierrette_Paulze </li>
-            <li>Edición con perspectiva de género del artículo de Jenny von Westphalen: se reescribe en su biografía el hecho de que ser esposa de alguien no es parte de su carrera, sino de su vida privada, ponderando su carrera intelectual antes que el dato de cuántos hijas e hijos tuvo. https://es.wikipedia.org/wiki/Jenny_von_Westphalen </li>
-            <li>Creación del artículo biográfico de Kathleen Thelen, a partir de la traducción del artículo en inglés existente. Se categoriza en listado de Politólogas y se crea el item de persona en Wikidata. </li>
-            <li>Creación de la categoría Mujeres en la Ciencia Política. Hay trabajo por hacer para categorizar a muchas feminidades.</li>
-        </ul>
+        <div class="index-div2 container-fluid">
+            <div class="container">
+            
+                <p class="index-text">
+                    Wikiaportes de Femiciencia es una sección creada con el fin de visibilizar a aquellas mujeres y disidencias que han formado y forman parte de la historia de las ciencias. Para esto, elegimos una de las enciclopedias más consultadas del mundo: <strong>Wikipedia</strong>. Esta ofrece una buena oportunidad para hacer aportes en los artículos sobre ciencias y sobre biografías de científicas, al promover el conocimiento libre y colaborativo. Teniendo en cuenta que la información que ofrece este sitio es consultada en muchos ámbitos e instancias educativas, su contenido construye sentido y se vuelve una fuente de referencia. Creemos que es necesario que existan más contribuciones para que Wikipedia se convierta en una enciclopedia más balanceada y justa respecto a las feminidades y mujeres en las ciencias. <br><br>
+                    Nuestros wikiaportes consisten en realizar ediciones y revisiones sobre los artículos de disidencias y feminidades en las ciencias que puedan contener sesgos machistas y prejuicios con raíz en la desigualdad de géneros; generar nuevos artículos biográficos de interés enciclopédico sobre mujeres y disidencias, y verificar y corregir datos que profundizan la brecha de géneros existente en los contenidos (por ejemplo: en artículos biográficos de mujeres donde se destaca cuántos hijos tuvieron, antes que su trayectoria profesional, algo que no ocurre en biografías de varones). También, se traducen al castellano artículos biográficos en inglés y se han agregado categorías como <strong>“Mujeres en las ciencias”, “Mujeres en la química” y “Mujeres en las ciencias políticas”</strong> , para construir listados que las visibilicen y reúnan.
+                </p>
+            </div>
+        </div>
 
 
-
+                <ul class="listaWiki">
+                    <p>A continuación dejamos algunos enlaces directos a las páginas en las que hemos trabajado</p>
+                    <a href="https://es.wikipedia.org/wiki/Fran_Bubani" target="_blank">
+                        <li>
+                            Creación del artículo biográfico de Fran Bubani 
+                        </li>
+                    </a>
+                    <a href="https://es.wikipedia.org/wiki/Historia_de_la_química" target="_blank">
+                        <li>
+                            Ediciones en Artículo de la Historia de la Química:  se agregó  a Marie Anne Pierrette Paulze y su referencia interna y externa. Se reemplazó "hombre" por "humano/humanidad", cuando se presentaba como referencia del ser humano. Se agregaron  referencias internas varias. Se sumó a Elizabeth Fullhame y sus referencias externas. Se agregó a Maria La Judia y a Cleopatra, alquimistas, con sus enlaces internos y externos. 
+                        </li>
+                    </a>
+                    <a href="https://es.wikipedia.org/wiki/Marie-Anne_Pierrette_Paulze" target="_blank">
+                        <li>
+                            Edición con perspectiva de género del artículo de Marie-Anne Pierrette Paulze: se reescribe en su biografía el hecho de que ser esposa de alguien no es parte de su carrera, sino de su vida privada. 
+                        </li> 
+                    </a>
+                    <a href="https://es.wikipedia.org/wiki/Jenny_von_Westphalen" target="_blank">
+                        <li>
+                            Edición con perspectiva de género del artículo de Jenny von Westphalen: se reescribe en su biografía el hecho de que ser esposa de alguien no es parte de su carrera, sino de su vida privada, ponderando su carrera intelectual antes que el dato de cuántos hijas e hijos tuvo.
+                        </li>
+                    </a>
+                    <li>
+                        Creación del artículo biográfico de Kathleen Thelen, a partir de la traducción del artículo en inglés existente. Se categoriza en listado de Politólogas y se crea el item de persona en Wikidata. 
+                    </li>
+                    <li>
+                        Creación de la categoría Mujeres en la Ciencia Política. Hay trabajo por hacer para categorizar a muchas feminidades.
+                    </li>
+                </ul>
 
 
     </main>
@@ -125,6 +150,8 @@
 
     </footer>
 
+    <script src="sweetalert2.all.min.js"></script>
     <script src="../app.js"></script>
+
 </body>
 </html>

@@ -13,6 +13,9 @@ main{
                 .columna-1{
                     //en las news pares el texto se va a acomodar a la izq
                     order: -1;
+                    @media screen and (max-width: 992px) {
+                        order: inherit;
+                    }
                 }
             }
             &:hover{
@@ -23,6 +26,9 @@ main{
                 width: 50%;
                 height: 100%;
                 position: relative;
+                @media screen and (max-width: 992px) {
+                    width: 100%;
+                }
                 img{
                     width: 100%;
                     height: 500px;
