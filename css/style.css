@@ -281,9 +281,32 @@ header nav ul .desplegable:hover > .arrow {
   transform: rotate(-180deg);
 }
 
+.fixed {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 81px;
+  background: #3FB6B0;
+  top: 0;
+  z-index: 999;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.fixed li, .fixed li a {
+  color: #D3E4CD;
+}
+.fixed li ul li a {
+  background: #5CB235;
+}
+
 @media all and (max-width: 980px) {
   header {
-    height: 12vh;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 999 !important;
+    transition: all 0.5s ease-in-out;
   }
   header div h1 a img {
     width: 41%;
@@ -400,6 +423,7 @@ main .index-post .post-div2 .row-post {
 main .index-post .post-div2 .row-post div a img {
   width: 100%;
   margin-top: 3%;
+  border: solid 10px #3FB6B0;
   margin-bottom: 3%;
   transition: all 300ms ease 0ms;
 }
@@ -414,6 +438,11 @@ main .index-post .post-div2 .row-post div a img:hover {
     --bs-gutter-x: 0;
   }
 }
+@media all and (max-width: 980px) {
+  main {
+    margin: 27% 0%;
+  }
+}
 
 /*footer*/
 footer {
@@ -421,26 +450,58 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: #3FB6B0;
-  z-index: 100;
-  border: 3px solid red;
   /*Footer mobile*/
   /*Footer: tablet*/
 }
-footer .logos-footer {
-  margin-left: 10px;
-  font-size: 2.6em;
+footer .top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2% 25%;
+}
+footer .top-container p {
+  margin: 1rem 0;
+  color: #D3E4CD;
+  font-size: 1.2em;
+}
+footer hr {
+  color: #D3E4CD;
+  width: 100vw;
+  height: 2px !important;
+}
+footer #vertical {
+  color: #D3E4CD;
+  width: 2px;
+  height: 100% !important;
+}
+footer .middle-container {
+  display: flex;
+  padding: 3% 5%;
+  width: 100%;
+  align-items: center;
+  color: #D3E4CD;
+}
+footer .middle-container .left {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+footer .middle-container .right {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+footer .icon-footer {
+  font-size: 2.2em;
+  height: 32px;
+  width: 32px;
   transition: all 300ms ease 0ms;
-  color: black;
-}
-footer .cafecito {
-  padding: 20px;
-}
-footer .footer-dev {
-  font-weight: bold;
-  margin-bottom: 0;
-}
-footer .social-media {
-  margin: 10px;
+  color: #D3E4CD;
+  background: black;
+  margin-right: 17px;
+  padding: 5px;
+  border-radius: 50%;
 }
 @media screen and (max-width: 480px) {
   footer .footer-text {

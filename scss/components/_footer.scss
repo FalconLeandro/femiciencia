@@ -5,14 +5,61 @@ footer{
     flex-direction: column;
     align-items: center;
     background-color: $color-green-femi;
-    z-index: 100;
-    border: 3px solid red;
+    // background-position: bottom;
+    // background-size: cover;
+    // background-image: url(/media/Presentación\ Marca\ personal\ acuarela\ Creativa\ Rosa\ y\ naranja.png);
+    .top-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2% 25%;
+        p{
+            margin: 1rem 0;
+            color: #D3E4CD;
+            font-size: 1.2em;
+        }
+    }
+    hr{
+        color: #D3E4CD;
+        width: 100vw;
+        height: 2px!important;
+    }
+    #vertical{
+        color: #D3E4CD;
+        width: 2px;
+        height: 100%!important;
+    }
+    .middle-container{
+        display: flex;
+        padding: 3% 5%;
+        width: 100%;
+        align-items: center;
+        color: #D3E4CD;
+        
+        .left{
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            
+        }
+        .right{
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+        }
+    }
 
-    .logos-footer{
-        margin-left: 10px;;
-        font-size: 2.6em;
+    .icon-footer{
+        font-size: 2.2em;
+        height: 32px;
+        width: 32px;
         transition: all 300ms ease 0ms;
-        color: black;
+        color: #D3E4CD;
+        background: black;
+        margin-right: 17px;
+        padding: 5px;
+        border-radius: 50%;
         //box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     //     &:hover{               
     //     //  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
@@ -22,25 +69,7 @@ footer{
 
 
 
-    .cafecito{
-        padding: 20px;
-
-
-    }
-
-
-    .footer-dev{
-        font-weight: bold;
-        margin-bottom: 0;
-    }
-    .social-media{
-
-        
-        margin: 10px;
-
-
-
-    }
+   
     
     /*Footer mobile*/
     @media screen and (max-width: 480px) {

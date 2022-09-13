@@ -136,13 +136,35 @@ header{
                         
                 }
             }
+            
     } 
 }
-
+.fixed{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 81px;
+    background: #3FB6B0;
+    top: 0;
+    z-index: 999;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    li, li a{
+        color: #D3E4CD;
+    }
+    li ul li a {
+        background: #5CB235;
+    }
+}
 
 @media all and (max-width: 980px) {
     header{
-        height: 12vh;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        z-index: 999!important;
+        transition: all .5s ease-in-out;
         div h1 a img{
             width: 41%;
             margin: 4%!important;
