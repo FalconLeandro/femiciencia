@@ -3,3 +3,34 @@
 .wikiaportes-div1{
     @extend %sub-headings;
 }
+.index-div2{
+    text-align: justify ;
+    line-height: 1.6;
+    margin-top: 0;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    column-count: 2; /* número de columnas */
+    column-gap: 0px; /* ancho de columnas */
+    column-rule: 2px outset $color-green-femi; /* separación de columnas */
+    @media all and (max-width: 980px) {
+        column-count: 1;
+    }
+    .index-text {
+        margin: 0 10%;
+        @media all and (max-width: 980px) {
+            margin: 0;
+        }
+    }
+}
+.listaWiki{
+    list-style-type: none;
+    text-align: justify;
+    list-style-type: '✔';
+    padding: 0% 7%;
+    p{
+        font-size: 1.3rem;
+    }
+    li{
+        padding: 0.5rem;
+    }
+}

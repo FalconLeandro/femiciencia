@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/MFlorenciaNS/desafio-coder/issues"
   },
-  "homepage": "https://github.com/MFlorenciaNS/desafio-coder#readme"
+  "homepage": "https://github.com/MFlorenciaNS/desafio-coder#readme",
+  "dependencies": {
+    "sweetalert2": "^11.4.32"
+  }
 }
