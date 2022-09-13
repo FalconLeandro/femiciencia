@@ -164,6 +164,7 @@ header{
         position: fixed;
         top: 0;
         z-index: 999!important;
+        transition: all .5s ease-in-out;
         div h1 a img{
             width: 41%;
             margin: 4%!important;
