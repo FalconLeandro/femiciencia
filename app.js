@@ -37,13 +37,13 @@ var fixed = menu.offsetTop;
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 
+// var x= window.matchMedia("(min-width: 800px)");
+
 function myFunction() {
 
-  if (window.pageYOffset > fixed) {
-
+  if ((window.pageYOffset > fixed) && (window.matchMedia("(min-width: 800px)").matches)) {
     menu.classList.add("fixed");
-
-  } else {
+    } else {
 
     menu.classList.remove("fixed");
 

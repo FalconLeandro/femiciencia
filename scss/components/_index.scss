@@ -9,7 +9,6 @@
 main{
     
     .index-section{
-        margin: 10% 0%;
         .index-div1{
             @extend %sub-headings;
             position: relative;
@@ -31,6 +30,9 @@ main{
                     margin: 0;
                 }
             }
+        }
+        @media all and (max-width: 980px) {
+            margin: 20% 0%;
         }
     }
     .index-post{
