@@ -1,109 +1,137 @@
-
 /*newsletters*/
-main{
+main {
     margin: 10% 0%;
-    .news-div1{
+
+    .news-div1 {
         @extend %sub-headings;
     }
-    .container{
-        .news{
+
+    .container {
+        .news {
             --bs-gutter-x: 0;
             display: flex;
-            &:nth-child(even){
-                .columna-1{
+
+            &:nth-child(even) {
+                .columna-1 {
                     //en las news pares el texto se va a acomodar a la izq
                     order: -1;
+
                     @media screen and (max-width: 992px) {
                         order: inherit;
                     }
                 }
             }
-            &:hover{
+
+            &:hover {
                 background-color: #C0D9BE;
             }
-            .imagen{
+
+            .imagen {
                 padding-left: 0;
                 width: 50%;
                 height: 100%;
                 position: relative;
+
                 @media screen and (max-width: 992px) {
                     width: 100%;
                 }
-                img{
+
+                .layer {
+                    position: absolute;
+                    height: 500px;
+                    width: 100%;
+                    background: linear-gradient(1deg, black, transparent);
+                }
+
+                img {
                     width: 100%;
                     height: 500px;
                     object-fit: cover;
                 }
-                h2{
+
+                h2 {
                     position: absolute;
                     top: 80%;
                     left: 40%;
                     transform: translate(-50%, -50%);
                 }
+
                 // agregar width y heigth para las fotos posta (todas igual tamaño)
                 //chequear los id de cada imagen y replicar el codigo
             }
-            .columna-1{
+
+            .columna-1 {
                 padding: 2%;
-                text-align: justify;
-                    .link-newsletters{
-                        color: $color-violet-femi;
-                        text-decoration: none;
-                        font-weight: bold;      
-                    }
+                background: #3FB6B0;
+                color: #D3E4CD;
+
+                p{
+                    font-size: 1.08em;
+                }
+
+                .link-newsletters {
+                    color: $color-violet-femi;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
             }
-            
+
         }
     }
 }
 
 
 
-.body-news-individuales{
+.body-news-individuales {
     background-color: $color-green-background;
-    main{
-        .news-ind-div1{
+
+    main {
+        .news-ind-div1 {
             display: flex;
             align-items: baseline;
             margin-top: 1em;
             border-bottom: 1em solid $color-violet-femi;
             margin-bottom: 2%;
         }
+
         section {
-            div{
+            div {
                 .columna-news {
                     .preguntas-news {
                         text-align: center;
-                        font-weight: bold;                
+                        font-weight: bold;
                     }
-                    .linea-divisoria{
+
+                    .linea-divisoria {
                         height: 3px;
-                        background-color: $color-green-femi;                
+                        background-color: $color-green-femi;
                     }
                 }
             }
         }
 
 
-        .boton-news-div{
+        .boton-news-div {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             margin-bottom: 5%;
             margin-top: 3%;
+
             @media screen and (max-width: 480px) {
                 display: flex;
                 flex-direction: row;
-                justify-content: center; 
+                justify-content: center;
                 width: 70%;
             }
 
-            .boton-news-img{
+            .boton-news-img {
                 transition: all 1s;
+
                 &:hover {
                     transform: scale(1.2);
                 }
-            } 
+            }
         }
     }
 }
