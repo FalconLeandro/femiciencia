@@ -1,56 +1,168 @@
-
 /*footer*/
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $color-green-femi;
+
     // background-position: bottom;
     // background-size: cover;
     // background-image: url(/media/Presentación\ Marca\ personal\ acuarela\ Creativa\ Rosa\ y\ naranja.png);
-    .top-container{
+    .top-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 2% 25%;
-        p{
+
+        p {
             margin: 1rem 0;
             color: #D3E4CD;
             font-size: 1.2em;
         }
     }
-    hr{
+
+    hr {
         color: #D3E4CD;
         width: 100%;
-        height: 2px!important;
+        height: 2px !important;
     }
-    #vertical{
+
+    #vertical {
         color: #D3E4CD;
         width: 2px;
-        height: 100%!important;
+        height: 100% !important;
     }
-    .middle-container{
+
+    .middle-container {
         display: flex;
         padding: 3% 5%;
         width: 100%;
         align-items: center;
         color: #D3E4CD;
-        
-        .left{
+
+        .left,
+        .right {
             display: flex;
             width: 50%;
             flex-direction: column;
-            
+            padding: 0 20px;
+
+            div {
+                
+
+                .wrap {
+                    height: 25vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center
+                }
+
+                .wrap div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 8px
+                }
+
+                .parent {
+                    position: relative
+                }
+
+                .parent .sub {
+                    transition: all .5s ease-in-out
+                }
+
+                .parent .thanks {
+                    font-size: 13px;
+                    transition: all .5s ease-in-out;
+                    position: absolute;
+                    top: -5px;
+                    left: 0;
+                    opacity: 0
+                }
+
+                .text {
+                    font-size: 17px;
+                    color: #F5F5F5;
+                    font-family: 'Open Sans', sans-serif;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    transition: all .5s ease-in-out
+                }
+
+                #toggle {
+                    display: none
+                }
+
+                .button {
+                    position: absolute;
+                    z-index: 999;
+                    width: 28px;
+                    height: 28px;
+                    background: #F9F9F9;
+                    border-radius: 10%;
+                    transition: all .5s ease-in-out;
+                    cursor: pointer
+                }
+
+                .button:before {
+                    position: absolute;
+                    top: 13px;
+                    left: 6px;
+                    content: '';
+                    width: 16px;
+                    height: 2px;
+                    background: #21CDB2;
+                    transform: rotate(90deg)
+                }
+
+                .button:after {
+                    position: absolute;
+                    top: 13px;
+                    left: 6px;
+                    content: '';
+                    width: 16px;
+                    height: 2px;
+                    background: #21CDB2
+                }
+
+                #toggle:checked~.nav {
+                    opacity: 1;
+                    transform: translateY(10%)
+                }
+
+                #toggle:checked~.button {
+                    transform: rotate(135deg);
+                    box-shadow: 0 0 transparent;
+                    border-radius: 100%
+                }
+
+                #toggle:checked~.subbed {
+                    opacity: 1
+                }
+
+                div {
+                    flex-direction: row;
+
+                    span {
+                        padding: 10px;
+                    }
+                }
+
+                a {
+                    color: white;
+                }
+            }
+
+            p {
+                margin: 0;
+            }
         }
-        .right{
-            display: flex;
-            width: 50%;
-            flex-direction: column;
-        }
+
     }
 
-    .icon-footer{
+    .icon-footer {
         font-size: 2.2em;
         height: 32px;
         width: 32px;
@@ -61,59 +173,71 @@ footer{
         padding: 5px;
         border-radius: 50%;
         //box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    //     &:hover{               
-    //     //  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-    //         transform: translateY(-7px);
-    //     }
+        //     &:hover{               
+        //     //  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+        //         transform: translateY(-7px);
+        //     }
+    }
+
+    .icon-sub {
+        color: #D3E4CD;
+        background: black;
+        border-radius: 50%;
     }
 
 
 
-   
-    
+
     /*Footer mobile*/
     @media screen and (max-width: 480px) {
-        .footer-text{
+        .footer-text {
             font-size: 13px;
         }
-        .footer-dev{
+
+        .footer-dev {
             margin: 4% 0 2% 0;
             font-weight: bold;
             text-align: center;
             font-size: 13px;
         }
-        .logo-social{
+
+        .logo-social {
             width: 70%;
         }
     }
 
     /*Footer: tablet*/
-    @media screen and (min-width: 481px) and (max-width: 980px){
-        .logo-social{
+    @media screen and (min-width: 481px) and (max-width: 980px) {
+        .logo-social {
             width: 85%;
         }
-    }  
+    }
 }
 
-.footer-dev>.heart{
+.footer-dev>.heart {
     display: inline-flex;
     animation-name: beatHeart;
     animation-duration: 0.8s;
     animation-iteration-count: infinite;
 }
+
 @keyframes beatHeart {
     0% {
         transform: scale(1);
     }
+
     25% {
         transform: scale(1.1);
     }
+
     40% {
         transform: scale(1);
     }
+
     60% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }

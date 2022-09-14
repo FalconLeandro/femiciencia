@@ -230,7 +230,7 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   list-style: none;
-  padding-left: 7px;
+  padding-left: 20px;
   color: #874F9D;
   font-family: Inter, sans-serif;
 }
@@ -409,7 +409,7 @@ main .index-section .index-div2 .index-text {
 }
 @media all and (max-width: 980px) {
   main .index-section {
-    margin: 20% 0%;
+    margin: 35% 0%;
   }
 }
 main .index-post {
@@ -484,15 +484,119 @@ footer .middle-container {
   align-items: center;
   color: #D3E4CD;
 }
-footer .middle-container .left {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-}
+footer .middle-container .left,
 footer .middle-container .right {
   display: flex;
   width: 50%;
   flex-direction: column;
+  padding: 0 20px;
+}
+footer .middle-container .left div .wrap,
+footer .middle-container .right div .wrap {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .middle-container .left div .wrap div,
+footer .middle-container .right div .wrap div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+}
+footer .middle-container .left div .parent,
+footer .middle-container .right div .parent {
+  position: relative;
+}
+footer .middle-container .left div .parent .sub,
+footer .middle-container .right div .parent .sub {
+  transition: all 0.5s ease-in-out;
+}
+footer .middle-container .left div .parent .thanks,
+footer .middle-container .right div .parent .thanks {
+  font-size: 13px;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  opacity: 0;
+}
+footer .middle-container .left div .text,
+footer .middle-container .right div .text {
+  font-size: 17px;
+  color: #F5F5F5;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+}
+footer .middle-container .left div #toggle,
+footer .middle-container .right div #toggle {
+  display: none;
+}
+footer .middle-container .left div .button,
+footer .middle-container .right div .button {
+  position: absolute;
+  z-index: 999;
+  width: 28px;
+  height: 28px;
+  background: #F9F9F9;
+  border-radius: 10%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+footer .middle-container .left div .button:before,
+footer .middle-container .right div .button:before {
+  position: absolute;
+  top: 13px;
+  left: 6px;
+  content: "";
+  width: 16px;
+  height: 2px;
+  background: #21CDB2;
+  transform: rotate(90deg);
+}
+footer .middle-container .left div .button:after,
+footer .middle-container .right div .button:after {
+  position: absolute;
+  top: 13px;
+  left: 6px;
+  content: "";
+  width: 16px;
+  height: 2px;
+  background: #21CDB2;
+}
+footer .middle-container .left div #toggle:checked ~ .nav,
+footer .middle-container .right div #toggle:checked ~ .nav {
+  opacity: 1;
+  transform: translateY(10%);
+}
+footer .middle-container .left div #toggle:checked ~ .button,
+footer .middle-container .right div #toggle:checked ~ .button {
+  transform: rotate(135deg);
+  box-shadow: 0 0 transparent;
+  border-radius: 100%;
+}
+footer .middle-container .left div #toggle:checked ~ .subbed,
+footer .middle-container .right div #toggle:checked ~ .subbed {
+  opacity: 1;
+}
+footer .middle-container .left div div,
+footer .middle-container .right div div {
+  flex-direction: row;
+}
+footer .middle-container .left div div span,
+footer .middle-container .right div div span {
+  padding: 10px;
+}
+footer .middle-container .left div a,
+footer .middle-container .right div a {
+  color: white;
+}
+footer .middle-container .left p,
+footer .middle-container .right p {
+  margin: 0;
 }
 footer .icon-footer {
   font-size: 2.2em;
@@ -503,6 +607,11 @@ footer .icon-footer {
   background: black;
   margin-right: 17px;
   padding: 5px;
+  border-radius: 50%;
+}
+footer .icon-sub {
+  color: #D3E4CD;
+  background: black;
   border-radius: 50%;
 }
 @media screen and (max-width: 480px) {
@@ -773,4 +882,4 @@ body {
 }
 .listaWiki li {
   padding: 0.5rem;
-}
+}/*# sourceMappingURL=style.css.map */
