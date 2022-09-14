@@ -473,9 +473,10 @@ footer hr {
   height: 2px !important;
 }
 footer #vertical {
-  color: #D3E4CD;
-  width: 2px;
-  height: 100% !important;
+  border: none;
+  border-left: 1px solid hsl(200deg, 10%, 50%);
+  height: 100vh;
+  width: 1px;
 }
 footer .middle-container {
   display: flex;
