@@ -2,4 +2,7 @@
 
 .congresos-div1{
     @extend %sub-headings;
+    .list-group-item:hover{
+        background-color: none;
+    }
 }
