@@ -76,11 +76,11 @@ header{
                 text-align: center;
                 margin-bottom: 0;
                 padding-left: 0;
-
+                transition: all 0.5s ease-in-out;
                     li{
                         display: inline-block;
                         list-style: none;
-                        padding-left: 7px;
+                        padding-left: 20px;
                         color: #874F9D;
                         font-family: Inter, sans-serif;
                         &:hover{
@@ -147,7 +147,7 @@ header{
     height: 81px;
     background: #3FB6B0;
     top: 0;
-    z-index: 999;
+    z-index: 6;
     align-items: center;
     transition: all 0.5s ease-in-out;
     li, li a{
@@ -167,7 +167,7 @@ header{
         transition: all .5s ease-in-out;
         div h1 a img{
             width: 41%;
-            margin: 4%!important;
+            
         }
         nav {
             #menu-burguer:checked ~ ul{
