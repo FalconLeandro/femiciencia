@@ -7,7 +7,7 @@
 
 
 main{
-    
+    margin-top: 10% !important;
     .index-section{
         .index-div1{
             @extend %sub-headings;
@@ -15,9 +15,7 @@ main{
         }
         .index-div2{
             text-align: justify ;
-            margin-top: 0;
-            padding-top: 3%;
-            padding-bottom: 3%;
+            padding: 10% 0;
             column-count: 2; /* número de columnas */
             column-gap: 0px; /* ancho de columnas */
             column-rule: 2px outset $color-green-femi; /* separación de columnas */
@@ -36,16 +34,17 @@ main{
         }
     }
     .index-post{
-        margin: 10% 0% 3% 0%;
         .index-post-images {
+            display: flex;
+            justify-content: center;
             .post-div1{
                 @extend %sub-headings;
             }
         }
         .post-div2{
-            padding-top: 3%;
-            padding-bottom: 3%;            
+            padding: 10% 0;           
             .row-post{
+                width: 100%;
                 --bs-gutter-x: 6.5rem; //achica cada card-post 
                 div {
                     a {
