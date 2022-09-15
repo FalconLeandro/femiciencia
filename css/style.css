@@ -759,16 +759,3 @@ body {
     margin: 0;
   }
 }
-
-.listaWiki {
-  list-style-type: none;
-  text-align: justify;
-  list-style-type: "✔";
-  padding: 0% 7%;
-}
-.listaWiki p {
-  font-size: 1.3rem;
-}
-.listaWiki li {
-  padding: 0.5rem;
-}
