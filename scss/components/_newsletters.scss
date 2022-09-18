@@ -61,13 +61,16 @@ main {
 
             .columna-1 {
                 padding: 2%;
-                background: #3FB6B0;
-                color: #D3E4CD;
+                background: $color-green-femi;
+                color: $color-green-background;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
 
                 p{
-                    font-size: 1.08em;
+                    font-size: 0.9rem;
+                    text-align: inherit;
                 }
-
                 .link-newsletters {
                     color: $color-violet-femi;
                     text-decoration: none;

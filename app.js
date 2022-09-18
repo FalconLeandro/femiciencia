@@ -35,36 +35,74 @@ alertNoContent.addEventListener('click', function(){
 
 /*FIN alerta de descargable*/
 
-// When the user scrolls the page, execute myFunction
+/*INICIO menú fijo*/
 
-window.onscroll = function() {myFunction()};
+// Cuando se haga scroll en la pagina se ejecuta la funcion
 
+window.onscroll = function() {posicionDeFijado()};
 
-// Get the header
+// agarro el menu que quiero fijar
 
-var menu = document.getElementById("menu");
+const menu = document.getElementById("menu");
 
+// obtengo la posicion del margen superior del elemento que quiero fijar
 
-// Get the offset position of the navbar
+const fixed = menu.offsetTop;
 
-var fixed = menu.offsetTop;
-
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-
+// agrego y saco la clase donde declaro la posicion que quiero que tenga (fixed) cuando hago scroll
 // var x= window.matchMedia("(min-width: 800px)");
 
-function myFunction() {
+function posicionDeFijado() {
 
-  if ((window.pageYOffset > fixed) && (window.matchMedia("(min-width: 800px)").matches)) {
+    if ((window.pageYOffset > fixed) && (window.matchMedia("(min-width: 800px)").matches)) {
     menu.classList.add("fixed");
     } else {
-
     menu.classList.remove("fixed");
-
-  }
-
+    }
 }
+/*FIN menú fijo*/
+
+/*INICIO logica para que aparezca el mensaje de gracias por suscribirte cuando hago click en el boton*/
+
+const toggle = document.querySelector('#toggle');
+const sub = document.querySelector('.sub');
+//console.log(sub);
+const thanks = document.querySelector('.thanks')
+//console.log(thanks);
+
+toggle.addEventListener('click', function(){
+    console.log(toggle.checked);
+    if(toggle.checked == true){
+        console.log(toggle.checked);
+        sub.style.opacity = '0';
+        thanks.style.opacity = '1';
+        console.log(thanks.style.opacity);
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc8VqwFJJlAEAxdl2mF-Wn6zLK8KfPBBio-UiVipJTwvLGVhA/viewform";
+    }else if(toggle.checked == false){
+        console.log(toggle.checked);
+        sub.style.opacity = '1';
+        thanks.style.opacity = '0';
+    }
+    });
+/*FIN logica para que aparezca el mensaje de gracias por suscribirte cuando hago click en el boton*/
+
+
+/*INICIO logica para que se esconda el boton sucribite cuando ingrese al footer*/
+
+
+let btnSuscribite = document.querySelector('.btn-flotante')
+let footer = document.querySelector('footer')
+//console.log(btnSuscribite);
+
+let posicion = footer.getBoundingClientRect();
+console.log("x: "+ posicion.x);
+console.log("y: "+ posicion.y);
+
+if(posicion.y > 900){
+    btnSuscribite.style.display = 'none';
+}else btnSuscribite.style.display = 'block';
+/*FIN logica para que se esconda el boton sucribite cuando ingrese al footer*/
+
 
 
 
@@ -429,9 +467,9 @@ function renderizarNewsletters(news) {
     let newARenderizar = document.querySelectorAll('.link-newsletters');
 
     let tituloARenderizar = document.querySelector('.heading-t2');
-    console.log(tituloARenderizar);
+   // console.log(tituloARenderizar);
     let contenidoARenderizar = document.querySelector('.columna-news');
-    console.log(contenidoARenderizar);
+   // console.log(contenidoARenderizar);
 
     // limpiamos los nodos
     tituloARenderizar.innerHTML = "";

@@ -42,11 +42,19 @@ main{
             }
         }
         .post-div2{
-            padding: 10% 0;           
+            padding: 10% 0 2%;           
             .row-post{
                 width: 100%;
-                --bs-gutter-x: 6.5rem; //achica cada card-post 
+                --bs-gutter-x: 5.5rem; //achica cada card-post 
+                @media all and (min-width: 768px) and (max-width: 982px) {
+                    --bs-gutter-x: 4.5rem;
+                }
+                @media all and (max-width: 768px){
+                    --bs-gutter-x: 9.5rem;
+                }
+
                 div {
+                    margin-bottom: 11%;
                     a {
                         img{
                             width: 100%;
@@ -54,23 +62,24 @@ main{
                             border: solid 10px #3FB6B0;
                             margin-bottom: 3%;
                             transition: all 300ms ease 0ms;
+                            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
                             &:hover{
                                 background-color: #5CB235; 
-                                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+                                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
                                 transform: translateY(-7px);
                                 color: #ffffff;
                             }
                         }
                     }
                 }
-                @media all and (max-width: 980px) {
-                    --bs-gutter-x: 0;
-                }
+                // @media all and (max-width: 980px) {
+                //     --bs-gutter-x: 0;
+                // }
             }
         }
     }
-    @media all and (max-width: 980px) {
-        margin: 27% 0%;
-    }
+    // @media all and (max-width: 980px) {
+    //     margin: 27% 0%;
+    // }
 }
 
