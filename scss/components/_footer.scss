@@ -1,15 +1,12 @@
 /*footer*/
 footer {
+    position: relative;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
-   // padding: 0 10%;
     background-color: $color-green-femi;
-
-    // background-position: bottom;
-    // background-size: cover;
-    // background-image: url(/media/Presentación\ Marca\ personal\ acuarela\ Creativa\ Rosa\ y\ naranja.png);
-    .top-container {
+ .top-container {
         display: flex;
         flex-direction: column;
         align-items: center;

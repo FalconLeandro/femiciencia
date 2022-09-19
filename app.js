@@ -15,24 +15,22 @@ function lineaAnimada(){
 /*FIN Logica para crear la cruz del menu burguer*/
 
 /*INICIO alerta de descargable*/
-
 const alertNoContent = document.querySelector("#alert");
 
 alertNoContent.addEventListener('click', function(){
     Swal.fire({
         title:'Sección en construcción',
-        text: 'Proximamente disponible',
+        text: 'Próximamente disponible',
         icon: 'info',
         iconColor: '#4FAC24',
-        confirmButtonText: '¡Lo espero!',
+        confirmButtonText: '¡OK!',
         confirmButtonColor: '#4FAC24',
         color: '#874F9D',
-        background: '#3FB6B0',
-        showCloseButton: true
-
+        background: '#D3E4CD',
+        showCloseButton: true,
+        closeButtonColor: '#4FAC24'
     })
 })
-
 /*FIN alerta de descargable*/
 
 /*INICIO menú fijo*/
@@ -70,37 +68,37 @@ const sub = document.querySelector('.sub');
 const thanks = document.querySelector('.thanks')
 //console.log(thanks);
 
-toggle.addEventListener('click', function(){
-    console.log(toggle.checked);
-    if(toggle.checked == true){
+    toggle.addEventListener('click', function(){
         console.log(toggle.checked);
-        sub.style.opacity = '0';
-        thanks.style.opacity = '1';
-        console.log(thanks.style.opacity);
-        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc8VqwFJJlAEAxdl2mF-Wn6zLK8KfPBBio-UiVipJTwvLGVhA/viewform";
-    }else if(toggle.checked == false){
-        console.log(toggle.checked);
-        sub.style.opacity = '1';
-        thanks.style.opacity = '0';
-    }
-    });
+        if(toggle.checked == true){
+            console.log(toggle.checked);
+            sub.style.opacity = '0';
+            thanks.style.opacity = '1';
+            console.log(thanks.style.opacity);
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc8VqwFJJlAEAxdl2mF-Wn6zLK8KfPBBio-UiVipJTwvLGVhA/viewform";
+        }else if(toggle.checked == false){
+            console.log(toggle.checked);
+            sub.style.opacity = '1';
+            thanks.style.opacity = '0';
+        }
+        });
 /*FIN logica para que aparezca el mensaje de gracias por suscribirte cuando hago click en el boton*/
 
 
 /*INICIO logica para que se esconda el boton sucribite cuando ingrese al footer*/
 
 
-let btnSuscribite = document.querySelector('.btn-flotante')
-let footer = document.querySelector('footer')
-//console.log(btnSuscribite);
+// let btnSuscribite = document.querySelector('.btn-flotante')
+// let footer = document.querySelector('footer')
+// //console.log(btnSuscribite);
 
-let posicion = footer.getBoundingClientRect();
-console.log("x: "+ posicion.x);
-console.log("y: "+ posicion.y);
+// let posicion = footer.getBoundingClientRect();
+// console.log("x: "+ posicion.x);
+// console.log("y: "+ posicion.y);
 
-if(posicion.y > 900){
-    btnSuscribite.style.display = 'none';
-}else btnSuscribite.style.display = 'block';
+// if(posicion.y > 900){
+//     btnSuscribite.style.display = 'none';
+// }else btnSuscribite.style.display = 'block';
 /*FIN logica para que se esconda el boton sucribite cuando ingrese al footer*/
 
 
