@@ -14,12 +14,12 @@ footer {
         align-items: center;
         text-align: center;
         padding: 2% 10%;
+        flex-direction: column;
 
         p {
             margin: 1rem 0;
             color: #D3E4CD;
-            font-size: 1.2em;
-            width: 50%;
+            font-size: 1.2rem;
         }
         a{
             // background-color: #21CDB2;
@@ -60,9 +60,8 @@ footer {
 
             .wrap {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-left: 10%;
+                width: 160px;
+                justify-content: space-between;
             }
 
             .wrap div {
@@ -166,6 +165,17 @@ footer {
             .insta{
                 display: flex;
                 flex-direction: row;
+                a {
+                    i{
+                        font-size: 2.1rem;
+                        
+                    }
+                    p{
+                        font-size: 1rem;
+                        margin-left: 10px;
+                    }
+                }
+                
             }
         }
         
@@ -177,18 +187,19 @@ footer {
             .license{
                 :nth-child(2){
                     display: flex;
-                    flex-direction: column;
-                    width: 15%;
-                    align-items: center;
-                    margin-left: 45%;
                     margin-top: 3%;
+                    align-items: center;
+                    justify-content: center;
                 }
                 width: 100%;
                 display: inline;
-                margin-bottom: 2%;
+                margin-bottom: 1%;
                 a{
                     color: #D3E4CD;
                 }
+            }
+            p{
+                margin-bottom: 0;
             }
             
             

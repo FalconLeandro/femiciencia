@@ -38,7 +38,9 @@ main{
 //         background-color: $color-green-bg3;
 //     }
 // }
-
+.link-equipo{
+  background: #3FB6B0;
+}
 .wrapper{
     padding: 0 10%;
     margin-top: 50px;
@@ -54,10 +56,11 @@ main{
 
       .team_member{
       background: #3FB6B0;
-      margin: 8% 0% 7% 0%;
+      margin-top: 12% ;
       width: 300px;
       padding: 20px;
       line-height: 20px;
+      height: 450px;
       color: #8e8b8b;  
       position: relative;
           h3{
