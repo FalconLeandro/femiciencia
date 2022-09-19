@@ -8,7 +8,6 @@ footer {
     background-color: $color-green-femi;
  .top-container {
         display: flex;
-        flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 2% 10%;
@@ -17,6 +16,7 @@ footer {
             margin: 1rem 0;
             color: #D3E4CD;
             font-size: 1.2em;
+            width: 50%;
         }
         a{
             // background-color: #21CDB2;
@@ -58,7 +58,8 @@ footer {
             .wrap {
                 display: flex;
                 justify-content: center;
-                align-items: center
+                align-items: center;
+                margin-left: 10%;
             }
 
             .wrap div {

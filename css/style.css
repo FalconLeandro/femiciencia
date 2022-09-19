@@ -486,15 +486,20 @@ footer {
 }
 footer .top-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 2% 10%;
 }
-footer .top-container p {
+@media all and (max-width: 980px) {
+  footer .top-container {
+    padding: 0;
+  }
+}
+footer .top-container .text-colaboration {
   margin: 1rem 0;
   color: #D3E4CD;
   font-size: 1.2em;
+  width: 50%;
 }
 footer .top-container a {
   color: #D3E4CD;
@@ -523,6 +528,7 @@ footer .social-container .wrap {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10%;
 }
 footer .social-container .wrap div {
   display: flex;
