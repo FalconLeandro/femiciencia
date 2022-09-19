@@ -27,16 +27,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--CSS-->
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
-<body class="body-news-individuales">
-    <!--Inicio encabezado-->    
+<body class="body-news-individuales">  
     <header>
         <div class="top-header">
-            <!--logo--> 
+        <!--logo--> 
         <a href="index.html"><img src="../media/logo.webp" alt="Logo Femiciencia"></a>
         <!--fin logo--> 
         </div>
@@ -94,18 +94,22 @@
     
 </header>
 
-    <!--Fin encabezado--> 
 
-    <!--Inicio main-->  
-    <main>
+<main>
+
         <div class="news-ind-div1 container-fluid">
             <h1 class="heading-t2">IV - CIENCIA POLÍTICA</h1>
         </div>
+
         <!--Inicio sección newsletter-->
         <section class="container">
             <div class="row">
-                <div class="col-12 columna-news">
-                    <p>En este cuarto encuentro, queremos hablarles sobre aquella ciencia abocada al análisis y estudio de las relaciones de poder, los sistemas políticos y organizativos, las prácticas y teorías gubernamentales a nivel local, estatal, nacional e internacional. En resumen, queremos hablarles de la Ciencia Política -y más aún de mujeres y feminidades en esta ciencia-. <br><br>
+                <div class="col-12 columna-news" id="inicio">
+                    <div class="boton-news-div container">
+                        <a href="#inicio"><i class="fa-solid fa-angles-up"></i></a>
+                    </div> 
+                    <img src="https://images.pexels.com/photos/4427506/pexels-photo-4427506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p class="first-child">En este cuarto encuentro, queremos hablarles sobre aquella ciencia abocada al análisis y estudio de las relaciones de poder, los sistemas políticos y organizativos, las prácticas y teorías gubernamentales a nivel local, estatal, nacional e internacional. En resumen, queremos hablarles de la Ciencia Política -y más aún de mujeres y feminidades en esta ciencia-. <br><br>
                     En sus orígenes, la Ciencia Política se nutrió de otras ciencias sociales como la Filosofía, la Economía, la Sociología, la Antropología y el Derecho. También, podemos rastrear y encontrar sus bases en lo que ahora comprendemos como Filosofía Política.  Por tratarse de una ciencia ligada a la práctica política y de gobierno, cuando hablamos de Ciencia Política podemos referirnos tanto a politólogas académicas como a feminidades en puestos de representatividad y activismo político. <br><br>
                     Cuando buscamos referentes de la Ciencia Política en internet -para sorpresa de nadie- no encontramos feminidades, pero si a esos varones destacados que parecen ser imprescindibles en todos los planes de estudio de colegios secundarios y universidades. Así es, hablamos de figuras como Nicolás Maquiavelo, el Barón de Montesquieu, Jean-Jacques Rousseau y hasta Max Weber. <strong>¿Pero dónde estaban las feminidades en la política?</strong> <br><br>
 
@@ -214,20 +218,17 @@
                     Equipo de <strong>FEMICIENCIA</strong></p>
                     
                 </div>
-            </div>        
+            </div>
+
         </section>
         <!--Fin sección newsletter-->
         
-        <!--Botón volver arriba-->
-        <div class="boton-news-div container">
-            <a href="newsletter4.html" class="boton-volver-news"> <img src="../media/buttonnews.webp" alt="botón volver arriba" class="boton-news-img"></a>
-        </div>
 
-    </main> 
-    <!--Fin main-->  
 
-    <!--Inicio pie de página-->  
-    <footer>
+
+</main> 
+
+<footer class="footer">
         <!--Copyright-->
         <p class="footer-text">© 2022 Femiciencia. Todos los derechos reservados.</p>
         
@@ -247,13 +248,13 @@
         
         <!--Desarrolladora-->
         <p class="footer-dev">Desarrollado con <span class= "heart">💚</span> por MFNS</p>
-    </footer>
-    <!--Fin pie de página-->  
+    </footer> 
     
     
 
 
     <!--JS-->
+    <script src="../botones.js"></script>   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
