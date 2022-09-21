@@ -943,6 +943,7 @@ h3 {
 }
 .list-group-item:hover {
   background-color: #3FB6B0;
+  color: white;
 }
 .list-group-item .descriptivo {
   margin-left: 1%;
@@ -996,4 +997,4 @@ body {
 }
 .notas .card .card-img-overlay .card-text {
   font-size: 1.5rem;
-}
+}/*# sourceMappingURL=style.css.map */
