@@ -7,11 +7,11 @@
 
 
 main{
-    margin-top: 10% !important;
+    // margin-top: 10% !important;
     .index-section{
         .index-div1{
             @extend %sub-headings;
-            position: relative;
+            // position: relative;
         }
         .index-div2{
             text-align: justify ;
@@ -21,6 +21,7 @@ main{
             column-rule: 2px outset $color-green-femi; /* separación de columnas */
             @media all and (max-width: 980px) {
                 column-count: 1;
+                padding: 10%;
             }
             .index-text {
                 margin: 0 10%;
@@ -30,7 +31,7 @@ main{
             }
         }
         @media all and (max-width: 980px) {
-            margin: 35% 0%;
+            margin-top: 35%;
         }
     }
     .index-post{

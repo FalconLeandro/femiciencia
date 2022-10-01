@@ -175,6 +175,7 @@ header{
             @media all and (max-width: 980px) {
                 header{
                     height: 100px;
+                    background-color: $color-green-background;
                     position: fixed;
                     top: 0;
                     z-index: 999!important;
