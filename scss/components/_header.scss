@@ -64,7 +64,6 @@ header{
             
             //menu nav
             ul{
-                color: #874F9D;
                 text-align: center;
                 margin-bottom: 0;
                 padding-left: 0;
@@ -73,7 +72,7 @@ header{
                         display: inline-block;
                         list-style: none;
                         padding-left: 20px;
-                        color: #874F9D;
+                        color: #3FB6B0;
                         font-family: Inter, sans-serif;
                         &:hover{
                             color:#5CB235;
@@ -82,7 +81,7 @@ header{
                         a, ul li{  
                             font-family: Inter, sans-serif;
                             text-decoration: none;
-                            color: #874F9D;
+                            color: #3FB6B0;
                             padding-left: 0px;
                                 @media all and (max-width: 980px) {
                                     font-size: .8em;

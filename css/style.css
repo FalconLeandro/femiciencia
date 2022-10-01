@@ -236,7 +236,6 @@ header nav label .btn span.linea3active {
   transform: rotate(-45deg) translate(-4px, 2px);
 }
 header nav ul {
-  color: #874F9D;
   text-align: center;
   margin-bottom: 0;
   padding-left: 0;
@@ -246,7 +245,7 @@ header nav ul li {
   display: inline-block;
   list-style: none;
   padding-left: 20px;
-  color: #874F9D;
+  color: #3FB6B0;
   font-family: Inter, sans-serif;
 }
 header nav ul li:hover {
@@ -255,7 +254,7 @@ header nav ul li:hover {
 header nav ul li a, header nav ul li ul li {
   font-family: Inter, sans-serif;
   text-decoration: none;
-  color: #874F9D;
+  color: #3FB6B0;
   padding-left: 0px;
 }
 @media all and (max-width: 980px) {
@@ -510,12 +509,12 @@ footer .top-container {
   align-items: center;
   text-align: center;
   padding: 2% 10%;
+  flex-direction: column;
 }
 footer .top-container p {
   margin: 1rem 0;
   color: #D3E4CD;
-  font-size: 1.2em;
-  width: 50%;
+  font-size: 1.2rem;
 }
 footer .top-container a {
   color: #D3E4CD;
@@ -542,9 +541,8 @@ footer .social-container {
 }
 footer .social-container .wrap {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10%;
+  width: 160px;
+  justify-content: space-between;
 }
 footer .social-container .wrap div {
   display: flex;
@@ -630,6 +628,13 @@ footer .social-container .insta {
   display: flex;
   flex-direction: row;
 }
+footer .social-container .insta a i {
+  font-size: 2.1rem;
+}
+footer .social-container .insta a p {
+  font-size: 1rem;
+  margin-left: 10px;
+}
 footer .rigths-container {
   display: flex;
   flex-direction: column;
@@ -639,18 +644,19 @@ footer .rigths-container {
 footer .rigths-container .license {
   width: 100%;
   display: inline;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 footer .rigths-container .license :nth-child(2) {
   display: flex;
-  flex-direction: column;
-  width: 15%;
-  align-items: center;
-  margin-left: 45%;
   margin-top: 3%;
+  align-items: center;
+  justify-content: center;
 }
 footer .rigths-container .license a {
   color: #D3E4CD;
+}
+footer .rigths-container p {
+  margin-bottom: 0;
 }
 footer .icon-footer {
   font-size: 2.2em;
@@ -734,6 +740,10 @@ footer .icon-sub {
   }
 }
 /*quienes somos*/
+.link-equipo {
+  background: #3FB6B0;
+}
+
 .wrapper {
   padding: 0 10%;
   margin-top: 50px;
@@ -749,10 +759,11 @@ footer .icon-sub {
 }
 .team .team_member {
   background: #3FB6B0;
-  margin: 8% 0% 7% 0%;
+  margin-top: 12%;
   width: 300px;
   padding: 20px;
   line-height: 20px;
+  height: 450px;
   color: #8e8b8b;
   position: relative;
 }

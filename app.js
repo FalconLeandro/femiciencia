@@ -484,6 +484,36 @@ renderizarNewsletters(news);
 /* FIN Logica para renderizar las newsletter*/
 
 
+/*Inicio text-changer*/
+
+// const eliana = document.getElementById("eliana");
+// const nabila = document.getElementById("nabila");
+// const veronica = document.getElementById("veronica");
+// const yamila = document.getElementById("yamila");
+// const greicy = document.getElementById("greicy");
+// const florencia = document.getElementById("florencia");
+// const antonella = document.getElementById("antonella");
+// const ana = document.getElementById("ana");
+
+// var array = 
+
+// var arrayText=[p1,p2,p3]
+// var i = 0;
+
+// texto.addEventListener("click", function( event ) {
+   
+//     if (i<=2) {
+//       eliana.innerHTML=arrayText[i];
+//       i++;
+//     } else {
+//       eliana.innerHTML=hi;
+//       window.location.hash = "#portfolio";
+//       i=0;
+//     }
+    
+      
+//   }, false);
+
 
 
 
