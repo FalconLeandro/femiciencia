@@ -365,7 +365,7 @@ header nav .desplegable:hover > .arrow {
     background-color: #D3E4CD;
     position: fixed;
     top: 0;
-    z-index: 999 !important;
+    z-index: 90;
     transition: all 0.5s ease-in-out;
   }
   header div h1 a img {
