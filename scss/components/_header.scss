@@ -227,8 +227,9 @@ header{
                                 display: block;
                                 font-size: 2em;
                                 padding-left: 0px;
-                                a{
-                                    color: #D3E4CD ;
+                                a, a:not([href]):not([class]) { // esto es porque descargable no tiene href
+                                    text-decoration: none;
+                                    color: #D3E4CD;
                                     &:active{
                                         color: #874F9D;
                                     }

@@ -34,13 +34,57 @@
     <!--CDN sweetalert-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!--CSS-->
-    <link rel="stylesheet" href="css/style.css"><!--cambiar a carpeta dedicada-->
+    <link rel="stylesheet" href="css/style.css">
     
 
 </head>
 
 <body >
+
     
+    
+
+
+
+        <style>
+            #intro {
+                background: green;
+                z-index: 91;
+                height: 100vh;
+                width: 100vw;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                overflow-y: hidden;
+                overflow-x: hidden;
+            }
+        </style>
+
+        <div id = "intro">
+            <img src="./media/logo.webp" alt="">
+            <p>bla bla bla clblamfkldlfmds</p>
+            <button onClick = "leerPag()"><i class="fa-solid fa-chevron-down"></i> segui leyendo guahci</button>   
+        </div>
+
+        <!-- Script to remove HTML element -->
+        <script>
+            const div = document.getElementById('intro');
+            const button = document.querySelector('button');
+            function leerPag() {
+                div.remove();
+            }  
+        </script> 
+
+
+
+
+
+
+
+
     <!--Inicio pop-up-->   
     <a class="btn-flotante" href="https://docs.google.com/forms/d/e/1FAIpQLSc8VqwFJJlAEAxdl2mF-Wn6zLK8KfPBBio-UiVipJTwvLGVhA/viewform">SUSCRIBITE</a>   
     <!--Fin pop-up -->   
@@ -112,6 +156,13 @@
 
 
     <main>
+
+
+
+
+
+
+
         <!--Inicio sección texto descriptivo-->
         <section class="index-section">
 
