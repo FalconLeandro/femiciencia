@@ -2,8 +2,24 @@
 .entrevistas-div1, .descargables-div1, .congresos-div1, .wikiaportes-div1, main .news-div1, main .equipo-div1, main .index-post .index-post-images .post-div1, main .index-section .index-div1 {
   display: flex;
   align-items: baseline;
-  margin-top: 6%;
-  border-bottom: 1em solid #3FB6B0;
+  margin-top: 20%;
+  border-bottom: 10px solid #3FB6B0;
+}
+@media screen and (max-width: 480px) {
+  .entrevistas-div1, .descargables-div1, .congresos-div1, .wikiaportes-div1, main .news-div1, main .equipo-div1, main .index-post .index-post-images .post-div1, main .index-section .index-div1 {
+    border-bottom: 5px solid #3FB6B0;
+    margin-top: 25%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .entrevistas-div1, .descargables-div1, .congresos-div1, .wikiaportes-div1, main .news-div1, main .equipo-div1, main .index-post .index-post-images .post-div1, main .index-section .index-div1 {
+    border-bottom: 7px solid #3FB6B0;
+  }
+}
+@media screen and (min-width: 920px) {
+  .entrevistas-div1, .descargables-div1, .congresos-div1, .wikiaportes-div1, main .news-div1, main .equipo-div1, main .index-post .index-post-images .post-div1, main .index-section .index-div1 {
+    margin-top: 7%;
+  }
 }
 
 * {
@@ -41,7 +57,7 @@ a:hover {
 .heading-t1 {
   font-weight: bolder;
   color: #3FB6B0;
-  font-size: 60px;
+  font-size: 42px;
   line-height: 50px;
   font-family: "Inter", sans-serif; /*desde aca*/
   /*Prueba animacion titulos*/
@@ -49,7 +65,7 @@ a:hover {
           animation: slide-top 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   position: absolute;
   overflow: hidden;
-  height: 48px; /*el height pega el titulo a la linea, regular en querys*/
+  height: 42px; /*el height pega el titulo a la linea, regular en querys*/
 }
 
 @-webkit-keyframes slide-top {
@@ -103,12 +119,12 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
     text-align: center;
   }
   .heading-t1, .heading-t2 {
-    font-size: 35px;
-    height: 38px;
+    font-size: 25px;
+    height: 34px;
   }
   .index-text {
     text-align: justify;
-    font-size: 16px;
+    font-size: 15px;
   }
   .text-integrante > p, .newsletter-div > p {
     font-size: 16px;
@@ -121,7 +137,7 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
   }
 }
 /*Main headings & texts size: tablet*/
-@media screen and (min-width: 481px) and (max-width: 980px) {
+@media screen and (min-width: 481px) and (max-width: 630px) {
   .integrantes-heading, .contacto-heading, .heading-post {
     font-size: 25px;
     text-align: center;
@@ -130,8 +146,8 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
     font-size: 25px;
   }
   .heading-t1, .heading-t2 {
-    font-size: 45px;
-    height: 42px;
+    font-size: 30px;
+    height: 35px;
   }
   .a ul {
     -webkit-margin-start: 0px;
@@ -180,7 +196,9 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
 /*header*/
 header {
   width: 100%;
-  height: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   /*logo*/
   /*menu nav*/
 }
@@ -188,7 +206,7 @@ header .top-header {
   text-align: center;
 }
 header .top-header h1 a img {
-  padding: 2%;
+  padding: 2% 5%;
 }
 @media all and (max-width: 980px) {
   header .top-header h1 a img {
@@ -207,10 +225,11 @@ header nav label {
 header nav label .btn {
   display: none;
   position: absolute;
-  width: 56px;
+  width: 38px;
   height: 43px;
   right: 2.5rem;
   top: 3.3rem;
+  padding: 0;
   cursor: pointer;
   /*fin boton burguer*/
 }
@@ -226,7 +245,7 @@ header nav label .btn span {
   /* fin transformacion de la cruz*/
 }
 header nav label .btn span.linea1active {
-  transform: rotate(45deg) translate(-2px, 1px);
+  transform: rotate(45deg) translate(-4px, -2px);
 }
 header nav label .btn span.linea2active {
   opacity: 0;
@@ -340,7 +359,9 @@ header nav .desplegable:hover > .arrow {
 
 @media all and (max-width: 980px) {
   header {
-    height: 100px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background-color: #D3E4CD;
     position: fixed;
     top: 0;
@@ -348,8 +369,15 @@ header nav .desplegable:hover > .arrow {
     transition: all 0.5s ease-in-out;
   }
   header div h1 a img {
-    width: 41%;
+    width: 29%;
   }
+}
+@media all and (max-width: 980px) and (max-width: 630px) {
+  header div h1 a img {
+    width: 33%;
+  }
+}
+@media all and (max-width: 980px) {
   header nav #menu-burguer:checked ~ ul {
     left: 0;
   }
@@ -362,9 +390,21 @@ header nav .desplegable:hover > .arrow {
   header nav label .btn {
     display: block;
     right: 1.5rem;
-    top: 1.3rem;
+    top: 45px;
     z-index: 99;
   }
+}
+@media all and (max-width: 980px) and (max-width: 480px) {
+  header nav label .btn {
+    top: 10%;
+  }
+}
+@media all and (max-width: 980px) and (max-width: 630px) {
+  header nav label .btn {
+    top: 20%;
+  }
+}
+@media all and (max-width: 980px) {
   header nav ul {
     display: flex;
     padding: 28% 0%;
@@ -412,6 +452,8 @@ header nav .desplegable:hover > .arrow {
     align-items: center;
     transform: translateY(-8%);
   }
+}
+@media all and (max-width: 980px) {
   .arrow {
     display: none;
   }
@@ -430,11 +472,20 @@ main .index-section .index-div2 {
   -moz-column-rule: 2px outset #3FB6B0;
        column-rule: 2px outset #3FB6B0; /* separación de columnas */
 }
-@media all and (max-width: 980px) {
+@media all and (max-width: 630px) {
   main .index-section .index-div2 {
     -moz-column-count: 1;
          column-count: 1;
     padding: 10%;
+  }
+}
+@media all and (min-width: 631px) and (max-width: 980px) {
+  main .index-section .index-div2 {
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 7%;
+         column-gap: 7%;
+    padding: 7%;
   }
 }
 main .index-section .index-div2 .index-text {
@@ -447,7 +498,12 @@ main .index-section .index-div2 .index-text {
 }
 @media all and (max-width: 980px) {
   main .index-section {
-    margin-top: 35%;
+    margin-top: 21%;
+  }
+}
+@media all and (max-width: 480px) {
+  main .index-section {
+    margin-top: 25%;
   }
 }
 main .index-post .index-post-images {
@@ -477,7 +533,7 @@ main .index-post .post-div2 .row-post div {
 main .index-post .post-div2 .row-post div a img {
   width: 100%;
   margin-top: 3%;
-  border: solid 10px #3FB6B0;
+  border: solid 4px #3FB6B0;
   margin-bottom: 3%;
   transition: all 300ms ease 0ms;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -503,7 +559,7 @@ footer .top-container {
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 2% 10%;
+  padding: 2% 7%;
   flex-direction: column;
 }
 footer .top-container p {
