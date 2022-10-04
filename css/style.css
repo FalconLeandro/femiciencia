@@ -336,7 +336,7 @@ header nav .desplegable:hover > .arrow {
     left: 0;
   }
   header nav #menu-burguer:checked ~ body {
-    overflow: hidden;
+    overflow-y: hidden;
   }
   header nav #menu-burguer:checked ~ label .btn span {
     background: #D3E4CD;
@@ -698,13 +698,21 @@ footer .icon-sub {
   }
 }
 /*quienes somos*/
+main {
+  margin: 20% 0;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    margin: 35% 0 !important;
+  }
+}
 .link-equipo {
   background: #3FB6B0;
 }
 
 .wrapper {
   padding: 0 10%;
-  margin-top: 50px;
+  margin-top: 5%;
 }
 
 .team {
@@ -717,13 +725,31 @@ footer .icon-sub {
 }
 .team .team_member {
   background: #3FB6B0;
-  margin-top: 12%;
+  margin-top: 20%;
   width: 300px;
   padding: 20px;
   line-height: 20px;
   height: 450px;
   color: #8e8b8b;
   position: relative;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .team .team_member {
+    margin-top: 35%;
+  }
+}
+.team .team_member .card-back {
+  display: none;
+}
+.team .team_member .card-front-show {
+  display: none;
+}
+.team .team_member .card-back-show {
+  display: block !important;
+  position: absolute;
+  top: 178px;
+  left: 0;
 }
 .team .team_member h3 {
   color: #D3E4CD;

@@ -187,7 +187,7 @@ header{
                             left: 0;
                         }
                         #menu-burguer:checked ~ body{
-                            overflow: hidden; // le saco el scroll a toda la pagina
+                            overflow-y: hidden; // le saco el scroll a toda la pagina
                         }
                         #menu-burguer:checked ~ label .btn span {
                             background: #D3E4CD;

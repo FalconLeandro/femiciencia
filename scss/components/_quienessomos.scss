@@ -1,35 +1,39 @@
-
-
 /*quienes somos*/
 
-main{
-    .equipo-div1{
-        @extend %sub-headings;
-    }
-    // section{
-    //     div{
-    //         div{
-    //             .integrante {
-    //                 @include integrante (flex, center, 1% 0 1% 0, center);
-    //                 .image-integrante{
-    //                     width: 150px;
-    //                     height: 150px;
-    //                 }
-    //                 .img-integrante-sm{
-    //                     margin-bottom: 2%;
-    //                 }
-    //                 .text-integrante{
-    //                     margin: 0 2% 0 2%;
-    //                     padding: 2%;
-    //                     display: flex;
-    //                     flex-direction: column;
-    //                     justify-content: center;
-    //                     align-items: center;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+main {
+  margin: 20% 0;
+  @media only screen and (max-width: 768px) {
+    margin: 35% 0!important;
+
+  }
+  .equipo-div1 {
+    @extend %sub-headings;
+  }
+
+  // section{
+  //     div{
+  //         div{
+  //             .integrante {
+  //                 @include integrante (flex, center, 1% 0 1% 0, center);
+  //                 .image-integrante{
+  //                     width: 150px;
+  //                     height: 150px;
+  //                 }
+  //                 .img-integrante-sm{
+  //                     margin-bottom: 2%;
+  //                 }
+  //                 .text-integrante{
+  //                     margin: 0 2% 0 2%;
+  //                     padding: 2%;
+  //                     display: flex;
+  //                     flex-direction: column;
+  //                     justify-content: center;
+  //                     align-items: center;
+  //                 }
+  //             }
+  //         }
+  //     }
+  // }
 }
 
 // .integrante{
@@ -38,74 +42,97 @@ main{
 //         background-color: $color-green-bg3;
 //     }
 // }
-.link-equipo{
+.link-equipo {
   background: #3FB6B0;
 }
-.wrapper{
-    padding: 0 10%;
-    margin-top: 50px;
-  }
-  
-  .team{
-    display: flex;
-    justify-content: center;
-    width: auto;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
 
-      .team_member{
+.wrapper {
+  padding: 0 10%;
+  margin-top: 5%;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  .team_member {
+    background: #3FB6B0;
+    margin-top: 20%;
+    width: 300px;
+    padding: 20px;
+    line-height: 20px;
+    height: 450px;
+    color: #8e8b8b;
+    position: relative;
+    cursor: pointer;
+    @media only screen and (max-width: 768px) {
+      margin-top: 35%;
+  
+    }
+
+    .card-back{
+      display: none;
+    }
+    .card-front-show{
+      display: none;
+    }
+    .card-back-show{
+      display: block!important;
+      position: absolute;
+      top: 178px;
+      left: 0;
+    }
+    
+    h3 {
+      color: #D3E4CD;
+      font-size: 26px;
+      margin-top: 85px;
+    }
+
+    p.role {
+      color: white;
+      margin: 12px 0;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #D3E4CD;
+    }
+
+    .team_img {
+      position: absolute;
+      top: -75px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
       background: #3FB6B0;
-      margin-top: 12% ;
-      width: 300px;
-      padding: 20px;
-      line-height: 20px;
-      height: 450px;
-      color: #8e8b8b;  
-      position: relative;
-          h3{
-          color: #D3E4CD;
-          font-size: 26px;
-          margin-top: 85px;
-          }
 
-          p.role{
-          color: white;
-          margin: 12px 0;
-          font-size: 12px;
-          text-transform: uppercase;
-          }
-          p{
-            color: #D3E4CD;
-          }
-  
-      .team_img{
-        position: absolute;
-        top: -75px;
-        left: 50%;
-        transform: translateX(-50%);
+      @media only screen and (max-width: 768px) {
         width: 150px;
         height: 150px;
+
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        padding: 10px;
         border-radius: 50%;
-        background: #3FB6B0;
+
         @media only screen and (max-width: 768px) {
           width: 150px;
           height: 150px;
-             
-        } 
-        img{
-          width: 150px;
-          height: 150px;
-          padding: 10px;
-          border-radius: 50%;
-          @media only screen and (max-width: 768px) {
-            width: 150px;
-            height: 150px;
-               
-          } 
+
         }
       }
+    }
 
-      }
   }
-    
+}

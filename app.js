@@ -85,6 +85,7 @@ const thanks = document.querySelector('.thanks')
 /*FIN logica para que aparezca el mensaje de gracias por suscribirte cuando hago click en el boton*/
 
 
+
 /*INICIO logica para que se esconda el boton sucribite cuando ingrese al footer*/
 
 
@@ -513,6 +514,24 @@ renderizarNewsletters(news);
     
       
 //   }, false);
+
+//inicio text changer
+
+
+
+
+  
+  
+  
+  
+
+    // texto.innerHTML=arrayText[i];
+    // i++;
+    // if (i==3) {
+    //   i=0;
+    // }
+    
+
 
 
 
