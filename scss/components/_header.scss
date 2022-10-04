@@ -4,14 +4,14 @@
 /*header*/
 header{
     width: 100%;
-    height: 200px;
+    height: fit-content;
         
         /*logo*/
         .top-header{
             text-align: center;
             h1{
                 a img{
-                    padding: 2%;
+                    padding: 2% 5%;
                         @media all and (max-width: 980px) {
                             display: flex;
                         }
@@ -32,10 +32,11 @@ header{
                 .btn {
                     display: none;//no quiero q sea vea el boton desktop
                     position: absolute; // le doy absolute para q no rompa en resp
-                    width:56px;
+                    width:38px;
                     height:43px;
                     right: 2.5rem;
                     top: 3.3rem;
+                    padding: 0;
                     cursor: pointer;    
                     span{        
                         display: block; //lo convierto en bloque
@@ -47,7 +48,7 @@ header{
                         transform-origin: 0px 100%; // lo mantiene pegado en en el padre
                         /*transformacion de la cruz*/
                         &.linea1active {
-                            transform: rotate(45deg) translate(-2px, 1px);
+                            transform: rotate(45deg) translate(-4px, -2px);
                         }
                         &.linea2active { //esta linea desaparece
                             opacity: 0;
@@ -174,13 +175,17 @@ header{
             }
             @media all and (max-width: 980px) {
                 header{
-                    height: 100px;
+                    height: fit-content;
+                    background-color: $color-green-background;
                     position: fixed;
                     top: 0;
-                    z-index: 999!important;
+                    z-index: 90;
                     transition: all .5s ease-in-out;
                     div h1 a img{
-                        width: 41%;
+                        width: 29%;
+                        @media all and (max-width: 630px) {
+                            width: 33%;
+                        }
                     }
                     nav {
                         #menu-burguer:checked ~ ul{
@@ -195,8 +200,14 @@ header{
                         label .btn{
                             display: block;
                             right: 1.5rem;
-                            top: 1.3rem;
+                            top: 45px;
                             z-index: 99;
+                            @media all and (max-width: 480px) {
+                                top: 10%;
+                            }
+                            @media all and (max-width: 630px) {
+                                top: 20%;
+                            }
                         }
                         ul{
                             display: flex;
@@ -216,8 +227,9 @@ header{
                                 display: block;
                                 font-size: 2em;
                                 padding-left: 0px;
-                                a{
-                                    color: #D3E4CD ;
+                                a, a:not([href]):not([class]) { // esto es porque descargable no tiene href
+                                    text-decoration: none;
+                                    color: #D3E4CD;
                                     &:active{
                                         color: #874F9D;
                                     }

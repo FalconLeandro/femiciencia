@@ -3,33 +3,33 @@
 .wikiaportes-div1{
     @extend %sub-headings;
 }
-.index-div2{
-    text-align: justify ;
-    line-height: 1.6;
-    margin-top: 0;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    column-count: 2; /* número de columnas */
-    column-gap: 0px; /* ancho de columnas */
-    column-rule: 2px outset $color-green-femi; /* separación de columnas */
-    @media all and (max-width: 980px) {
-        column-count: 1;
-    }
-    .index-text {
-        margin: 0 10%;
-        @media all and (max-width: 980px) {
-            margin: 0;
-        }
-    }
-}
+// .index-div2{
+//     text-align: justify ;
+//     line-height: 1.6;
+//     margin-top: 0;
+//     padding: 10%;
+//     column-count: 2; /* número de columnas */
+//     column-gap: 0px; /* ancho de columnas */
+//     column-rule: 2px outset $color-green-femi; /* separación de columnas */
+//     @media all and (max-width: 980px) {
+//         column-count: 1;
+//     }
+//     .index-text {
+//         margin: 0 10%;
+//         @media all and (max-width: 980px) {
+//             margin: 0;
+//         }
+//     }
+// }
 h3{
     margin: 1%;
     text-align: center;
     font-size: 1.5rem;
+    padding: 0 5%;
 }
 
 .list-group{
-    margin: 5%;
+    margin: 10%;
     border-radius: .5rem;
     &-item{
         margin: 0.8% 0.8% 3% 0.8%;
@@ -39,7 +39,7 @@ h3{
         box-shadow: 10px 18px 25px -7px rgba(150,150,150,0.97);
         &:hover{
             background-color: $color-green-femi;
-            color: white;
+            color: $color-green-yellow-femi;
         }
         .descriptivo{
             margin-left: 1%;
@@ -52,15 +52,3 @@ h3{
     background: 0 0;
     color: #874F9D;
 }
-// .listaWiki{
-//     list-style-type: none;
-//     text-align: justify;
-//     list-style-type: '✔';
-//     padding: 0% 7%;
-//     p{
-//         font-size: 1.3rem;
-//     }
-//     li{
-//         padding: 0.5rem;
-//     }
-// }

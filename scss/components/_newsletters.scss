@@ -41,7 +41,7 @@ main {
                 }
             }
             .columna-1 {
-                padding: 0 5% 5% 5%;
+                padding: -1px 5% 3% 5%;
                 background: $color-green-bg3;
                 display: flex;
                 flex-direction: column;
@@ -63,6 +63,7 @@ main {
                     text-align: inherit;
                     margin-bottom: inherit;
                     color: white;
+                    padding: 0 8%;
                 }
                 .link-newsletters {
                     color: white;
@@ -85,8 +86,7 @@ main {
             margin-bottom: 2%;
         }
         section.container {
-            background-color: #C0D9BE;
-            margin: 5%;
+            // margin: 5%;
             width: auto;
             max-width: none;
             div.row {
