@@ -755,9 +755,6 @@ footer .logo-social {
 
 /*Footer: tablet*/
 /*quienes somos*/
-main {
-  margin: 10% 0;
-}
 @media only screen and (max-width: 768px) {
   main {
     margin: 35% 0 !important;
