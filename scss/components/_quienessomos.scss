@@ -1,10 +1,7 @@
 /*quienes somos*/
 
 main {
-  @media only screen and (max-width: 768px) {
-    margin: 35% 0!important;
-
-  }
+  
   .equipo-div1 {
     @extend %sub-headings;
   }
@@ -33,6 +30,12 @@ main {
   //         }
   //     }
   // }
+}
+.main-equipo{
+  @media only screen and (max-width: 768px) {
+    margin: 35% 0!important;
+
+  }
 }
 
 // .integrante{

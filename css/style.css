@@ -756,10 +756,11 @@ footer .logo-social {
 /*Footer: tablet*/
 /*quienes somos*/
 @media only screen and (max-width: 768px) {
-  main {
+  .main-equipo {
     margin: 35% 0 !important;
   }
 }
+
 .link-equipo {
   background: #3FB6B0;
 }
