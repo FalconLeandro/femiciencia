@@ -85,22 +85,24 @@ const thanks = document.querySelector('.thanks')
 /*FIN logica para que aparezca el mensaje de gracias por suscribirte cuando hago click en el boton*/
 
 
+/*INICIO logica boton subir en news */
 
-/*INICIO logica para que se esconda el boton sucribite cuando ingrese al footer*/
+let subir = document.querySelector('.boton-news-div');
+let footer = document.querySelector('footer');
+console.log(subir);
 
+function mostrarScroll(){
+    let scrollTop = document.documentElement.scrollTop
+    let alturaFlecha = subir.offsetTop;
+    if(alturaFlecha +200< scrollTop ){
+        subir.style.display= 'block';
+        subir.style.position = 'fixed';
+    }
+}
 
-// let btnSuscribite = document.querySelector('.btn-flotante')
-// let footer = document.querySelector('footer')
-// //console.log(btnSuscribite);
+window.addEventListener('scroll', mostrarScroll);
 
-// let posicion = footer.getBoundingClientRect();
-// console.log("x: "+ posicion.x);
-// console.log("y: "+ posicion.y);
-
-// if(posicion.y > 900){
-//     btnSuscribite.style.display = 'none';
-// }else btnSuscribite.style.display = 'block';
-/*FIN logica para que se esconda el boton sucribite cuando ingrese al footer*/
+/*FIN logica boton subir en news */
 
 
 
@@ -455,6 +457,42 @@ let news = [
         Cuidate, cuidá al resto.</i><br><br>
         Equipo de <strong>FEMICIENCIA</strong>
         </p>`
+    },
+    {
+        id:10,
+        img: "/media/ilustraciones/apesardemisexo-web.jpg",
+        titulo: "A pesar de mi sexo",
+        contenido: `<p class="first-child">La historia que vamos a contar inicia en el año 2021, cuando dos jóvenes investigadoras decidieron sentarse a escribir sobre la vida universitaria de las mujeres y su activismo político desde 1947. <br><br>
+        <strong>“A pesar de mi sexo”</strong> terminó de imprimirse en abril de este 2022 y pertenece a la editorial de la Universidad Nacional de Rosario (UNR). Su prólogo, escrito por su gran madrina Dora Barrancos, nos advierte: “Estos apuntes desafían a las nuevas inscripciones feministas manteniendo la radicalidad de los orígenes –porque mientras haya patriarcado y capitalismo habrá que ser impertinentes– (...)”.<br><br>
+        Este trabajo documental, realizado por Sofía y Camila, tiene como protagonistas a feminidades que atravesaron la actual Facultad de Humanidades y Artes de la UNR durante el auge de la matrícula universitaria femenina. <br><br>
+        En un contexto histórico y político marcado por la gratuidad universitaria, la entonces Facultad de Artes y Humanidades se conformó como la casa de estudios por excelencia feminizada, atravesada por la fuerte militancia política de las juventudes. <br><br>
+        En Femiciencia creemos que reflexionar sobre la trayectoria de las feminidades en el campo académico es hacerlo también sobre las formas de construir el conocimiento, por eso invitamos a charlar a las creadoras de “A pesar de mi sexo”.</p>
+        <hr class="linea-divisoria">
+
+        <p><Strong>Camila Entrocassi Varela</Strong> es Profesora de Historia por la Facultad de Humanidades y Artes de la UNR, docente en la Facultad de Humanidades y Ciencias Sociales de la Universidad Nacional de Jujuy (UNJu) y becaria Doctoral del CONICET.</p>
+        <p><strong>Sofía Belén Bianchi</strong> es estudiante de Historia en la Facultad de Humanidades y Artes de la UNR y becaria del Programa de preservación documental “La Facultad de Humanidades y Artes. Historia, memoria y política”. Es bibliotecaria en la Escuela de Historia, UNR y miembro del Centro Latinoamericano de Investigación en Historia Oral y Social (CLIHOS).</p>
+        
+        <hr class="linea-divisoria">
+
+        <p class="preguntas-news">
+            ¿Qué las motivó a investigar y escribir acerca de la participación de las mujeres en el ámbito universitario y académico? ¿Por qué creen que es necesario seguir indagando acerca del lugar que han ocupado históricamente las mujeres en las universidades, y hacer pública esa información?</p>
+
+        <p><strong>Camila: </strong>Comenzó como un proyecto de investigación conjunto sobre la historia de la Universidad y nuestra Facultad, y progresivamente la evidente presencia de las mujeres y la riqueza de sus historias nos condujo, creo, a interesarnos en ellas específicamente. Queríamos visibilizarlas y comprender cómo fue su paso por la Facultad. <br><br>
+        <strong>Sofia: </strong>La investigación se realizó en el marco del Programa de preservación documental “La Facultad de Humanidades y Artes. Historia, memoria y política”. Allí, en conjunto con estudiantes y docentes de la carrera de Historia, nos dedicamos al relevamiento, inventariado y digitalización de un corpus documental sobre la vida institucional de la facultad desde sus inicios en 1947. Como parte de ese trabajo, tomamos contacto con muchos de los documentos que luego se convertirían en fuentes de nuestra investigación: estadísticas en donde se dejaba ver la abrumadora mayoría de mujeres en el claustro estudiantil, notas de agrupaciones políticas firmadas por mujeres, conflictos que las tenían como protagonistas, entre otros. No obstante, a pesar de que tanto Camila como yo nos consideramos feministas y sensibles a las problemáticas de género, el pasaje de conocer la documentación a convertirla en un problema de investigación no fue lineal ni evidente. Creo que fue decisivo el impulso de la directora del programa -Cristina Viano- para jerarquizar la pregunta por el género en ese contexto específico. <br><br>
+        De ahí en más, al adentrarnos en la historia de las universidades encontramos que los entrecruzamientos con los estudios de género no abundan y que todavía queda mucho por indagar. No solo para recuperar la presencia de las mujeres en espacios que no suelen considerarse como feminizados, sino también para plantear otros interrogantes. Por ejemplo, con respecto al ejercicio político en el movimiento estudiantil o a su participación –profundamente desigual- en el campo académico y en la producción de conocimiento científico. El primero de estos tópicos es abordado en el libro: cómo la política estudiantil en la facultad es conducida mayormente por mujeres. El segundo solo alcanza a ser esbozado y requiere de un mayor desarrollo. La gran disparidad que existe entre una amplia mayoría de mujeres estudiantes y graduadas (más del 80%) y una escasa minoría en el claustro docente (menos del 20%) es un hecho que necesita mayor explicación. En ese camino continuará mi investigación.</p>
+        
+        <p class="preguntas-news">Sobre cuál es el papel que ocupan las mujeres en la educación superior, nos parece importante realizar otro cuestionamiento: ¿Qué tareas invisibles se encuentran “dentro” de esos papeles, que no son realizadas por los varones de la institución? ¿Podríamos pensar en estas tareas como “feminizadas”? (con requerimientos propios del cuidado y la sensibilidad).</p>
+        <p><strong>Sofia: </strong>Si continuamos pensando en esas dos dimensiones -la política y la académica-, vemos que en el ámbito político las mujeres desempeñaron múltiples roles: fueron delegadas estudiantiles, consejeras directivas, condujeron el centro de estudiantes y otras agrupaciones políticas, e incluso hubo una decana que fue la primera mujer en el país en desempeñar ese cargo, Erminda Benítez de Lambruschini en 1954. Con lo cual, en principio, no se manifiestan roles discriminados por género en este plano. En cambio, en el ámbito académico las diferencias son más evidentes. La escasa presencia de mujeres en el claustro docente y en la dirección de institutos de investigación contrasta con su gran participación en cargos no remunerados, como ayudantes de cátedra y auxiliares en institutos de investigación. </p>
+        <p class="preguntas-news">En su recopilación de testimonios identificaron situaciones de irregularidad en concursos universitarios de docencia e investigación. ¿Consideran que el reclamo estudiantil estuvo basado en denuncias de irregularidades, o también se basó en inequidades de género al contrastar las aptitudes de lxs aspirantes? </p>
+        <p><strong>Sofia: </strong>En 1956, luego del derrocamiento de Perón por la autodenominada “Revolución Libertadora, en la universidad tuvo lugar un masivo llamado a concursos para reemplazar a lxs docentes que habían tenido cargos durante el peronismo. Allí lxs estudiantes no formaron parte del jurado, pero sí se les permitió a las agrupaciones impugnar aspirantes a esos concursos. Los criterios de impugnación tuvieron matices entre las distintas agrupaciones, pero el objetivo principal fue “desperonizar” la universidad y refundarla bajo nuevas bases. De esa manera, el género no tuvo una incidencia directa en los criterios de impugnación. No obstante, es notorio que, a pesar del gran recambio en la planta docente, la proporción genérica continuará siendo la misma: menos de un 20% de mujeres. Esto nos da la pauta de que el género y la escasa presencia de mujeres es un factor estructural en el campo académico. Es decir, que no responde directamente a los vaivenes políticos de la institución, sino que se vincula a relaciones de poder más amplias. </p>
+        <p class="preguntas-news">¿Qué lugar piensan que ocupa el activismo político de las mujeres al acceder a cargos universitarios? ¿Dirían que hay un avance con respecto a la actualidad?</p>
+        <p><strong>Camila: </strong> Efectivamente hay un avance desde aquel período hasta hoy, no solo a nivel cuantitativo (somos más mujeres las que accedemos a los cargos), sino cualitativo, ya que accedemos a mejores cargos, de mayor responsabilidad. Creo que el activismo ha jugado un papel muy importante, pero no solo el político, el social y cultural también. </p>
+        <hr class="linea-divisoria">
+        <p>La investigación de Camila y Sofía recupera el testimonio y las vivencias de feminidades militantes que, en el contexto político de una Argentina cambiante, dieron sus primeros pasos en el acceso a una educación formal, gratuita y laica que comenzaba a ser frecuentada por mujeres y feminidades que salían del nivel secundario. <br><br>
+        Algunas de las personas que integramos Femiciencia conocimos en carne propia el costo de la militancia política en el ámbito académico, que es especialmente caro para una mujer. Si no, hacé el ejercicio de buscar el significado de “mujer pública” en la RAE y compararlo con el de “hombre público”. Verás cómo la concepción del activismo político y del trabajo sexual parece ser una cuestión de género. <br><br>
+        <strong>Hasta acá llegó este newsletter, esperamos que te haya gustado.</strong></p>
+        <p><i>Nos vemos el mes que viene.</i></p>
+        <p>Equipo de <strong>Femiciencia</strong></p>`
     }
 ]
 
