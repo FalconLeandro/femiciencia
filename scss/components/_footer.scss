@@ -56,6 +56,9 @@ footer {
             color: #D3E4CD;
             width: 100%;
             align-items: center;
+            font-family: "Open Sans", sans-serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             justify-content: space-evenly;
             @media all and (max-width: 480px) {
                 justify-content: space-between;
@@ -92,7 +95,8 @@ footer {
                         position: absolute;
                         top: -5px;
                         left: 0;
-                        opacity: 0
+                        opacity: 0;
+                        margin-left: 10px;
                     }
                 @media all and (max-width: 480px) {
                     .text, .sub{
@@ -114,6 +118,7 @@ footer {
                 width: 28px;
                 height: 28px;
                 background: #F9F9F9;
+                margin-right: 10px;
                 border-radius: 10%;
                 transition: all .5s ease-in-out;
                 cursor: pointer;
