@@ -60,6 +60,7 @@ main {
   text-align: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-bottom: 15%;
 
   .team_member {
     background: #3FB6B0;
@@ -67,27 +68,16 @@ main {
     width: 300px;
     padding: 20px;
     line-height: 20px;
-    height: 450px;
     color: #8e8b8b;
     position: relative;
     cursor: pointer;
+    
     @media only screen and (max-width: 768px) {
       margin-top: 35%;
   
     }
 
-    .card-back{
-      display: none;
-    }
-    .card-front-show{
-      display: none;
-    }
-    .card-back-show{
-      display: block!important;
-      position: absolute;
-      top: 178px;
-      left: 0;
-    }
+    
     
     h3 {
       color: #D3E4CD;
@@ -137,4 +127,13 @@ main {
     }
 
   }
+}
+.back{
+  display: none;
+}
+.card-front-show{
+  display: none;
+}
+.card-back-show{
+  display: block!important;
 }

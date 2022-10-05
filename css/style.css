@@ -569,6 +569,9 @@ footer .social-container {
   color: #D3E4CD;
   width: 100%;
   align-items: center;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   justify-content: space-evenly;
 }
 @media all and (max-width: 480px) {
@@ -612,6 +615,7 @@ footer .social-container .parent .thanks {
   top: -5px;
   left: 0;
   opacity: 0;
+  margin-left: 10px;
 }
 @media all and (max-width: 480px) {
   footer .social-container .parent .text, footer .social-container .parent .sub {
@@ -630,6 +634,7 @@ footer .social-container .button {
   width: 28px;
   height: 28px;
   background: #F9F9F9;
+  margin-right: 10px;
   border-radius: 10%;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
@@ -777,6 +782,7 @@ footer .logo-social {
   text-align: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-bottom: 15%;
 }
 .team .team_member {
   background: #3FB6B0;
@@ -784,7 +790,6 @@ footer .logo-social {
   width: 300px;
   padding: 20px;
   line-height: 20px;
-  height: 450px;
   color: #8e8b8b;
   position: relative;
   cursor: pointer;
@@ -793,18 +798,6 @@ footer .logo-social {
   .team .team_member {
     margin-top: 35%;
   }
-}
-.team .team_member .card-back {
-  display: none;
-}
-.team .team_member .card-front-show {
-  display: none;
-}
-.team .team_member .card-back-show {
-  display: block !important;
-  position: absolute;
-  top: 178px;
-  left: 0;
 }
 .team .team_member h3 {
   color: #D3E4CD;
@@ -847,6 +840,18 @@ footer .logo-social {
     width: 150px;
     height: 150px;
   }
+}
+
+.back {
+  display: none;
+}
+
+.card-front-show {
+  display: none;
+}
+
+.card-back-show {
+  display: block !important;
 }
 
 .news-container {
