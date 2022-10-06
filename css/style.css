@@ -556,6 +556,7 @@ footer {
   flex-direction: column;
   align-items: center;
   background-color: #3FB6B0;
+  padding: 0 5%;
   /*Footer mobile*/
 }
 footer .top-container {
@@ -567,11 +568,11 @@ footer .top-container {
 }
 footer .top-container p {
   margin: 1rem 0;
-  color: #D3E4CD;
+  color: white;
   font-size: 1.2rem;
 }
 footer .top-container a {
-  color: #D3E4CD;
+  color: white;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -593,7 +594,7 @@ footer #vertical {
 }
 footer .social-container {
   display: flex;
-  color: #D3E4CD;
+  color: white;
   width: 100%;
   align-items: center;
   font-family: "Open Sans", sans-serif;
@@ -626,7 +627,7 @@ footer .social-container .parent {
 }
 footer .social-container .parent .text {
   font-size: 17px;
-  color: #F5F5F5;
+  color: white;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -660,7 +661,7 @@ footer .social-container .button {
   z-index: 999;
   width: 28px;
   height: 28px;
-  background: #F9F9F9;
+  background: white;
   margin-right: 10px;
   border-radius: 10%;
   transition: all 0.5s ease-in-out;
@@ -725,7 +726,7 @@ footer .social-container .insta a i {
 }
 footer .social-container .insta a p {
   font-size: 1rem;
-  margin-left: 10px;
+  margin-left: 7px;
 }
 @media all and (max-width: 480px) {
   footer .social-container .insta a i, footer .social-container .insta a p {
@@ -739,7 +740,7 @@ footer .rigths-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #D3E4CD;
+  color: white;
 }
 footer .rigths-container .license {
   width: 100%;
@@ -755,29 +756,26 @@ footer .rigths-container .license :nth-child(2) {
   padding: 0 5%;
 }
 footer .rigths-container .license a {
-  color: #D3E4CD;
+  color: white;
 }
 footer .rigths-container p {
   margin-bottom: 0;
 }
 footer .icon-footer {
-  font-size: 2.2em;
+  font-size: 1.7em;
   height: 32px;
   width: 32px;
   transition: all 300ms ease 0ms;
-  color: #D3E4CD;
-  background: black;
-  margin-right: 17px;
+  color: white;
+  margin-right: 10px;
   padding: 5px;
-  border-radius: 50%;
 }
 footer .icon-sub {
-  color: #D3E4CD;
+  color: white;
   background: black;
   border-radius: 50%;
 }
 footer .footer-dev {
-  margin: 4% 0 2% 0;
   text-align: center;
   font-size: 13px;
 }
