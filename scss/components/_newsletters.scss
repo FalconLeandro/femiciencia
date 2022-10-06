@@ -6,7 +6,8 @@
         width: auto;
          //en las news pares el texto se va a acomodar a la izq
         .news{
-            &:nth-child(even) {
+            padding-bottom: 2%;
+            &:nth-child(2n+1) {
                 .columna-1 {
                     order: -1;
                     @media screen and (max-width: 992px) {
@@ -79,61 +80,61 @@
 }
 
 
-// main {
-//         .news-ind-div1 {
-//             display: flex;
-//             align-items: baseline;
-//             margin-top: 1em;
-//             border-bottom: 1em solid $color-violet-femi;
-//             margin-bottom: 2%;
-//         }
-//         section.container {
-//             // margin: 5%;
-//             width: auto;
-//             max-width: none;
-//             div.row {
-//                 .columna-news {
-//                     padding: 5%;
-//                     img{
-//                         width: 73%;
-//                         float: right;
-//                         margin-bottom: 2%;
-//                         margin-left: 4%;
-//                     }
-//                     p{
-//                         text-align: justify;
-//                         &.first-child::first-letter {
-//                             font-size: 4rem;
-//                             float: left;
-//                             margin: 0 1% 0% 0;
-//                             line-height: 4rem;
-//                         }
-//                     }
-//                     .preguntas-news {
-//                         text-align: center;
-//                         font-weight: bold;
-//                     }
-//                     .linea-divisoria {
-//                         height: 3px;
-//                         background-color: $color-green-femi;
-//                     }
-//                 }
-//             }
+main {
+        .news-ind-div1 {
+            display: flex;
+            align-items: baseline;
+            margin-top: 1em;
+            border-bottom: 1em solid $color-violet-femi;
+            margin-bottom: 2%;
+        }
+        section.container {
+            // margin: 5%;
+            width: auto;
+            max-width: none;
+            div.row {
+                .columna-news {
+                    padding: 5%;
+                    img{
+                        width: 73%;
+                        float: right;
+                        margin-bottom: 2%;
+                        margin-left: 4%;
+                    }
+                    p{
+                        text-align: justify;
+                        &.first-child::first-letter {
+                            font-size: 4rem;
+                            float: left;
+                            margin: 0 1% 0% 0;
+                            line-height: 4rem;
+                        }
+                    }
+                    .preguntas-news {
+                        text-align: center;
+                        font-weight: bold;
+                    }
+                    .linea-divisoria {
+                        height: 3px;
+                        background-color: $color-green-femi;
+                    }
+                }
+            }
 
-//             .boton-news-div{
-//                 font-size: 5rem;
-//                 display: none;
-//                 bottom: 0;
-//                 right: -60%;
-//                 z-index: 0;
-//                 @media screen and (max-width: 480px) {
-//                 font-size: 2.5rem;
-//                 }
-//                 }
-//         }
-// }
-// .footer{
-//     position: relative;
-//     width: 100%;
-//     z-index: 10;
-// }
+            .boton-news-div{
+                font-size: 5rem;
+                display: none;
+                bottom: 0;
+                right: -60%;
+                z-index: 0;
+                @media screen and (max-width: 480px) {
+                font-size: 2.5rem;
+                }
+                }
+        }
+}
+.footer{
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
