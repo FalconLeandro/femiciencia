@@ -34,49 +34,53 @@
 </head>
 
 <body class="body-news-individuales">  
-    <header>
-        <div class="top-header">
+    <header id="inicio">
         <!--logo--> 
-        <a href="index.html"><img src="../media/logo.webp" alt="Logo Femiciencia"></a>
-        <!--fin logo--> 
+        <div class="top-header">
+            <h1>
+                <a href="#inicio">
+                    <img src="media/logo.webp" alt="Femiciencia">
+                </a>
+            </h1>
         </div>
-        
-            
+        <!--fin logo-->
+    
         <!--menu nav-->
         <nav>
-        
             <!--boton burguer-->             
-                <input type="checkbox" id="menu-burguer">
-                <label for="menu-burguer">
-                    <div class="btn">
-                        <span class="linea1"></span>
-                        <span class="linea2"></span>
-                        <span class="linea3"></span>
-                    </div>
-                </label>
+            <input type="checkbox" id="menu-burguer">
+            <label for="menu-burguer">
+                <div class="btn">
+                    <span class="linea1"></span>
+                    <span class="linea2"></span>
+                    <span class="linea3"></span>
+                </div>
+            </label>
             <!--fin boton burguer--> 
             
-            <ul>
+            <ul id="menu">
                 <li>
-                    <a href="index.html">INICIO</a>
+                    <a href="#inicio">INICIO</a>
                 </li>
                 <li >
                     <a href="pages/newsletters.html">NEWSLETTERS</a>
                 </li>
-                <li class="desplegable">PROYECTOS
+                <li class="desplegable">
+                    <a href="#sub-menu-1">PROYECTOS</a>
                     <i class="fa-solid fa-chevron-down arrow"></i>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="sub-menu-1">
                         <li >
                             <a href="pages/wikiaportes.html">WIKIAPORTES</a>
                         </li>
-                        <li >
-                            <a href="pages/descargables.html">DESCARGABLES</a>
+                        <li>
+                            <a id="alert">DESCARGABLES</a>
                         </li>
                     </ul>
                 </li>
-                <li class="desplegable">PRENSA
+                <li class="desplegable">
+                    <a href="#sub-menu-2">PRENSA</a>
                     <i class="fa-solid fa-chevron-down arrow"></i>
-                    <ul class="sub-menu">
+                    <ul class="sub-menu" id="sub-menu-2">
                         <li>
                             <a href="pages/entrevistas.html">ENTREVISTAS</a>
                         </li>
@@ -91,8 +95,7 @@
             </ul>
         </nav>
         <!--fin menu nav -->
-    
-</header>
+    </header>
 
 
 <main>
@@ -230,27 +233,62 @@
 
 </main> 
 
-<footer class="footer">
-        <!--Copyright-->
-        <p class="footer-text">© 2022 Femiciencia. Todos los derechos reservados.</p>
+<footer>
+
+    <hr>
+    
+    <div class="top-container">
+        <p>
+            <strong>Femiciencia</strong> es un proyecto autogestionado. Tu colaboración es de gran ayuda para darle continuidad, mantener su crecimiento y mudarlo a nuevas plataformas virtuales.
+        </p>
+        <div class="coffe">
+            <a href="https://cafecito.app/femiciencia">
+                <i class="fa-solid fa-mug-hot icon-footer"></i>
+                Invitanos un cafecito!
+            </a>
+        </div>
         
-        <!--Social media-->
-        <section class="social-media">
-            <div>
+    </div>
+    <hr>
+    <div class="social-container">
+            <div class="insta">
                 <a href="https://instagram.com/femiciencia_" target="_blank">
-                <img src="../media/instagram.webp" alt="logo instagram" class="logo-social">
+                    <i class="fa-brands fa-square-instagram "></i>
+                    <p class="text">Instagram</p> 
                 </a>
             </div>
-            <div>
-                <a href="https://www.facebook.com/femiciencia" target="_blank">
-                <img src="../media/facebook.webp" alt="logo facebook" class="logo-social">
-                </a>
+                
+            <div class="wrap">
+                <div>
+                    <input type="checkbox" id="toggle"/>
+                    <label class="button" for="toggle"></label>
+                </div>
+                <div class="parent">
+                    <p class="text sub"> Suscribite</p>
+                    <p class="text thanks"> Gracias por suscribirte</p>
+                </div>
             </div>
-        </section>
+            
+    </div>
+
+    <hr>
+
+    <div class="rigths-container">
+        <div class="license">Esta obra está bajo una 
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional</a>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+                <img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+            </a>
+        </div>
+        <hr>
+        <p class="footer-dev">Desarrollado por Leandroide</p>
         
-        <!--Desarrolladora-->
-        <p class="footer-dev">Desarrollado con <span class= "heart">💚</span> por MFNS</p>
-    </footer> 
+        
+    </div>
+    
+    <hr>
+
+</footer>
     
     
 

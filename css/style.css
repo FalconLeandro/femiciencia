@@ -407,7 +407,7 @@ header nav .desplegable:hover > .arrow {
 @media all and (max-width: 980px) {
   header nav ul {
     display: flex;
-    padding: 28% 0%;
+    padding: 15% 0%;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -907,6 +907,13 @@ footer .logo-social {
   text-align: justify;
   position: relative;
 }
+@media screen and (max-width: 570px) {
+  .news-container .news .columna-1 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .news-container .news .columna-1 h6 {
   position: absolute;
   top: 2%;
@@ -915,6 +922,11 @@ footer .logo-social {
 }
 .news-container .news .columna-1 h2.newsletters-heading-2 {
   padding-top: 4%;
+}
+@media screen and (max-width: 570px) {
+  .news-container .news .columna-1 h2.newsletters-heading-2 {
+    margin: 10%;
+  }
 }
 @media screen and (max-width: 992px) {
   .news-container .news .columna-1 h2.newsletters-heading-2 {
@@ -933,6 +945,11 @@ footer .logo-social {
   text-decoration: none;
   padding: 2%;
   border: 1px solid white;
+}
+@media screen and (max-width: 570px) {
+  .news-container .news .columna-1 .link-newsletters {
+    margin: 10%;
+  }
 }
 .news-container .news .imagen {
   padding-left: 0;

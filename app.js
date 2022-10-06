@@ -36,21 +36,16 @@ alertNoContent.addEventListener('click', function(){
 /*INICIO menú fijo*/
 
 // Cuando se haga scroll en la pagina se ejecuta la funcion
-
 window.onscroll = function() {posicionDeFijado()};
-
-// agarro el menu que quiero fijar
-
-const menu = document.getElementById("menu");
-
-// obtengo la posicion del margen superior del elemento que quiero fijar
-
-const fixed = menu.offsetTop;
 
 // agrego y saco la clase donde declaro la posicion que quiero que tenga (fixed) cuando hago scroll
 // var x= window.matchMedia("(min-width: 800px)");
 
 function posicionDeFijado() {
+    
+// agarro el menu que quiero fijar y obtengo la posicion del margen superior del elemento a fijar
+    const menu = document.getElementById("menu");
+    let fixed = menu.offsetTop; 
 
     if ((window.pageYOffset > fixed) && (window.matchMedia("(min-width: 800px)").matches)) {
     menu.classList.add("fixed");
@@ -62,22 +57,17 @@ function posicionDeFijado() {
 
 /*INICIO logica para que aparezca el mensaje de gracias por suscribirte cuando hago click en el boton*/
 
-const toggle = document.querySelector('#toggle');
+let toggle = document.querySelector('#toggle');
 const sub = document.querySelector('.sub');
-//console.log(sub);
 const thanks = document.querySelector('.thanks')
-//console.log(thanks);
 
     toggle.addEventListener('click', function(){
         console.log(toggle.checked);
         if(toggle.checked == true){
-            console.log(toggle.checked);
             sub.style.opacity = '0';
             thanks.style.opacity = '1';
-            console.log(thanks.style.opacity);
             window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSc8VqwFJJlAEAxdl2mF-Wn6zLK8KfPBBio-UiVipJTwvLGVhA/viewform";
         }else if(toggle.checked == false){
-            console.log(toggle.checked);
             sub.style.opacity = '1';
             thanks.style.opacity = '0';
         }
@@ -89,7 +79,6 @@ const thanks = document.querySelector('.thanks')
 
 let subir = document.querySelector('.boton-news-div');
 let footer = document.querySelector('footer');
-console.log(subir);
 
 function mostrarScroll(){
     let scrollTop = document.documentElement.scrollTop
@@ -105,11 +94,9 @@ window.addEventListener('scroll', mostrarScroll);
 /*FIN logica boton subir en news */
 
 
-
-
 let news = [  
     {
-        id:1,
+        id:10,
         img: "/media/ilustraciones/astronomía.png",
         titulo: "I - ASTRONOMÍA",
         contenido: `<p>Lo primero que hicimos cuando decidimos entrevistar a dos astrónomas contemporáneas fue rastrear en Google a sus colegas del pasado, porque honestamente nosotras tampoco las conocíamos. ¿Y adivinen qué? desde <strong>Hipatia de Alejandría</strong> (s. IV - V) - una de las primeras mujeres astrónomas documentada - no encontramos más femeneidades hasta mediados del siglo XVIII (por supuesto sin olvidar a <strong>Fátima de Madrid</strong> - X-XI).  Claro que esto no es casual, porque durante cientos de años pareciera ser que la historia de la ciencia estuvo únicamente escrita por varones. <br><br>
@@ -149,7 +136,7 @@ let news = [
         <i>¡Gracias por leernos, nos vemos!</i></p>`
     },
     {
-        id:2,
+        id:9,
         img:"https://images.pexels.com/photos/1244705/pexels-photo-1244705.jpeg?cs=srgb&dl=pexels-dominika-roseclay-1244705.jpg&fm=jpg",
         titulo: "II - FILOSOFÍA",
         contenido: `<p>En esta entrega vamos a hablar de filósofas. Seguro, al pensar en esta ciencia crítica, te remontes a la Grecia antigua, donde esos barbudos canosos que viste en esculturas se paseaban semidesnudos cuestionándose sobre el origen del universo, el cosmos, la naturaleza o la vida después de la muerte. <br><br>
@@ -197,7 +184,7 @@ let news = [
         Equipo de <strong>FEMICIENCIA</strong></p>`
     },
     {
-        id:3,
+        id:8,
         img: "../media/ilustraciones/quimica.png",
         titulo: "III - QUÍMICA",
         contenido: `<p>En esta oportunidad, hablaremos sobre las mujeres y feminidades químicas de ayer y hoy. Sería un poco trillado comenzar este Newsletter hablando de <strong>Marie Sklodowska Curie</strong> (1867 - 1934) -pero adivinen qué: sí, arrancamos por ahí-. ¿Les suena ese nombre? Bueno, ELLA -así, con mayúsculas- fue la primera mujer en ganar no solo uno, sino dos premios Nobel y la única en recibirlos en dos disciplinas científicas distintas. Al primer Nobel lo ganó en la disciplina de física (1903) junto a su esposo Pierre Curie, mientras su segundo galardón fue para química (1911). Sin embargo, Marie Sklodowska Curie fue una privilegiada para la época, ya que las mujeres en ese momento tenían vedado el acceso al conocimiento. <br><br>
@@ -279,7 +266,7 @@ let news = [
         </p>`
     },
     {
-        id:4,
+        id:7,
         img:"https://images.pexels.com/photos/4427506/pexels-photo-4427506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         titulo: "IV - CIENCIA POLÍTICA",
         contenido: `<p>En este cuarto encuentro, queremos hablarles sobre aquella ciencia abocada al análisis y estudio de las relaciones de poder, los sistemas políticos y organizativos, las prácticas y teorías gubernamentales a nivel local, estatal, nacional e internacional. En resumen, queremos hablarles de la Ciencia Política -y más aún de mujeres y feminidades en esta ciencia-. <br><br>
@@ -345,7 +332,7 @@ let news = [
         Equipo de <strong>FEMICIENCIA</strong></p>`
     },
     {
-        id:5,
+        id:6,
         img: "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         titulo: "V - ESPECIAL LGBTIQ+",
         contenido:`<p>Todos los 28 de junio se conmemora el Día Internacional del Orgullo LGBTIQ+. Año a año, el hito de la <strong>revuelta de Stonewall</strong> de 1969, es motivo de marchas, movilizaciones y diversos eventos en todos los países del mundo. En Argentina, la primera marcha del Orgullo se realizó el 2 de julio de 1992, con una organización mayoritariamente conformada por la Comunidad Homosexual Argentina (CHA), liderada por Carlos Jáuregui. Nota de color: la estación de subterráneo de la línea H en CABA de calles Pueyrredón y Santa Fe lleva su nombre. <br><br>
@@ -392,7 +379,7 @@ let news = [
         </p>`
     },
     {
-        id:6,
+        id:5,
         img: "/media/ilustraciones/medicina.png",
         titulo: "VI - MEDICINA",
         contenido:`<p>Cuando empezamos a escribir este newsletter, lo primero que se nos vino a la mente, fue que a las mujeres y feminidades nos costó ganar nuestro espacio en la Medicina - bueno, como en casi todas las disciplinas-. De hecho, reafirmamos nuestro lugar con base en la lucha de muchxs que nos precedieron en la historia. <br><br>
@@ -459,367 +446,219 @@ let news = [
         </p>`
     }, 
     {
-        id: 7,
+        id: 4,
         img:"../media/ilustraciones/antropología.png" ,
         titulo:"VII - Antropología",
         contenido: `<p class="first-child">Seguramente has escuchado hablar de la Antropología como la ciencia que estudia “al hombre” o al ser humano de forma integral. Si bien se inscribe en las ciencias sociales, esta disciplina posee una diversidad de ramas, cuya pertinencia va desde el ámbito sociocultural al de la salud.<br><br>
         Ante todo, para esbozar una primera definición de esta ciencia, es vital abordar su principal problema de conocimiento, y es que, la primera pregunta de la Antropología es la pregunta por el Otro -categoría que, a los fines aclaratorios de ser un newsletter sobre género, comprendemos también como Otra u Otrx-.
         Es decir, que el problema inicial de conocimiento de esta ciencia subyace en la categoría de alteridad. Esto es, la inquietud por las variaciones entre las sociedades y la diversidad en la construcción de esas identidades otras. <br><br>
-    
         Como en toda producción de conocimiento, su contexto histórico y social jugó un papel central en la consolidación de sus métodos de estudio, que no puede ignorarse si se quiere lograr su comprensión. En este sentido, podemos establecer tres momentos en los estudios antropológicos: uno primero, marcado por el evolucionismo del siglo XIX; un segundo periodo, enmarcado en las teorías de la diversidad cultural del periodo entre guerras mundiales, y un tercer momento que inició luego de la Segunda Guerra Mundial y se circunscribe en las teorías alternativas sobre la Otredad cultural.<br><br>
-        
         Sin embargo, cabe aclarar que no fue hasta el siglo XIX que la Antropología se consolidó como una ciencia, que por entonces construyó su objeto de estudio a partir de la diferencia cultural con unx Otrx. Para esta tarea, el principio de la “diferencia” se constituyó como objeto de explicación científica, y la teoría evolucionista se erigió como principio fundamental a través del método comparativo.<br><br>
-        
         Pero ojo, no era sólo cuestión de establecer bases teóricas y metodologías de investigación. Fue esta teoría evolucionista, la pionera en tomar por objeto de estudio al hombre -claro que al hombre blanco, europeo, cis-género, heterosexual y clase media/alta-. En ese marco, esta primera Antropología sentó los principios de la dualidad cuerpo/alma - el “cuerpo”, como parte de la naturaleza, en cuyo estudio se centró la Antropología Física; y el “alma”, principio de la cultura, en la que se basó la Antropología Cultural-.<br><br>
-        
         Durante la etapa evolucionista, quienes se dedicaron al estudio de la antropología identificaban las diferencias entre “los hombres” como la diferencia entre las culturas. De este modo, se daba cuenta de la existencia de sociedades  “civilizadas y complejas”, en detrimento de las sociedades “primitivas”. <br><br>
-
         Con la crítica al método comparativo, que fue catalogado como etnocéntrico por aplicar escalas valorativas a la diversidad de culturas, surgieron otras escuelas y teorías como el Estructuralismo, el Funcionalismo inglés, el Particularismo histórico de Estados Unidos, la Escuela Histórico-Cultural de Alemania y la Escuela Sociológica francesa. En su cuestionamiento a la antropología hegemónica, estas escuelas sustituyeron la metodología de la comparación por la del relativismo cultural, que establecía la diversidad de cada cultura y la imposibilidad de establecer comparaciones.  <br><br>
-
         Pero, pese a que algunxs investigadorxs establecen “tiempos” en los estudios antropológicos para facilitar su historización, cabe aclarar que desafortunadamente continúan hasta la actualidad las teorías evolucionistas, que postulan la “superioridad” de algunas culturas y la “barbarie” de otras.<br><br>
-
         Por otro lado, la influencia de las teorías marxistas en la Antropología permitieron esbozar explicaciones sobre la dominación y la desigualdad, como principios transversales a todas las sociedades, tiempos y espacios.<br><br>
-
         Pero a todo esto: ¿Qué imagen viene a tu mente cuando pensás en unx antropólogx?. <br><br>
-
         Entre charlas, algunas de nosotras nos dimos cuenta de que de niñas teníamos un imaginario en común sobre lxs trabajadorxs de la Antropología, representada por esa figura típica televisiva de individuo que abandonaba la comodidad de su hogar para adentrarse en sociedades desconocidas, de costumbres totalmente distantes a la propia. <br>
         Es decir, un imaginario que refiere al método de observación participante, acuñado por algunos sectores del campo. Pero la Antropología no es sólo eso y la Etnografía no es el único método utilizado. <br><br>
-                    
         De hecho, la llegada de antropólogxs “nativxs” que estudiaban sus propias sociedades introdujo nuevos problemas epistemológicos a la disciplina: <i>“¿Quién es la Otredad? ¿Dónde vemos lo distinto?”</i>. En ese marco, el objeto de estudio dejaba el lugar de la diferencia para cederlo al mismx antropólogx, que utilizaba el principio de extrañamiento como recurso metodológico primario para investigar.<br><br></p>
-
         <hr class="linea-divisoria">
-    
         <p>Hasta aquí una aproximación a la historia de los estudios antropológicos, pero aún no dijimos nada de sus referentes, y en este sentido quizás te suenen apellidos como (Claude) <strong>Lévi-Strauss,</strong>(Franz) <strong>Boas</strong>, (Bronisław) <strong>Malinowski</strong> o (Clifford) <strong>Geertz</strong>. Esto seguramente sea porque sus aportes al campo de esta disciplina fueron fundamentales, de hecho, la trascendencia de la Antropología para el resto de las ciencias sociales reside en que muchas de sus ramas del conocimiento se basan en presupuestos antropológicos -es decir, que a estos apellidos de varones los escuchamos mucho, probablemente desde la secundaria-. Pero como saben, nuestra eterna pregunta es: <i>¿Existieron feminidades en la Antropología?</i> -Pues sí mi cielx-.<br><br>
-        
         Primero que nada, cabe destacar que entre las primeras antropólogas prominentes estaban -para sorpresa de nadie- las esposas y compañeras sexo-afectivas de los antropólogos profesionales, que realizaban el trabajo de sus esposos haciendo las traducciones y transcripciones de sus trabajos. Un claro ejemplo de esto, fue <strong>Margery Wolf</strong> (1933- 2017) que escribió la etnografía clásica "La Casa de Lim", un estudio basado en la experiencia en su viaje al norte de Taiwán durante un estudio realizado por su esposo.​ <br>
-
         Aún así, quizás nuestra historia deba empezar por la antropóloga, educadora y escritora norteamericana <strong>Ruth Underhill</strong> (1883-1984), que fue conocida por sus numerosas investigaciones en torno a la cultura nativa americana. O también por su contemporánea, <strong>Ruth Benedict</strong> (1887-1948) que fue una gran estudiosa de las relaciones entre personalidad, arte, lengua y cultura. Elegida en 1964 como la primera mujer presidenta de la Asociación Antropológica Americana, Benedict no solo fue pionera en la Antropología Cultural, sino que se comprometió al trabajo colaborativo con organizaciones para educar a la sociedad sobre las amenazas del racismo durante el surgimiento del nazismo en los años 30. <br>
         Pese al desconocimiento tejido en torno a su figura, Benedict fue una pionera en establecer vinculaciones entre los estudios antropológicos y los feminismos, al adentrarse en la lectura de referentas como Mary Wollstonecraft, Margaret Fuller y Olive Schreiner. Sin embargo, la información disponible sobre ella sólo nos conduce a sus tiempos de estudiante -con Franz Boas como profesor- o a su romance con su colega Margaret Mead. A lo largo de su vida, Benedict se dedicó a la investigación, y, además, publicó poemarios bajo los pseudónimos de Ruth Stanhope y Anne Singleton. <br><br>
-
         <strong>Gladys Reichard </strong>(1893-1955) fue otra antropóloga cultural y lingüística norteamericana, reconocida por sus investigaciones en torno a las costumbres de lxs nativxs de su tierra, centrada principalmente en las lenguas Wiyot, Coeur d'Alene y Navajo. Su aporte a la Antropología, se centra principalmente en la comprensión de las variaciones del lenguaje en conexión con la religión, la cultura y el contexto histórico. <br><br>
-
         La también estadounidense, <strong>Hortense Powdermaker </strong>(1896-1970) fue reconocida por sus estudios etnográficos de afroamericanxs en las zonas rurales de América y de Hollywood. Pero como antropóloga, su investigación más reconocida fue “Hollywood, the Dream Factory”, un estudio en el que revelaba los valores culturales puestos en juego durante la producción cinematográfica hollywoodense.  <br><br>
-
         También destacaron los estudios antropológicos de la afroamericana <strong>Zora Neale Hurston </strong>(1981-1960), que propiciaron la salida de las narrativas etnográficas con pretensión de objetividad. En esta línea, se inscribieron también los aportes de las coreógrafas y bailarinas <strong>Katherine Mary Dunham</strong>(1910 - 2006) y <strong>Pearl Primus</strong> (1919 - 1994) quién promovió el estudio de la danza africana como respuesta al arquetipo occidental de salvajismo africano. El ingreso de las mujeres racializadas a los estudios antropológicos, propició la introducción del arte y la creatividad a los modos acartonados del quehacer investigativo. <br><br>
-
         Hasta ahora vamos bien, pero seguramente la única figura femenina que te suene sea esta: <strong>Margaret Mead</strong> (1901-1978), antropóloga cultural estadounidense y feminista que abordó temas sociales controversiales hasta el momento. Sus aportes la consolidaron como una pionera en la formulación del concepto de “género”, lo que también la consolidó como una oradora visible de la Antropología, que se posicionó fuertemente en los medios de comunicación durante 1960 y 1970. <br><br>
-
         Pese a que hay antecedentes en materia de Antropología Feminista, la antropología propiamente “de mujeres”, se introdujo con el trabajo de <strong>Peggy Golde</strong> en su investigación "Mujeres en el campo", y la obra de <strong>Michelle Rosaldo</strong> y <strong>Louise Lamphere</strong> "Mujeres, cultura, y sociedad”, que recuperó el rol cultural distintivo de las mujeres, que eran borradas en el enfoque androcéntrico dado los antropólogos hombres, que tomaban las vidas de sus semejantes como actores universales de las sociedades. -¿Eso explica mucho no?- <br><br>
-
         Pero si hablamos de Antropología Feminista norteamericana, no podemos olvidar la figura de la investigadora y activista <strong>Gayle Rubin</strong> (1949), que introdujo la crítica al sistema sexo/género. Sus estudios centrados en temáticas como los feminismos, la pornografía, el trabajo sexual, la literatura lesbiana, la pedofilia y el sadomasoquismo, la consolidan como una de las antropólogas culturales y académicas más influyentes sobre políticas de género. <br><br>
-
         En Argentina, una antropóloga que nos resuena siempre es <strong>Rita Laura Segato</strong> (1951), educadora, activista e investigadora que reparte sus residencias entre las calurosas Brasilia (Brasil) y Tilcara (Jujuy, Argentina). Sus principales estudios, se centran en los conceptos de colonialidad del poder, racismo y género. En los últimos años, sus pensamientos y testimonios incómodos la convirtieron en una referenta de los estudios antropológicos y feminismos latinoamericanos que es frecuentemente consultada por los medios de comunicación. 
-        
         <strong>María Ester Albeck</strong> (1952-2020) fue una antropóloga, arqueóloga e investigadora argentina que se centró en el estudio de las sociedades de la quebrada de Humahuaca y la puna de Jujuy del Noroeste argentino. Fue pionera en la aplicación de la liquenometría, una técnica que permite estimar la edad de exposición de una superficie mediante el diámetro de los líquenes que la componen. Albeck, también fue una iniciadora de los estudios microambientales y experimentales en el norte argentino, donde también investigó los sistemas de cultivos en la puna y quebrada de Humahuaca.<br><br>
-
         <strong>María Amelia Gutiérrez</strong> (1968) es una antropóloga y docente argentina, especializada en arqueología y antropología biológica. Actualmente se desempeña como Investigadora Principal del CONICET en el Instituto de Investigaciones Arqueológicas y Paleontológicas del Cuaternario Pampeano (INCUAPA). En 1997 fue galardonada con el premio Summer Thesis Research Award por Texas Tech University y con el Premio Bernardo Houssay en el Área Ciencias Humanas en su Edición 2011.<br><br>
-
         <strong>María Estela Mansur</strong> (1954) es una antropóloga y arqueóloga argentina, conocida en el campo por su trabajo con grupos cazadores y recolectores de la Patagonia. Por sus investigaciones, fue precursora en desarrollar el análisis funcional de base microscópica en Argentina.<br><br>
-
         <strong>Evelia "Chichi" Oyhenart</strong> (1955 - 2021) fue una antropóloga argentina con destacado desempeño como investigadora sobre el crecimiento y nutrición infantil. Sus estudios sobre el crecimiento, estado nutricional y composición corporal en infancias a lo largo de diferentes provincias de Argentina, le permitió documentar sucesos como la incidencia de la obesidad infanto-juvenil en la menarca y en otros indicadores de desarrollo. Su trabajo también fue relevante para obtener un mapa de situación, e identificar a las infancias con malnutrición, con el objetivo de propiciar su asistencia médica y rehabilitación.<br><br>
-
         <strong>Hebe M. C. Vessuri</strong>  (1942) es una antropóloga de nacionalidad argentina y venezolana, reconocida en 2017 con el Premio John Desmond Bernal Prize de la Sociedad de Estudios Sociales de la Ciencia y el Premio Bernardo Houssay. Tras el Proceso de Reorganización Nacional, impuesto por la dictadura argentina de 1976 a 1983, Vessuri emigró a Venezuela, donde fue pionera en el desarrollo de los Estudios Sociales de la Ciencia, contribuyendo de manera determinante en la institucionalización del campo en el país, a través de la creación de programas de posgrados.<br><br>
-
         <strong>Mónica Tarducci</strong> es una antropóloga feminista argentina, que dirige sus trabajos de investigación a las interacciones entre el género y las religiones. Actualmente se desempeña como profesora en la Universidad de Buenos Aires y la Universidad Nacional de San Martín. Como activista feminista, su trabajo se inició en 1980 como parte de la organización Mujeres en Movimiento, para luego volver a destacar su participación durante los años de lucha por la Legalización del Aborto en Argentina. <br><br>
-
         <strong>Julieta Greco</strong> es una joven antropóloga, docente e investigadora de la Universidad Nacional de San Martín, desde donde también se desempeña como columnista, escritora y coordinadora académica de la Revista Anfibia. Sus estudios se centran en el amor romántico y la construcción de vínculos desde el amor libre. Conduce el podcast de Revista Anfibia “El deseo de Pandora” , y es militante feminista en la organización “Chana”.<br><br>
-
         En México, una figura que resuena es la de <strong>Marcela Lagarde y De Los Ríos</strong> (1948) reconocida no solo como académica, investigadora y activista representante del feminismo latinoamericano, sino como política y Diputada del Congreso de la Unión de México. Asociada fundadora de la Red de Investigadoras por la Vida y Libertad de las Mujeres, se aboca al estudio antropológico de la condición femenina, en tratativas de temáticas como el cautiverio, la sexualidad, el amor, el poder, el trabajo, la subjetividad, la religión, la maternidad y la sororidad. <br><br>
-
         Hasta ahora, hablamos de feminidades en la Antropología desde Sudamérica, Centroamérica y Norteamérica. ¿Pero qué sucede con el Oriente? Claro que no olvidamos que la ciencia, por imposición androcéntrica, también es occidental. <br>
         <strong>Saddeka Arebi</strong> (¿? - 2007) fue una antropóloga social saudí, nacionalizada norteamericana, autora de la investigación “Women and words in Saudi Arabia”, que releva las interseccionalidades que trascienden las vivencias de las feminidades en Arabia Saudita a través de un estudio etnográfico y literario.
-        
         <strong>Ikram Antaki Akel</strong> (1948 - 2000) fue una educadora, antropóloga y escritora siria que emigró para radicar en México hasta los últimos años de su vida. Educada en la Universidad de París VII Denis Diderot y en el École Pratique des Hautes Études, a muy temprana edad se propuso “viajar hasta el fin del mundo” y así llegó a México, donde residió hasta su muerte. A lo largo de su vida publicó 29 libros con traducciones al español, francés y árabe.<br><br>
-
         Como imaginarás, así como no es sencillo localizar información sobre mujeres y feminidades de la Antropología en Occidente, mucho menos lo es en Oriente. Por esto, te invitamos a que de ahora en adelante te posiciones críticamente sobre los lugares desde los que se construye el conocimiento - o mejor aún, sobre los lugares desde los que trasciende el quehacer científico-. <br><br> 
-
         <hr class="linea-divisoria">
         <p>Ahora, luego de esta breve historización, quisiéramos presentarte a nuestras antropólogas entrevistadas: 
-
         <strong>Marce Butierrez</strong> es activista travesti, antropóloga e Investigadora Feminista Queer. Es la primera travesti en obtener una beca de investigación en la Facultad de Humanidades de la Universidad Nacional de Salta. Es también integrante de la Red Universitaria por el Derecho al Aborto (RUDA) y de la Colectiva de Disidencias Sexogeneropolíticas de la Campaña Nacional por el Derecho al Aborto Legal, Seguro y Gratuito. Este año dictó el taller Una introducción a la Teoría Travesti/Trans* Latinoamericana, organizado por LATFEM y forma parte del comité editorial del espacio de archivo y memorias Moléculas Malucas. En su trabajo académico pone en el mapa la existencia de travestis y trans a lo largo y ancho de Argentina.<br><br>
-
         <strong>María del Carmen -Chavi- Flaherty Martínez</strong> es Licenciada en Antropología Social por la UNICEN, Profesora en Lengua y Literatura por el ISFD N° 22, estudiante de Maestría en Ciencias Sociales en la UNLP y de una Diplomatura en ESI en la UNSAM. Dedicada a la docencia y a los estudios de la sexualidad en el ámbito de la Antropología de la salud, realizó una tesis de grado sobre la Intersexualidad y su abordaje desde el modelo médico hegemónico. En la actualidad, para su tesis de Maestría investiga sobre estudios biopolíticos del sexo, y su análisis dentro del sistema sexo-género desde el Feminismo Materialista. <br><br></p>
-
         <hr class="linea-divisoria">
-
         <p class="preguntas-news">¿Por qué decidieron ser antropólogas? ¿Creen que alguna vivencia en particular de su infancia o adolescencia influyó en la elección de su carrera? ¿Cómo fue la experiencia de ingresar a la carrera y ser estudiante universitaria?<br><br></p> 
-
         <p><strong>Marce:</strong> No estoy segura de haber decidido ser antropóloga, de hecho siento que mi perspectiva de trabajo es una confluencia de la antropología, la geografía y la historia. Me anoté en la carrera porque me interesaba la sociología y lo más parecido que podía conseguir en Salta era Antropología. Pero en realidad lo que me interesaba era tener más herramientas para pensar sobre las problemáticas de género. Yo había tomado algunos cursos sobre ESI y venía militando activamente en espacios feministas, pero siempre tenía la sensación de que los activismos estaban más anclados en slogans que se repetían sin demasiada reflexividad y necesitaba acceder a eso. Creo que el punto de inflexión fue cuando Flavio Rapisardi visitó Salta para dar una charla: asistí emocionada pero cuando salí sentí que entendía la mitad de las cosas que Flavio mencionaba... definitivamente me faltaban elementos para comprender cabalmente las discusiones que se estaban dando a otro nivel. Ahí fue cuando me decidí a apuntarme a una carrera. Sobre mi infancia, I don’t know... mi familia siempre fue bastante progre y mi madre es Profesora de Letras, creo que eso influyó un poco en mis inclinaciones académicas, pero mi familia no es una figura presente en mi vida y tampoco acompañaron mi formación. La experiencia fue en general buena, aunque para mi sorpresa tampoco dentro de la antropología había tantos desarrollos en materia de género, y lo que había estaba bastante anclado en los binarismos. Así que más que nada lo que aprendí de la carrera fue a utilizar herramientas para mis propias indagaciones.<br><br>
-
         <strong>Chavi:</strong> La decisión de comenzar estudios en Antropología Social surge de mi necesidad de entender la realidad en la que estaba inmersa en ese entonces y la cual padecía, muchas veces de manera consciente y otras sin comprenderla, teniendo una sensación de vida de desesperanza especialmente respecto a mi lugar como mujer. Mi mayor objetivo era poder construir herramientas para enfrentarme a las diversas problemáticas de la vida así como a la elaboración de decisiones racionales y no sólo orientadas por cuestiones instintivas o del sentido común propio de mi contexto social. Tenía 22 años de edad, estaba en la mitad de la carrera de Profesorado en Lengua y Literatura cuando gracias a la bibliografía que obtenía en algunas materias dictadas por una docente especializada en psicología, sociología y antropología, supe con certeza que quería estudiar Antropología Social, de modo que, al finalizar estos estudios terciarios me inscribí en la Licenciatura. Es decir que, tuve esta iniciativa y me movilizó la profunda obstinación de comprender el porqué la realidad social estaba configurada de tal manera, especialmente respecto a las desigualdades sociales, las configuraciones arbitrarias de los derechos, oportunidades y accesos educativos y culturales, los dispositivos de poder que reducían a ciertos grupos sociales a tener determinados comportamientos y responder a específicos roles y la naturalización y legitimación de la misoginia. Desde muy pequeña comprendí que no quería ser mujer si esto significaba ser lo que otros querían que yo fuera de manera exclusiva y sin el menor interés por mi subjetividad. Esta disposición tradicional también estaba atravesada por otras configuraciones sociales que delimitaban y reducían, como aún lo hacen hoy, la existencia a través de desiguales derechos y el control de la autonomía personal. Ya en la universidad, mi motivación fue experimentando una sistemática reproducción institucional de las estructuras de poder, que tanto daño causan, respondiendo y batallando interiormente con prejuicios de clases, creencias y de género, principalmente a través de una fuerte jerarquía patriarcal que muchas veces se materializaba literal y prácticamente y otras se leía de modos sutiles, pero igualmente tan efectiva. Aunque asistir a la universidad fue y sigue siendo el modo más poderoso de comprender los entramados del capitalismo patriarcal y todas sus instancias de dominio, las configuraciones sociales y la construcción de herramientas socioculturales propiciadas en muchas situaciones de aprendizajes teóricos y prácticos que proporcionan un punto de partida para comprender el mundo.<br><br></p>
-
         <p class="preguntas-news">¿Había equidad de género en la cantidad de ingresantes cuando estudiaron?<br><br></p> 
-
         <p><strong>Marce:</strong> Me gusta está pregunta y me hace gracia a la vez. Me resulta curioso cómo está idea de que la equidad numérica de participación entre “varones” y “mujeres” nos parece que garantizaría de alguna manera un avance en materia de derechos. En primer lugar se espera una representación que no condice proporcionalmente con el macro estadístico de la población pero además... ¿que una persona sea mujer o varón o lo que fuera nos garantizaría que una perspectiva feminista o respetuosa del género se impusiera en las prácticas educativas? Me parece que no es por ahí... de hecho hay carreras donde la mayoría de las estudiantes son mujeres y no por eso son feministas o respetuosas...incluso a veces esos son los sectores más resistentes a las identidades no conformes. Lo planteo porque hemos atado proyectos ideológicos y perspectivas a ciertas identidades y hay al menos tres errores en eso: uno es la falta total de lectura de la realidad empírica, luego la ausencia de otras intersecciones como la clase, la raza, etc. y por último y más preocupante: ¿en serio estaría bien que determinadas identidades respondan a determinados proyectos ideológicos? Creo que ahí estamos entrampados en la construcción de una nueva normatividad que amenaza a quitarle al feminismo su potencia crítica y convertirlo en un manual de procedimientos (muchas veces punitivos). No podemos esperar que todas las travestis respondamos a un unívoco proyecto político o pensemos igual sobre ciertos temas, justamente nuestra potencia crítica está en ser disidentes de la normalidad. <br><br>
-        
         <strong>Chavi:</strong> Los primeros años de mi carrera universitaria, durante los años 2006 y 2007, el ciclo común que contenía varias carreras entre ellas la de Antropología Social era diverso. Sin tener datos estadísticos de las matrículas durante esos años, podía ver equidad de género en la cantidad de ingresantes, inclusive creo que había más estudiantes mujeres que varones. La equidad de género se evidenciaba en los discursos institucionales pero en muchísimos casos no se traducían en hechos. Las diferencias de género surgían en la cotidianidad de la vida académica durante la trayectoria universitaria en la que entre compañeras manifestábamos situaciones de control, dominación, exclusión, inferiorización, cosificación, etc. sobre la base de una legitimidad institucional de carácter fuertemente patriarcal y el mercado laboral académico. En la actualidad, esta estructura académica de relaciones desiguales de poder, paternalista y patriarcal, es vigente y generalmente nos ciñe a constantes desahogos y no necesariamente a una construcción de compañerismo, sororidad y exposición de reclamos dada la misma articulación del sistema de promoción. Habitualmente se suceden situaciones donde este contrato implícito se traduce en violencia epistémica atravesada por lógicas sexistas y de competitividad mercantil. Los avances denotan constantes esfuerzos y son notorios gracias al movimiento de mujeres, aunque esta visibilidad es comunicacional y de carácter exclusivo y excepcional, en la cotidianidad de la vida de muchísimas mujeres trabajadoras y profesionales la realidad que se vive es opresora. <br><br></p>
-
         <p class="preguntas-news">¿Cuántas referentas antropólogas escucharon nombrar en sus clases universitarias o leyeron en apuntes? ¿Hay algunas áreas de los estudios antropológicos más feminizadas que otras? (con mayor presencia de mujeres y feminidades). <br><br></p>
-
         <p><strong>Marce:</strong> Muchas, afortunadamente en muchas cátedras se incluían autoras mujeres. Otra vez, no se si esto dice algo sobre la sensibilidad en materia de género... pero al menos leíamos a autoras que proponían otras perspectivas. Me cuesta de todos modos también la cuestión de los límites disciplinares, porque leíamos a muchas autoras que siendo antropólogas no pensaban sobre género o bien que pensaban sobre el género sin ser antropólogas. Por ejemplo una de las lecturas que fueron un parteaguas en mi formación fue “El Estado y sus márgenes” de Veena Das y Deborah Poole. Sin atender precisamente a la cuestión de género sus perspectivas son una clave para pensar un montón de mis temas de investigación. También Vera Telles fue importante en algún momento para pensar la cuestión de los ilegalismos y las formas de resolución material de la vida. O LudmilaCatela Da Silva para pensar cuestiones relativas a la memoria. De Segato en su momento tomé algunos conceptos como los de cuerpo/territorio que no están en sus textos más conocidos sobre cuestiones de género. Después hay cientos de autoras de otras disciplinas que me parecen centrales: Doreen Massey, Judith Butler, Sandy Stone, Susan Striker... miles. <br><br>
-
         <strong>Chavi:</strong> Paradójicamente, tuvimos breves e intermitentes lecturas feministas. Si bien había una o dos profesoras fuertemente formadas en feminismo, de pronto perdíamos la posibilidad de seguir cursando con ellas porque, por motivos que desconozco, dejaban de dar clases en nuestra facultad. En profesores varones el área de estudios sobre la mujer era casi inexistente, se evidenciaban la reproducción de las perspectivas masculinas y sus privilegios de clase intelectual. Luego había profesoras que en sus programas incluían algunos temas relacionados a la lucha por los derechos de la mujer, pero recuerdo que eran aislados y no se profundizaban especialmente. Los estudios de géneros apuntaban principalmente a la desnaturalización de la normativa heterosexual y la lucha más urgente era la visibilización de la diversidad sexual respecto a la homosexualidad. Algunas autoras que leímos fueron Margaret Mead, Mary Douglas, Verena Stolcke. En la actualidad se define el ámbito de los estudios de la mujer o los estudios de género desde la Antropología feminista como espacio de predilección femenina.<br><br></p>
-
         <p class="preguntas-news">¿Cómo es ser feminidad y disidencia en el ámbito académico? ¿Pensás que existen barreras de género para acceder a cargos superiores? ¿Los feminismos y los estudios de género hicieron aportes teóricos y metodológicos al campo de estudios de la antropología? ¿Cuáles?<br><br></p> 
-
         <p><strong>Marce:</strong> Es muy difícil. Sobre todo porque muchas de las colegas que trabajan en el área no están habituadas a que desempeñemos un rol central en los procesos de investigación. Voy a ser dura, muy dura quizás, pero lamentablemente he tenido que atravesar esta experiencia más de una vez. Las travestis somos divertidas mientras servimos de testimoniantes, mientras hablamos desde el lugar de nuestras propias experiencias. Cuando nos atrevemos a pensar de modo autónomo, discutir y oponernos a ciertos criterios establecidos dentro del campo ya no somos agradables. Y ese desagrado lamentablemente se traslada a la violencia más explícita. Muchas investigadoras “feministas” disfrutan tener una travesti de adorno en su mesita de luz, pero no les agrada cuando la travesti muestra capacidad suficiente para pensar por sí misma o construir sus propios criterios epistémico-metodológicos. Eso es triste y decepcionante, porque una al principio admira mucho a las colegas, pero luego son capaces de atacar tu identidad, cuestionar tus experiencias, señalar con regodeo tus defectos o directamente ignorarte y desplazarte de los espacios. Me ha pasado y creo que esa violencia duele más que la de otros colegas varones a los que se presume machistas. Quizás lo son, pero es algo que es previsible. Lo que una no se espera es que las propias colegas dentro del campo de los feminismos sean hostiles con una. Yo en particular no suelo hablar desde mi experiencia, porque soy consciente que mi trayectoria de vida es muy distinta a la de mis pares trans* y siento que eso molesta... porque de algún modo se espera que seamos sujetas de investigación y no investigadoras con peso propio. <br>
         Sin dudas. Creo que los feminismos han puesto en evidencia como muchas disciplinas están centradas en nociones muy añejas sobre la sexualidad y producidas desde una perspectiva cisheteropatriarcal. Hace poco leí el texto de Judith Butler “¿El parentesco es siempre de antemano heterosexual?” y me sirvió para ver lo mucho que los estudios feministas y de género han hecho para modificar nuestras perspectivas como antropólogos. Hoy siento que la antropología está bastante permeada por la cuestión de género, ya sea por plena convicción o por corrección política, pero en general se piensa en las cuestiones de género al menos de una manera tangencial. También se ha problematizado mucho en torno a lo que vivimos las mujeres y feminidades en el trabajo de campo y aún hay mucho por reflexionar allí, porque sin duda en esa experiencia tan concreta y tan corporalmente comprometida se hacen reales muchas violencias hacia las feminidades. De todos modos quiero hacer hincapié en esto: aún hay mucho por hacer, en especial por dejar de ser sólo una tema de investigación o una preocupación secundaria dentro de otro conjunto de datos, así como por correr la mirada de “las mujeres” como único sujeto de los feminismos y pensar qué pasa con las disidencias sexuales en otros muchos ámbitos y como una perspectiva travestis/trans* puede ayudarnos a mirar de nuevo el campo para hacer nuevas interpretaciones.
         <strong>Chavi:</strong> Hoy siguen siendo extensas y profundas las luchas de las mujeres para acceder a espacios laborales y profesionales. El ámbito académico es un lugar de poder que muchas veces frustra y muchas otras empodera, ser disidente es una tarea insumisa, de rebeldía. Si bien la sociedad ha venido transformando conceptualmente la problemática de la disparidad de género, en la práctica existen muchos aspectos de la vida de las mujeres que imposibilitan la equidad y que la jerarquía institucional androcéntrica limita en oportunidades en el plano laboral. La dinámica organizacional de la vida demuestra que ya no son la formación profesional alcanzada por las mujeres ni sus participaciones en la actividad productiva, sino el recorrido de las diversas actividades y ocupaciones que debemos realizar a razón de los privilegios masculinos y las limitaciones impuestas en el desarrollo profesional de nuestras carreras. La Antropología Social ha venido realizando aportes muy importantes a los Estudios de la mujer desde la Antropología Feminista, en especial lo concerniente a su metodología etnográfica y su punto de vista emic como el único capaz de producir conocimientos acerca de la diversidad cultural y un diálogo entre lo que hace la investigación científica y lo que dicen las mujeres que les pasa. Sus aportes más significativos se centran no sólo en los estudios de género si no especialmente desde la interseccionalidad al reconocer que las desigualdades sistémicas son configuradas a partir de diferentes factores socioculturales como la etnia, el género, la clase social.<br><br></p>
-
         <p class="preguntas-news">¿Cuál creen que es el desafío de la Antropología en la visibilización y reconstrucción de mujeres y feminidades en la historia de las ciencias? ¿En qué otras problemáticas relativas al género se centra la Antropología actualmente?<br><br></p>
-
         <p><strong>Marce:</strong> Bueno, como decía antes, hay mucho por hacer en relación a la ruptura de una perspectiva binaria. Creo que la antropología puede hacer mucho para poner en escena a otros sujetos que escapan del binario varón/mujer, aunque hay que ser cautelosas con la manera en que esa visibilización se realiza. Me preocupa a veces cierta operación que se hace y me parece anacrónica e inútil: la de intentar revalidar nuestras identidades tal como actualmente están constituidas apelando a justificaciones del tipo “en las culturas previa a la colonización / en los pueblos originarios ya existían otras formas de sexualidad diferentes de las occidentales”. Siento que esa clave esencialista no ayuda, no aporta y además no es una justificación necesaria... Nuestras experiencias actuales e imbricadas con la modernidad son válidas per se. Además de allí se desprende muchas veces una idea falsa respecto a que las comunidades étnicas suelen ser más receptivas de la diversidad y no siempre es así. Me parece que hace falta correrse de esa perspectiva esencialista sobre las identidades si queremos hacer un ejercicio realmente feminista de la disciplina. Dentro de las cosas que se vienen haciendo en Antropología me interesan en particular aquellos trabajos que están pensando en las estrategias feministas de resolución material de la vida, sobre todo porque los feminismos se volcaron mucho a un conjunto de demandas civiles y dejaron de lado la cuestión del trabajo doméstico y las tareas de cuidado. Actualmente hay algunos trabajos antropológicos preguntándose por ese universo de prácticas en donde se dirime la reproducción material y simbólica del mundo y donde las mujeres y disidencias tomamos parte con estrategias propias... ahí hay un nudo interesante, además porque nos permite recuperar el terreno de las prácticas y de lo cotidiano que en los feminismos post-estructuralistas cedió lugar para enfocarse demasiado en lo discursivo. Me parece que aquella máxima de E.P. Thompson de construir una historia “desde abajo” nos debería convocar para construir también un “feminismo desde abajo”.<br><br>
         <strong>Chavi:</strong> La Antropología tiene como desafío constante investigar las diversas formas que adopta la vida social de las mujeres y su contexto. Su prioridad es conocer, comprender, reflexionar  acerca del tipo de relaciones que existen, los significados que les dan sentido, relacionándonos, como investigadoras, con las personas y sus entornos. Nuestra tarea es mirar, escuchar, sentir y así interpretar los significados, lo cual pone a esta disciplina en el mejor lugar para conocer sus vidas. Desde mi punto de vista el desafío más importante de la Antropología Social respecto a las mujeres es la construcción y reconstrucción de una ética feminista y un movimiento que desde lo individual y lo colectivo logre ir construyendo una lógica y un modo de intervenir en la sociedad sin reproducir los estándares masculinos y su hegemonía. Por consiguiente, creo que es necesario que la apropiación del mundo por parte de las mujeres se dé a través de un recorrido que logre contrarrestar los valores del patriarcado capitalista y que de este modo no sostenga el statu quo. En este sentido, la Antropología Social junto a otras disciplinas de las ciencias sociales se centra en diversas problemáticas de género como la sexualidad, la mortalidad, la maternidad, salud femenina y atención médica, educación y analfabetismo, acceso a educación superior, independencia económica, carga de trabajo doméstico, desigualdades e inequidad laboral y profesional, violencias contra la mujeres, femicidios, trata de personas, prostitución, mutilación genital femenina, derechos y protección de las infancias, matrimonio infantil, derechos, justicia y aplicación de leyes a favor de la mujer, diversidad étnica, migración, etc. así como temas vinculados a las diversidades de género y de sexo y los estudios de las masculinidades.<br><br></p>
-
         <hr class="linea-divisoria">
-
         <p>Hasta acá llegamos con este newsletter, queremos agradecer a nuestras entrevistadas por dedicar su tiempo a dialogar con nosotras. En está oportunidad, tuvimos el privilegio de entrevistar a referentas de la antropología y de visibilizar a algunas de las protagonistas de una ciencia dedicada al estudio de aspectos físicos, culturales y sociales. Tal como lo indican en sus testimonios, al igual que el resto de las ciencias, la Antropología tiene un gran trabajo para realizar en la visibilización y ampliación de derechos para mujeres y disidencias.<br><br>
         También, realizamos un breve recorrido por los aportes de antropólogas de Oriente para visibilizar la existencia de otras formas de construir conocimientos científicos no centrados en Occidente. Desde Femiciencia saludamos y apostamos a un abordaje interdisciplinario entre los distintos ámbitos del conocimiento para desbaratar el androcentrismo y la violencia epistémica.  <br>
         En este espacio consideramos que la interdisciplinariedad es fundamental para crear mapas que permitan comprender e interpretar la complejidad del mundo del cual somos parte. <br><br></p>
-
         <p>Te mandamos un abrazo, seguí cuidándote. Nos reencontramos en octubre.</p>
-
         <p>Equipo de <strong>FEMICIENCIA</strong></p>`
     },
     {
-        id: 8,
+        id: 3,
         img:"../media/ilustraciones/brujas.png" ,
         titulo:"VIII -Brujas",
         contenido: ` <p class="first-child">Como sabrás, la temporada de fines de octubre y principios de noviembre se caracteriza por la llegada de una festividad algo controversial. Si, hablamos de Halloween (originalmente Samhain), esa celebración de origen celta que emigró hacia distintos países del continente americano, para luego popularizarse y adquirir el sinónimo de <i>“Noche de Brujas”.</i><br><br>
         El “Samhain”, se consolidó como la fiesta de fin del año celta, celebrada cada 31 de octubre para festejar el punto cúlmine de la cosecha anual. Durante la festividad, se ofrendaban alimentos y dulces a lxs muertxs, que se creía, regresaban a la tierra para el día de la fecha. Con la popularización de Halloween durante las inmigraciones europeas de 1820 a 1930, la festividad perdió las características de su ritual purificador, y se transformó en un ambiente de distensión que comúnmente implica fiestas de disfraces, diversiones de infancias y maratones de películas de horror.  <br><br>
-
         Durante este tiempo, las <strong>“brujas”</strong> se transformaron en el eslogan y la figura caricaturizada del Halloween. Una nariz grande, un par de verrugas, ojos saltones, una cabellera añeja y un gato negro, que generalmente acompaña sus rituales satánicos junto a un gran caldero. Las brujas siempre estuvieron presentes en nuestras vidas, en los libros de cuentos, y en las películas de la infancia. Pero, ¿quiénes son las brujas? ¿Por qué las representamos así?<br><br>
-    
         La “Caza de brujas” - llevada a cabo entre los siglos XVI y XVII - fue un hecho real y verídico, que se basó en la persecución y matanza de mujeres que eran acusadas de brujería bajo los preceptos de la iglesia católica. Las investigaciones de la pensadora feminista Silvia Federici, dan cuenta de este femigenocidio como un hecho crucial para el desarrollo del capitalismo. <br><br>
-    
         Por nuestro bagaje en Femiciencia, supimos que la conexión entre <strong>Brujas y Científicas</strong>  es más antigua que el conocimiento científico-académico mismo. Pero para tratar este tema en profundidad viajamos virtualmente hasta México, para entrevistar a la <strong>Dra. Sandra Aurora González Sánchez.</strong><br><br>
-    
         Sandra es Doctora y Maestra en Ciencias de la Educación, Ingeniera Química, y Diplomada en Estudios Críticos en Género y Ciencia. Es activista, profesora e investigadora en la Universidad de Ciencias y Artes de Chiapas. Investiga sobre Didáctica de las Ciencias Experimentales y Exactas con perspectiva de género e interculturalidad.  <br>
         Sandra nos cuenta que trabaja activamente en la formación de vocaciones científicas en la niñez, también que da cursos a profesorados de enseñanza de la ciencia con perspectiva de género.  <br><br>
-                
         <i>“Soy originaria de Chiapas, pertenezco a organizaciones de la sociedad civil que trabajan por la defensa de los derechos humanos de las mujeres y la niñez: Creo firmemente en la educación como un proceso de formación de pensamiento crítico que contribuya a un mundo más igualitario y con respeto a los seres vivos”.</i> <br><br></p>
-    
-        
         <hr class="linea-divisoria">
-
         <p class="preguntas-news">En la celebración de Halloween vimos aparecer nuevamente la figura de las brujas, tan mercantilizada y utilizada con los estereotipos crueles y ficticios que ya conocemos. Pero queremos preguntarte, ¿Cómo ves la utilización de sus figuras en estas celebraciones? ¿Quiénes eran realmente “las brujas”? ¿Cuál fue el origen de su “mala reputación”?<br><br></p> 
-    
         <p>La utilización de la figura de las brujas reproduce la estigmatización sobre las mujeres como una amenaza del orden y control de un sistema opresor que nos muestra como personas siniestras que deben ser eliminadas o aniquiladas. Tampoco vindica a todas las mujeres que fueron asesinadas de manera injusta por no someterse al esquema violento del medioevo, que las colocaba en una situación de alta vulnerabilidad ante los abusos de los señores feudales, los sacerdotes o bien hombres que pertenecían a su círculo cercano. Las “brujas” eran mujeres que tenían un conocimiento ancestral producto del empirismo y que además se atrevieron a continuar con prácticas consideradas como paganas por el cristianismo que se había instalado en territorio Europeo, referente de control y poder. Es decir, mujeres que se sometieron y asumieron un posicionamiento de libertad. <br>
         El origen de la mala reputación de estas mujeres, es una estrategia aún vigente por cualquier sistema opresor: la desacreditación pública. Generar psicosis social por su señalamiento como una amenaza, fue la forma en que vivieron violencia extrema (fueron discriminadas, estigmatizadas, violentadas y asesinadas).</p>
-    
         <p class="preguntas-news">Quienes integramos Femiciencia, postulamos y denunciamos que el androcentrismo está vigente en las ciencias, en tanto forma patriarcal de construcción (y reproducción) del conocimiento. ¿Cuál era el vínculo entre ciencia y brujería? ¿Quiénes creés que sean “las brujas” de nuestro tiempo?<br><br></p> 
-    
         <p>Lo que las mujeres señaladas como brujas, era un conocimiento resultado de un proceso empírico por su estrecho contacto con la naturaleza (conocían mucho de herbolaria), ese conocimiento no iba a ser avalado por el racionalismo que surgió en el siglo XVII con gran fuerza y era respaldado por Descartes, Galileo y Newton (ciencia lógica y objetiva). Las mujeres señaladas como brujas vivieron entre otras violencias lo que hoy denominaríamos epistémica, al desvalorizar su sentir y pensar. <br>
         Viviendo en un sistema opresor en América Latina que aún posiciona la ciencia androcéntrica y mantiene vigente el pensamiento colonizador, las brujas de hoy serían todas las mujeres que se atreven a cuestionar los abusos y a intentar ejercer sus derechos para vivir una libertad plena en pensamiento y acción.<br><br></p>
-    
         <p class="preguntas-news">La pensadora feminista italiana Silvia Federici, presentó diversas investigaciones sobre la caza de brujas y hechiceras. “Calibán y la bruja” se constituye como una de esas obras que teorizan sobre este genocidio, y su vínculo con el control de la natalidad, el paso al sistema capitalista y la acumulación originaria. ¿Por qué -luego de tantas investigaciones- la caza de brujas sigue sin tomar seriedad a diferencia de otras matanzas y tragedias en la historia de la humanidad? ¿Podemos pensar un vínculo entre las persecuciones esbozadas por Federici y los gobiernos actuales, que en muchos países todavía pretenden negar el derecho al aborto legal, seguro y gratuito?<br><br></p>
-   
         <p>Silvia Federici señala de manera acertada en su libro “Calibán  y la bruja” la división del sistema productivo (capitalismo) y el sistema reproductivo (asignado a las mujeres), el cuerpo de las mujeres ha cobrado diferente significado y ha sido utilizado por intereses políticos, económicos y/o religiosos. La reproducción como un sistema de control para cualquiera de las dimensiones que mencioné anteriormente tiene que pasar primero por el sometimiento de las mujeres y su opresión continua por el sistema patriarcal. La muerte de las mujeres en esta etapa del medioevo no ha sido visibilizada, ni mucho menos cuestionada demostrando el poco valor que tiene la vida de las mujeres en el sistema hegemónico y patriarcal actualmente, además hacerlo sería cuestionar otra gran estructura que se mantenido a lo largo de casi 500 años como un referente político de control: la iglesia católica, quién fue la responsable de estos feminicidios. Considero que la restricción de los derechos de las mujeres (incluidos el de su cuerpo), son una perpetuación de esta práctica opresora que relega y condena a las mujeres al sometimiento y constantes actos violatorios de derechos humanos. </p>
-    
         <p class="preguntas-news">¿Creés que la caza de brujas influyó en la construcción de la femineidad? ¿Hubo cambios con respecto al patriarcado y al sistema capitalista? <br><br></p> 
-    
         <p>Claro que la caza de brujas contribuyó a una femineidad en la que se restringían los derechos y el acceso a prácticas de ejercicio de libertad podían costar la vida. Las mujeres para sobrevivir debieron permanecer subordinadas, en el silencio a pesar de los constantes abusos y seguir con el adoctrinamiento religioso que les impuso en la subjetividad “lo permitido o no”, estos modelos aún permanecen en la sociedad. El capitalismo tan violento normalizó los roles domésticos y de cuidado como exclusivos de las mujeres, sin asignarles ningún valor, desvalorizando este trabajo (esta lucha por vindicar este trabajo no remunerado permanece hoy en día, como mecanismo de explotación).</p>
-    
         <p class="preguntas-news">En su libro “Reflexiones sobre género y ciencia” (1991) la teórica Evelyn Fox Keller argumenta que, en la historia de la construcción del conocimiento, la razón y la racionalidad se adjudicaron como atributos masculinos, mientras que la emotividad fue relegada a las feminidades. En este punto, creemos que se puede establecer una relación con la construcción de la figura de “la bruja”, en tanto ser “malévolo”, en estrecha relación con naturaleza y el demonio. 
         Cuando escribieron el “Malleus Maleficarum”, los inquisidores Heinrich Kraemer y James Sprenger postularon que las mujeres eran más propensas a ser inducidas a la brujería por ser “débiles de espíritu” e “inferiores”. ¿Crees que aún “pesan” estos estigmas sobre las mujeres científicas/académicas? ¿Por qué crees que aspectos humanos como la “emotividad” y la ternura son excluidos de la construcción del conocimiento?<br><br></p>
-    
         <p>En el siglo XVII se instauro el racionalismo como una corriente de pensamiento para lograr una ciencia racional y objetiva, este pensamiento encabezado por Newton, Galileo y Descartes, impregnó en una cultura machista y un poder patriarcal una mirada claramente androcéntrica a la ciencia, además el impulso de la persecución y muerte de las mujeres que osaran acercarse al conocimiento, reforzada por la Iglesia como institución de control y poder que desacreditaba y estigmatizaba la capacidad de las mujeres, realzando “su vulnerabilidad” a ser seducidas o atrapadas por fuerzas demoníacas, es el origen de la “deshumanización de la ciencia”. Este hecho aún se hace presente en una ciencia que no es universal ni incluyente, debido a que no todo/as pueden acceder a sus beneficios y no solamente restringe el acceso de las mujeres a las esferas de tomas de decisiones, también a otros grupos históricamente discriminados como indígenas y la comunidad afrodescendiente. <br>
         Estoy totalmente convencida que los tipos de violencia que viven las mujeres académicas y científicas en los espacios Universitarios y Centros de Investigación. La deshumanización de la ciencia es otra estrategia capitalista para vender el conocimiento empleando la propiedad intelectual y patentes como una forma de comercializarlo, y hacerlo, la mayoría de las veces, inaccesible a la mayoría de la población. </p>
-    
         <p class="preguntas-news">Para cerrar, queremos preguntarte: ¿Cuál crees que sea el aporte de las “brujas” al campo de los estudios de género y de la comunicación de las ciencias? ¿Por qué es necesario rescatar su historia? ¿Por qué las brujas adquirieron tanta relevancia para los feminismos?<br><br></p>
-    
         <p>Las brujas fueron mujeres que realizaron un ejercicio de resistencia ante tanto abuso que vivían en esta época, creo que el legado de las brujas en el campo de los estudios de género ha permitido visibilizar las desigualdades y los abusos perpetrados primero por la iglesia y el sistema feudal y posteriormente por el sistema capitalista, al no reconocer el valor de trabajo de las mujeres. <br>
         Rescatar la historia de las brujas vindica la vida de estas mujeres y revelan que instituciones que fueron responsables aún tienen gran poder y lo ejercen para mantener el control instaurando el sometimiento y el terror. <br><br></p>
-    
         <hr class="linea-divisoria">
-    
         <p>Tal como Sandra lo indica, el epistemicidio y la violencia epistémica no son hechos de novedad. Tiempo atrás, el feminicidio - y el olvido- eran destinos  inexorables para quienes se atrevían a hacer ciencia. Pero las circunstancias no cambiaron tanto si recordamos que la etiqueta de la “brujería” también pesaba sobre las mujeres que decidían sobre su cuerpo. Aún en la actualidad, negarse a la reproducción de la especie trae consecuencias legales para feminidades y disidencias (porque negarse a la reproducción no es afín a un sistema que apaña la explotación de lxs cuerpxs).<br><br>
-                
         La construcción de la figura de las brujas, -como seres malévolos, promiscuos, grotescos y en potencia de producir miserias- no nos parece casual. En tanto la belleza, la eterna juventud, la sumisión, la pureza, el carisma y la bondad se consolidaron como atributos propios de la feminidad, la industria cultural promulgó que las brujas tuvieran las características inversas. Por eso no hay brujas bellas, porque las mujeres bellas no van contra el status-quo. </p> 
-    
         <p>Hasta acá llegó este newsletter, esperamos que te haya gustado. </p>
-    
         <strong> <i> Equipo de Femiciencia</i></strong>`
     },
     {
-        id: 9,
+        id: 2,
         img:"../media/ilustraciones/educación-ambiental.jpg" ,
         titulo:"IX - Educación Ambiental",
         contenido: `<p class="first-child">Como saben, los incendios forestales en Argentina coparon las agendas informativas de este último tiempo. A distancia y con angustia atravesada en la garganta, vivimos el minuto a minuto de la pérdida y el daño irreversible a nuestra flora y fauna nativas. Vimos también cajonear proyectos de ley, cuyas políticas públicas duermen en el senado con una comodidad casi envidiable. <strong>Por eso, este es un newsletter urgente.</strong><br><br>
         La Cumbre de Estocolmo (Suecia), celebrada por las Naciones Unidas en 1972, determinó la relevancia mundial de la Educación Ambiental para la preservación del ambiente y los recursos naturales. En Argentina, la Ley Yolanda (Ley n.º 27592, sancionada en el año 2020) tiene como principal objetivo <i>garantizar la formación integral en ambiente, con perspectiva de desarrollo sostenible y con especial énfasis en cambio climático, para las personas que se desempeñan en la función pública.</i> Sin embargo, aún no se logra implementar al 100% en las áreas de gobierno. <br><br>
         Nuestrxs lectorxs saben que en este Newsletter recorremos la historia de la ciencia y la participación de las feminidades en ella. Es imperioso contar que esta Ley, se denomina de esta manera en honor a <strong>Yolanda Ortiz</strong> (1926 - 2019),  doctora en Química especializada en Toxicología, que en 1973 se convirtió en la primera secretaria de Recursos Naturales y Ambiente Humano de nuestro país y de América Latina, siendo designada por el gobierno de Juan Domingo Perón.<br><br>
-
         Cuando pensamos en la historización de educadoras, encontramos que es fácil hallar feminidades latinoamericanas referentas en ámbitos educativos de diversos niveles.<strong>Juana Manso</strong>  (1819-1875), <strong>Marina Vilte</strong>  (1938-1976), <strong>Rosario Vera Peñaloza</strong>  (1873-1950), <strong>Florencia Fossati </strong> (1888-1978) y <strong>Mary Sánchez</strong>  (1943-2016) son algunos de los tantos nombres que vienen a nuestra mente, y es que desde que las mujeres pudimos acceder a la formación, la docencia se consolidó como un trabajo feminizado – más aún en los niveles primarios y secundarios-. El desafío, para la temática que nos convoca, fue hallar feminidades referentas en educación ambiental.<br><br>
-
         A nivel internacional, la norteamericana <strong>Ellen Swallow</strong> (1842-1911) fue una antecesora en la educación ambiental. Estudió ciencia para mujeres en el Vassar College for Women (Nueva York), e ingresó en el MIT  - institución que por entonces era solo frecuentada por varones- Se especializó en temas de química ambiental, e investigó sobre la contaminación en el agua. Su contemporáneo, <strong>Ernst Haeckel</strong> (1834-1919) -biólogo y naturalista alemán- esbozó la primera definición de ecología utilizada hasta la fecha. Sin embargo, Ellen, con el permiso de Ernst, reformuló el término estableciéndola como: <i>la ciencia de las condiciones de salud y bienestar de la vida humana diaria</i>. A pesar de que ella reivindicó el concepto de “ecología” como una relación humano/naturaleza, estos principios fueron ignorados tanto como su figura en la historia del conocimiento. <br><br>
-
         En 1960, una amplia rama de los feminismos materializó sus conexiones con el ecologismo y la conciencia ambiental, y dio pie a lo que denominamos “Ecofeminismos”. Término creado y teorizado en 1974 por la pensadora francesa <strong>Françoise d'Eaubonne (1920-2005).</strong> <br><br>
-            
         Un punto clave en los ecofeminismos, es la estrecha relación patriarcal entre la explotación de la tierra y la dominación de las mujeres. La construcción de una sociedad ecológica, una vida sustentable, sostenible y respetuosa del medioambiente, sería el principio clave de un posicionamiento que parte de los ecofeminismos. <br><br>
-
         Si bien no siempre se reconocieron como “ecofeministas”, desde 1960 las feminidades protagonizaron grandes levantamientos contra la explotación de la tierra en distintas partes del mundo. En India, el Movimiento “Chipko” (1973) conformado principalmente por campesinas; y el Movimiento “Cinturón Verde” creado en Kenia en 1977 por la activista Wangari Maathai.<br><br>
-
         La bióloga marina y periodista científica <strong>Rachel Carson</strong>  (1907-1964) fue una figura clave en la construcción de los ecofeminismos, al denunciar el daño irreversible que las fumigaciones de DDT producían en la fauna nativa, y las consecuencias que generaban en los humanos a través de la cadena alimentaria. <br><br>
-
         En América Latina y el mundo, la hondureña <strong>Berta Cáceres</strong>  (1971-2016) se consolidó como una referenta clave en la militancia medioambiental y política.<strong>Fue líder indígena Lenca, activista por el ambiente y feminista</strong>. Fundó el Consejo Cívico de Organizaciones Populares e Indígenas de Honduras (COPINH), cuyo objetivo es luchar por los derechos de quienes pertenecen a la comunidad lenca. A lo largo de su trayectoria, fue galardonada con numerosos premios y reconocimientos a su labor y arduo trabajo en la reivindicación de los derechos indígenas y la defensa del medioambiente. En el año 2016, Berta Cáceres fue asesinada tras reiteradas amenazas de muerte. Recién en 2021 la justicia hondureña condenó a David Castillo, directivo de una empresa energética, por haber sido el responsable su asesinato. Hoy y siempre proclamamos <strong>#bertacácerespresente</strong> <br>
-
         <hr class="linea-divisoria">
-
-
         <p>A continuación, les presentamos a nuestras entrevistadas:
-
         <strong>Florencia Ansaldi: </strong> estudio profesorado en Biología en el Instituto Superior del Profesorado N°16 <i>Dr. Bernardo A. Houssay</i> (Rosario, Santa Fé).<br><br>
-
         Es estudiante de Especialización en Enseñanza de la Escuela Media con mención en Ciencias Naturales, en la Facultad de Humanidades y Artes de la Universidad Nacional de Rosario<br>
         Trabaja como docente en escuelas medias orientadas públicas y privadas de Villa Gobernador Galváez y de Alvear<br>
-    
-    
         <strong>Pamela Sioya: </strong> es Licenciada en Periodismo de la Universidad Argentina de la Empresa (UADE).<br><br>
-
         Es estudiante de la especialización de Educación en Ambiente para el Desarrollo Sostenible Universidad Nacional del Comahue (UNComa).<br>
-
         Trabaja como Analista de Nuevas Tecnologias del Aprendizaje en AySA<br>
-
         Trabaja de forma independiente con el colectivo Comunicación Ambiental en el diseño de talleres y cursos a medida.<br></p>
-
         <p class="preguntas-news">¿Cuáles fueron sus primeros acercamientos a la educación?<br><br></p> 
-
         <p><strong>Pamela:</strong> Considero que desde pequeña estuve en contacto con la comunicación y la educación ambiental, ya que me crie en una zona semi-rural del Gran Buenos Aires, en una familia de viveristas, descendiente de japoneses, que siempre ha tenido huerta para el autoconsumo y prácticas cooperativas como el intercambio de semillas. En otras palabras, crecí en una hermosa mezcla de saberes argentinos-japoneses y rurales-urbanos, en diálogo permanente.<br><br>
-            
         <strong>Florencia:</strong>  Desde muy chica la naturaleza me cautivó. Pasaba horas observando insectos y arañas y coleccionaba todo escarabajo que encontraba muerto. De a poco, con la plata que juntaba en los cumpleaños, fui comprándome libros y enciclopedias de animales y de biología en general. Pero a la vez, empezaba a entender que todo lo que yo amaba, estaba en riesgo. Estaba segura de que quería dedicarme el resto de mi vida a estudiar la naturaleza y buscar la manera de generar los cambios que estuvieran a mi alcance. La educación es una gran aliada para esto último<br><br></p>
-
         <p class="preguntas-news">¿Qué las motivó a especializarse en educación ambiental?<br><br></p> 
-
         <p><strong>Pamela:</strong> Primero me formé en Periodismo porque creía -y sigo creyendo- en la importancia del “cuarto poder” para sostener una democracia saludable. Pero entendí que había que cambiar muchas realidades, y que para ello investigar y difundir no eran suficientes. En esa búsqueda, la Educación Ambiental me dio respuestas y nuevas preguntas disparadoras, porque concibe a la enseñanza y al aprendizaje como procesos colaborativos, situados en los territorios y transformadores, que enriquecen a todos los actores sociales involucrados, individualmente y en comunidad. <br><br>
-            
         <strong>Florencia:</strong> Comencé el profesorado de biología, pero sentía que algo estaba todavía sin llenar. Fue en el año 2016 que me contactan para ir a hacer una recorrida a una Reserva Natural en mi ciudad, de la cual no tenía conocimiento. Sin dudas, ese día cambió radicalmente mi vida y le dio sentido a la docente que soy y quiero seguir siendo. El último parche de bosque al sur de la provincia de Santa Fe, vulnerable a negocios inmobiliarios, esperando ser protegido. Fue entonces donde comprendí que quería especializarme en Educación Ambiental y vi la oportunidad de hacerlo de manera intensiva al recibirme.<br><br></p>
-
         <p class="preguntas-news">¿Trabajan en proyectos de investigación científica?<br><br></p>
-
         <p><strong>Pamela:</strong>  Considero que no realizo investigación científica, pero si puedo mencionar que participé en dos proyectos. El primero, hace 15 años, junto a profesionales y estudiantes del Centro Universitario Argentina Nippon, planteamos la necesidad de que el sistema académico/científico “se ambientalice” y propicie el trabajo colaborativo interinstitucional y la investigación transdisciplinaria.<br><br>
-
         El otro fue posterior al Gran terremoto y tsunami de 2011 que sacudió a Japón y detonó la crisis nuclear de Fukushima, tierra natal de mis abuelos y abuelas. Junto al investigador Pablo Gavirati (IIGG-UBA) indagamos en cómo la catástrofe ambiental no era “natural” sino que tenía sus orígenes en desigualdades históricas invisibilizadas. <br><br>
-
         Actualmente trabajo en AySA, la prestadora de agua potable y saneamiento que abastece a la Ciudad de Buenos Aires y 26 partidos bonaerenses. Aquí colaboré en el diseño de cursos de capacitación con puntaje docente sobre Agua y Educación Ambiental. Y en estos momentos desarrollo proyectos de capacitación interna y gestión del conocimiento, con el propósito de recuperar, organizar y socializar saberes valiosos que no se estudian en ninguna universidad, sino que se producen desde la propia operación de los servicios públicos esenciales. <br> <br>
-
         <strong>Florencia:</strong> No, En este momento únicamente me dedico a la docencia.<br><br></p>
-
         <p class="preguntas-news">¿Cómo analizan las políticas públicas medioambientales implementadas por los gobiernos actuales? ¿Creen que se piensan con perspectiva de género?<br><br></p> 
-
         <p><strong>Pamela:</strong> Celebro el avance que está teniendo la implementación de tres leyes fundamentales como la Ley Micaela (27.499), la Ley de Educación Ambiental Integral (27.621) y la Ley Yolanda (27.592) pero sé que todavía hay un largo trecho por recorrer, tanto en los distintos gobiernos (nacional, provinciales, municipales,interjurisdiccionales) como en los distintos poderes (ejecutivo, legislativo, judicial). <br><br>
         También cabe aclarar que las políticas públicas medioambientales no se deberían limitar a las de las carteras ambientales. Sería deseable que las políticas productivas, energéticas, sanitarias, financieras, urbanísticas, educativas y asistenciales se piensen con perspectiva de género y de desarrollo sostenible.<br><br>
-
         <strong>Florencia:</strong> Las políticas públicas ambientales vigentes son las de las leyes de presupuestos mínimos de protección ambiental que fueron sancionadas anteriormente. Hablando especialmente de la ley de humedales que no dejan que salga, es realmente es desesperante.<br><br></p>
-
         <p class="preguntas-news">¿Hay equidad de género en los espacios vinculados a la educación ambiental?<br><br></p>
-
         <p><strong>Pamela:</strong> Desconozco estadísticas sobre equidad de género en la educación ambiental, pero considero que desde sus bases se propone como un ámbito más igualitario, horizontal, dinámico, cimentado sobre vínculos de cuidados, empatía, escucha profunda, comunicación no violenta, vocación de servicio y creatividad.<br><br>
-
         <strong>Florencia: </strong> No, sin embargo, considero que asumimos un papel fundamental en la búsqueda de romper con el modelo hegemónico de vida y ponemos en el centro de debate una transformación del modelo de producción y consumo. <br><br>
-            Hace ya tiempo el ecofeminismo denunció una estrecha relación entre la subordinación de las mujeres y la explotación de la naturaleza.<br><br></p>
-
+        Hace ya tiempo el ecofeminismo denunció una estrecha relación entre la subordinación de las mujeres y la explotación de la naturaleza.<br><br></p>
         <p class="preguntas-news">¿Qué mirada sobre esta cosmovisión? ¿Cuál creen que sea la utilidad de vincular la perspectiva de género con la socioambiental?<br><br></p>
-
         <p><strong>Pamela:</strong> Coincido con esa postura del ecofeminismo. Por un lado, es usual que en una situación de explotación de la naturaleza, las mujeres además están más vulneradas que los hombres, porque están al cuidado de sus familias, en situación de pobreza, contaminación y violencia. <br><br>
         Por el otro, el patriarcado capitalista subordina todo lo que considere de su propiedad. Así, la naturaleza se reduce a recursos naturales. Y ejerce su poder depredatorio o extractivista (ya que externaliza los daños y no se responsabiliza por ellos), sobre las mujeres, pero también sobre todos los demás seres en condición desigual: las infancias, las personas adultas mayores, los pueblos originarios, los y las inmigrantes, las personas con discapacidad, los animales no humanos, etc. <br><br>
-
         <hr class="linea-divisoria">
-
         <p>Si llegaste hasta acá, te contamos que este newsletter ha llegado a su fin. Queremos agradecer a nuestras entrevistadas por dedicar su tiempo a brindarnos los testimonios y a dialogar con nosotras. Tal como se indicó anteriormente, las educadoras ambientales tienen un rol fundamental en la construcción de un nuevo paradigma que incluya la revalorización del ambiente que nos rodea. Por eso queremos invitarlxs a que sigamos participando e involucrándonos e interviniendo como una sociedad organizada, en los sectores clave para la toma de decisiones. En definitiva, es un poco nuestra responsabilidad para comprender la complejidad del mundo del cual somos parte<br><br>
-            
         Por otra parte, (y ahora sí para despedirnos) queremos contarte brevemente un proyecto que se está comenzando a gestar desde Femiciencia, que tiene una estrecha relación con este Newsletter: la confección de un abecedario de flora y fauna nativas, con ilustraciones de dibujantes argentinas. Por eso les recomendamos estar atentxs a todas las novedades, necesitaremos su ayuda para concretarlo.</p> 
-
         <p>Te mandamos un abrazo, seguí cuidándote. Nos reencontramos pronto 💚</p>
-
-        <strong> <i> Equipo de Femiciencia</i></strong>
-`
+        <strong> <i> Equipo de Femiciencia</i></strong>`
     },
     {
-        id: 10,
+        id: 1,
         img: "../media/ilustraciones/historia.png",
         titulo: "X - Historia",
         contenido:`<p class="first-child">Antes de empezar, queremos contarte que al iniciar la búsqueda de referentxs en el tema, pusimos en el buscador de Google: <i>“Mujeres historiadoras”</i> , en español e inglés. Para sorpresa de nadie, en las sugerencias el buscador nos mostró el adjetivo<i> “hot” </i>-del inglés <i>“caliente”</i> -. Es decir, que las mujeres no solo debemos hacer demostraciones de genialidad en el mundo académico sino que, además, debemos estar <i>“buenas”</i>  y nuestros cuerpos deben corresponder a cánones de belleza casi inalcanzables. ¿No será mucho? <br> <br>
-                    
         En estos días reflexionamos que tal vez, si nosotras fuéramos quienes contáramos la historia, podríamos aparecer más -y <i>“mejor”</i> - representadas en hechos históricos como, por ejemplo, el que se conmemoró ayer. <br><br>
-
         Sucede que siempre fuimos ubicadas como la esposa, la hija o la que hacía trabajos de cuidado y asistencia. Cuando éramos definidas de esa forma, lo éramos en función de datos de color que nos patalogizaban, humillaban o sexualizaban. Todos ellos, roles y estereotipos que invisibilizaron a feminidades y disidencias con roles protagónicos y esenciales en la historia universal, latinoamericana y Argentina. <br><br>
-        
         Para que no dar lugar a dudas, te presentamos algunxs:
-
         <hr class="linea-divisoria">
-
         <p><strong>Ana Comneno </strong> (1083 – 1153) fue una historiadora y princesa bizantina. Fue popularizada como una de las primeras mujeres historiadoras occidentales. Su pertenencia a una clase privilegiada le permitió convertirse en una erudita con grandes conocimientos de literatura, historia, geografía, mitología y filosofía. Sus estudios también abarcaron astronomía, matemáticas y medicina. Sus contemporáneos consideraban a Ana como una persona que había alcanzado <i>las más altas cimas de la sabiduría, tanto laicas como divinas</i>. Pero pese a estos bellos elogios, no encontramos más registros de su actividad. <br><br>
-        
         Al investigar sobre historiadorxs de los siglos XIII y XIX, encontramos el trabajo de Elise Garritz (investigadora de la Academia de Finlandia, Departamento de Historia) titulado <i>“Mujeres, historiadoras, género y formación del yo autoritativo en paratextos en la Gran Bretaña victoriana tardía”</i>  (2020), en el que reflexiona: <i>“a las mujeres historiadoras se les asignó un papel como amateurs o asistentes de sus maridos, padres y otros parientes varones. Esto se consideró natural, ya que se percibía que las mujeres carecían del poder intelectual para generar conocimiento original. Muchos de los historiadores coincidieron en que las mujeres eran principalmente aptas para reproducir el conocimiento original generado por los hombres. Aunque este relato tiene algo de verdad y los contornos de la disciplina fueron moldeados en gran medida por hombres con educación universitaria, sugiero que, no obstante, simplifica la naturaleza compleja de la escritura de la historia de las mujeres”.</i> <br><br>
-
         En su trabajo rescata a tres historiadoras: <strong>Mary Hickson (1825–1899), Alice Gardner (1854–1927) y Kate Norgate (1853–1935)</strong>, siendo esta última una historiadora británica y una de las primeras mujeres en lograr el éxito académico en este ámbito. Fue autodidacta en la era victoriana, cuando la educación superior era generalmente negada a las mujeres. Su obituario en <i>The Times </i> la describió entonces como <i>"la historiadora más culta del período preacadémico".</i> <br><br>
-
         En búsqueda de historiadoras argentinas encontramos a <strong>Reyna Pastor (1931-2022)</strong>  quien fue profesora de Historia de España y perdió su cargo durante la dictadura militar de Juan Carlos Onganía, además de que tuvo que exiliarse a España en 1976. Durante su exilio se especializó en Feudalismo y el Campesinado, también en Familia e  historia de las mujeres. ​ Ejerció como encargada de curso en el Departamento de Historia Económica de la Facultad de Ciencias Económicas en la Universidad Complutense de Madrid. Fue miembro del Comité Científico Asesor y del Área de Humanidades del CSIC. <br><br>
-
         No podemos dejar de nombrar a <strong>Dora Beatriz Barrancos (1940)</strong>  investigadora, socióloga, historiadora, educadora y feminista argentina. Es doctora en Historia por la Universidad Estadual de Campinas (UNICAMP), Brasil, y profesora consulta de la Universidad de Buenos Aires. Fue Directora del Instituto Interdisciplinario de Estudios de Género (IIEGE) de la Facultad de Filosofía y Letras (UBA) e Investigadora Principal del CONICET, donde integró el directorio hasta 2019. <br><br>
-
         También, queremos mencionar en este recorrido de historiadorxs argentinxs a <strong>Julia Rosemberg (1984)</strong> , que se desempeña como Profesora de la Universidad de Buenos Aires (UBA). Julia es reconocida por su trayectoria en el estudio de la vida y obra de Eva Duarte de Perón. Es autora del libro <i>"Eva y las mujeres: Historia de una irreverencia"</i>  y coautora del libro <i>"Conversaciones. Bicentenario: historia y política en los años kirchneristas". </i> </p>
         <hr class="linea-divisoria">
         <p>A continuación, les presentamos a nuestras entrevistadas:</p>
-        
         <p><strong>Velia Luparello: </strong>es Licenciadx y Doctorx en Historia por la Universidad Nacional de Córdoba <br><br>
         Actualmente es Profesorx Asistente en la cátedra de "Historia Contemporánea de Europa" en la Escuela de Historia de la FFyH y se desempeña como administrativx en la secretaría de esa misma institución. <br><br>
-    
         <strong>Cintia Martínez: </strong>es Profesora de Historia por el Instituto Provincial de Educación Superior "Antonio E. Agüero" y Licenciada en Enseñanza de la Historia por la FCH (UNSL) <br><br>
         Actualmente, realiza el Doctorado en Ciencias de la Educación en la FFyL (UNCuyo). Es Profesora Responsable de las cátedras "Ciencias Sociales e Historia" y "Política de la Educación Argentina" en el IFDC de Villa Mercedes (San Luis) y Auxiliar de Primera en "Didáctica de las Ciencias Sociales I y II" en la UNVIME.</p>
-
         <p class="preguntas-news">¿Por qué decidieron estudiar historia? </p>
-
         <p><strong>Cintia: </strong> Porque, para mí, el pasado es clave para entender esta realidad social compleja, dinámica y diversa en la que vivimos. Además, en mi infancia, el viento Chorrillero me trajo historias de mujeres, contadas por mujeres, mi abuela, mis maestras, mi madre, las vecinas del barrio y las madres de mis amigas. Cada una de ellas, a su manera, me contaron anécdotas, mitos, leyendas e historias de vida. Esas historias me han acompañado toda la vida, me envuelven y fortalecen. Y yo siento que tengo un deber con ellas, que tengo que continuar con ese legado, contar historias de mujeres, visibilizar sus trayectorias, hablar sobre ellas, no solo en el ámbito académico sino, sobre todo, al público en general. <br><br>
         <strong>Velia: </strong>Antes de decidir estudiar Historia, consideré otras opciones (paleontología, geografía, economía, sociología), aunque todas estaban relacionadas con un núcleo común. Creo que siempre tuve una necesidad de entender el mundo que me rodeaba y por qué funciona de la manera en que lo hace. Recuerdo que desde pequeñx me resultaba interesante conocer historias y costumbres de otras partes del mundo, pero que también me generaba mucha curiosidad saber el origen de las cosas y el costado social de lo que sucedía a mi alrededor. La decisión también estuvo motivada por la búsqueda de explicaciones y de poder dar un cierto orden al mundo, para lo que fue fundamental ahora entender las relaciones sociales y de opresión, etc. que me y nos atraviesan.</p>
-
         <p class="preguntas-news">¿Mientras estudiaban, leyeron y conocieron historiadoras que hayan sido referentas en el área? </p>
-
         <p><strong>Cintia: </strong>No, mientras estudiaba nunca leí ni conocí sobre mujeres historiadoras que hayan sido referentes en el área. <br><br>
         <strong>Velia: </strong>Muy poco, la verdad. Recuerdo haber leído textos de algunas autoras que se dedican a la historia argentina e historia regional, pero no era frecuente en las lecturas obligatorias de las cátedras encontrar historiadoras. Hacia finales de mi carrera de grado y durante mis estudios de posgrado, comencé a formarme en los estudios sobre feminismos y entré en contacto con textos de historiadoras con perspectiva de género en sus análisis históricos, como Silvia Federici, Wendy Goldman, y Maxine Berg. </p>
-
         <p class="preguntas-news">¿En qué proyectos de investigación científica trabajan actualmente? </p>
-
         <p><strong>Cintia: </strong>En la actualidad integro dos proyectos de investigación científica en la Facultad de Ciencias Humanas de la UNSL. Los mismos son: PROICO 4-1820 “Mediatizaciones del sentido y procesos socioculturales, identidades, cultura, discursos y poder”, que dirige el Dr. Claudio Lobo y Codirige la Mgter. Marcela Navarrete.
         Proyecto de Investigación N°04-2320 “Hacer la Historia, construir la Memoria. Su impacto en las Ciencias Humanas”, que dirige la Dra. Sonia Riveros. <br><br>
         <strong>Velia: </strong>Actualmente formo parte de un proyecto de investigación en torno a la Historia Internacional del Socialismo mediante análisis comparativos en América y Europa. Dentro de ese proyecto, yo profundizo en el estudio del tema tratado en mi tesis doctoral: la IV Internacional en Europa durante la Segunda Guerra Mundial. Asimismo, mi proyecto de investigación individual está orientado hacia el estudio comparativo de las políticas sobre la cuestión de la mujer en las Internacionales Socialistas durante el siglo XX, enfocándome en el análisis histórico del trabajo femenino y la perspectiva marxista y de la teoría de la reproducción social sobre la emancipación de las mujeres.  </p>
-
         <p class="preguntas-news">En las prácticas pedagógicas, ¿qué sucede con la enseñanza de los hechos protagonizados por mujeres? ¿Y con las mujeres que dejaron su huella? </p>
-
         <p><strong>Cintia: </strong>En las prácticas pedagógicas de la mayoría de mis compañeros y compañeras docentes de Historia, no hay casi mención de hechos protagonizados por mujeres. Si hacen mención: lo presentan como algo anecdótico, una nota de color. Y con respecto a las mujeres que dejaron su huella en la historia argentina, son muy pocas y de manera muy acotada su mención en las aulas. <br><br>
         <strong>Velia: </strong>Creo que está más presente que antes la práctica pedagógica de visibilización de las mujeres en la historia en todos los niveles educativos. En mi opinión, esto es parte de un contexto de expansión y de presencia de los feminismos que lograron insertarse en casi todos los ámbitos de la nuestras vidas y mostraron que había otra parte de la historia que se estaba dejando afuera. Pero también se explica porque las visiones feministas han calado hondo en todas las generaciones. Es común que lxs estudiantes pregunten por esa cuestión en medio de una clase, lo cual hace que como docente no puedas ignorar el tema, como pasaba antes. Creo que puede debatirse sobre las perspectivas de cómo encarar la enseñanza de las mujeres en la Historia, pero no que ya está instalado formal o informalmente en la mayoría de los establecimientos educativos. </p>
-
         <p class="preguntas-news">¿Cómo debería ser la enseñanza de una historia atravesada por la perspectiva de género? ¿Creen importante indagar e investigar el papel de las mujeres y disidencias que fueron invisibilizadas?</p>
-
         <p><strong>Cintia: </strong>Yo siento que tengo un deber irrenunciable con las mujeres de mi país y de mi provincia que participaron activamente en nuestro pasado y que fueron invisibilizadas, por el simple hecho de ser mujeres y si además eran indígenas o afrodescendientes, el olvido que se impuso sobre ellas fue peor todavía. Como la mayoría de ellas eran analfabetas, porque eran mujeres de pueblo, que en muchos casos se quedaron solas y enfrentaron un destino incierto, tampoco contamos con testimonios de primera mano sobre los que les pasó, como se sentían, etc. Acaso otros, escribieron sobre ellas, y si es que lo hacían, eran varones, blancos y de la élite. <br><br>
         Yo considero que la perspectiva de género debería ser un eje transversal en la enseñanza de la Historia, ya que solo recuperando y revalorizando el papel protagónico de las mujeres en nuestra historia podemos brindar una visión más integral y humanizada del pasado que nos atraviesa. Hay que dejar de lado el enfoque tradicional, que todavía es preponderante en la escuela. La historia que “nos enseñaron” solo se ocupa de los héroes y próceres, jefes militares victoriosos y perfectos, que “nunca dudaron y no participaron en la política de la época”. Además, parece que todo lo que hicieron fue por voluntad propia, sin participación del pueblo. <br><br>
         Ante este panorama creo que es primordial indagar e investigar sobre el papel de las mujeres y las disidencias en la historia de nuestro país y de nuestra provincia. <br><br>
         <strong>Velia: </strong>Creo que la incorporación de la perspectiva de género en la enseñanza y la investigación de la historia es algo de vital importancia. No se trata, en mi opinión, de agregar “mujeres y disidencias” como parte de una receta al tema que sea y pretender que eso es tener perspectiva de género. Hacer una “historia de las mujeres” es algo completamente diferente a incorporar una perspectiva de género en el tema que se estudie o se enseñe. <br> <br>
         Creo que la incorporación de la perspectiva de género en la enseñanza y la investigación de la historia es algo de vital importancia. No se trata, en mi opinión, de agregar “mujeres y disidencias” como parte de una receta al tema que sea y pretender que eso es tener perspectiva de género. Hacer una “historia de las mujeres” es algo completamente diferente a incorporar una perspectiva de género en el tema que se estudie o se enseñe. </p>
-
         <p class="preguntas-news">A veces la mención de “historia” como asignatura dentro de la currícula escolar y universitaria nos remite a quejas incesantes de personas que cuestionan la “utilidad” de su estudio. ¿Qué dirías a estudiantes y referentes de instituciones científico-académicas que hacen este cuestionamiento? 
         </p>
-        
         <p><strong>Cintia: </strong>Creo que, antes que nada, yo les recordaría que cada uno de nosotros somos sujetos históricos, atravesados por una historia local y nacional que ha determinado nuestra existencia y nuestro presente. Estoy convencida de que en el pasado podemos encontrar respuestas a nuestro difícil presente. Asimismo, recuperar la historia de nuestras mujeres es un ejercicio clave para mantener viva la memoria y ampliar nuestro horizonte. El pasado está vivo y merece que nosotros lo visibilicemos a todos y a todas. <br><br>
         <strong>Velia: </strong>Primero les preguntaría ¿por qué es el criterio de la “utilidad” el único que importa al momento de producir y transmitir conocimientos y experiencias? ¿En base a qué necesidades se fijaría tal criterio? Me parece interesante cuestionar en lxs estudiantes ciertos sentidos comunes derivados de la presión productivista en la que vivimos. <br></br>
         La cuestión está en cómo, desde nuestro lugar de docentes e investigadores, visibilizar esas conexiones, incluir a lxs estudiantes en esa historia, y por sobre todo, reflexionar sobre cuál es nuestra posición como profesionales al pensar “la utilidad” de la disciplina, o mejor dicho en la pregunta “¿historia, para qué, para quiénes?”. Las respuestas sobre la importancia de la historia están atravesadas por los entrelazamientos de clase social, de géneros, culturales, de ubicación geográfica, etc. </p>
-
         <p class="preguntas-news">Por último, una de las grandes denuncias epistemológicas que realizaron los movimientos feministas fue el androcentrismo del sistema científico. Este postulado nos remonta a la contrapropuesta del pensador Walter Benjamin, que se refirió a la necesidad de pensar la historia “a contrapelo”, desde el punto de vista de lxs vencidxs. ¿Cuál sería la contrapropuesta que puede hacer la historia feminista para lograr el cambio estructural que apremia a nuestras sociedades? ¿Cómo sería una historia feminista?</p>
-
         <p><strong>Cintia: </strong>Yo adhiero fervientemente al rechazo absoluto hacia el carácter androcéntrico del sistema científico, que todavía prevalece en gran medida en amplios sectores académicos. Sobre todo, en lo que respecta a la posibilidad de que las mujeres puedan acceder a cargos de gestión y decisión. En este aspecto, creo que todavía debemos dar una lucha persistente y permanente para que nuestras congéneres puedan acceder, por ejemplo, a presidir el CONICET, ser elegidas Rectoras en nuestras Universidades y tener poder de decisión en las políticas científicas. <br><br>
         <strong>Velia: </strong>Personalmente, como historiadora, me vi interpelada por las consignas y las acciones de las masivas marchas feministas y transfeministas en todo el mundo a partir de 2017: huelgas de mujeres del trabajo remunerado y no remunerado; huelga de úteros, y uno de los eslóganes principales "si nuestras vidas no valen, produzcan sin nosotras". Al mismo tiempo, la dinámica de las luchas transfeministas actuales nos permite pensar en el derecho sobre el propio cuerpo (en el sentido más amplio del término) y la reproducción cotidiana de nuestras vidas. Ese derecho no puede entenderse de forma individualista o aislado de las relaciones sociales que lo moldean, sino que nos muestra cómo implica a las decisiones o a las posibilidades de acceso sobre lo que comemos, en qué clase de medio ambiente vivimos, qué tipo de trabajo hacemos y en qué condiciones, cuáles son las necesidades básicas que podemos satisfacer, y muchas otras. <br><br>
         Desde ese lugar, me parece esencial partir de una perspectiva feminista que entienda sobre las relaciones de género en el marco del capitalismo. La decisión de abordar el estudio de las condiciones de producción y reproducción social de la fuerza laboral desde el feminismo de la reproducción social, es clave para comprender la situación actual de las mujeres y de las disidencias sexo genéricas, y la relación que los procesos de acumulación de capital entablan con los géneros</p>
         <hr class="linea-divisoria">
-
         <p>Para concluir, les dejamos este proyecto de investigadoras de CONICET y de la Universidad de Buenos Aires: Ellas también estuvieron allí, es un archivo de frases e imágenes que nuclea a mujeres argentinas con el objetivo de revalorizar su lugar en la historia nacional. <br><br>
         Gracias por acompañarnos otro mes más y si se quedaron con gusto a poco, vamos a ampliar más el material sobre historiadoras latinoamericanas en nuestra cuenta de Instagram (@femiciencia_) <br><br>
-
         Nos vemos el mes que viene. </p>
-        
         <i>Equipo de Femiciencia</i>`
     },
     {
-        id: 11,
+        id: 0,
         img: "/media/ilustraciones/apesardemisexo-web.jpg",
         titulo: "XI - A pesar de mi sexo",
         contenido: `<p class="first-child">La historia que vamos a contar inicia en el año 2021, cuando dos jóvenes investigadoras decidieron sentarse a escribir sobre la vida universitaria de las mujeres y su activismo político desde 1947. <br><br>
@@ -828,18 +667,13 @@ let news = [
         En un contexto histórico y político marcado por la gratuidad universitaria, la entonces Facultad de Artes y Humanidades se conformó como la casa de estudios por excelencia feminizada, atravesada por la fuerte militancia política de las juventudes. <br><br>
         En Femiciencia creemos que reflexionar sobre la trayectoria de las feminidades en el campo académico es hacerlo también sobre las formas de construir el conocimiento, por eso invitamos a charlar a las creadoras de “A pesar de mi sexo”.</p>
         <hr class="linea-divisoria">
-
         <p><Strong>Camila Entrocassi Varela</Strong> es Profesora de Historia por la Facultad de Humanidades y Artes de la UNR, docente en la Facultad de Humanidades y Ciencias Sociales de la Universidad Nacional de Jujuy (UNJu) y becaria Doctoral del CONICET.</p>
         <p><strong>Sofía Belén Bianchi</strong> es estudiante de Historia en la Facultad de Humanidades y Artes de la UNR y becaria del Programa de preservación documental “La Facultad de Humanidades y Artes. Historia, memoria y política”. Es bibliotecaria en la Escuela de Historia, UNR y miembro del Centro Latinoamericano de Investigación en Historia Oral y Social (CLIHOS).</p>
-        
         <hr class="linea-divisoria">
-
         <p class="preguntas-news">¿Qué las motivó a investigar y escribir acerca de la participación de las mujeres en el ámbito universitario y académico? ¿Por qué creen que es necesario seguir indagando acerca del lugar que han ocupado históricamente las mujeres en las universidades, y hacer pública esa información?</p>
-
         <p><strong>Camila: </strong>Comenzó como un proyecto de investigación conjunto sobre la historia de la Universidad y nuestra Facultad, y progresivamente la evidente presencia de las mujeres y la riqueza de sus historias nos condujo, creo, a interesarnos en ellas específicamente. Queríamos visibilizarlas y comprender cómo fue su paso por la Facultad. <br><br>
         <strong>Sofia: </strong>La investigación se realizó en el marco del Programa de preservación documental “La Facultad de Humanidades y Artes. Historia, memoria y política”. Allí, en conjunto con estudiantes y docentes de la carrera de Historia, nos dedicamos al relevamiento, inventariado y digitalización de un corpus documental sobre la vida institucional de la facultad desde sus inicios en 1947. Como parte de ese trabajo, tomamos contacto con muchos de los documentos que luego se convertirían en fuentes de nuestra investigación: estadísticas en donde se dejaba ver la abrumadora mayoría de mujeres en el claustro estudiantil, notas de agrupaciones políticas firmadas por mujeres, conflictos que las tenían como protagonistas, entre otros. No obstante, a pesar de que tanto Camila como yo nos consideramos feministas y sensibles a las problemáticas de género, el pasaje de conocer la documentación a convertirla en un problema de investigación no fue lineal ni evidente. Creo que fue decisivo el impulso de la directora del programa -Cristina Viano- para jerarquizar la pregunta por el género en ese contexto específico. <br><br>
         De ahí en más, al adentrarnos en la historia de las universidades encontramos que los entrecruzamientos con los estudios de género no abundan y que todavía queda mucho por indagar. No solo para recuperar la presencia de las mujeres en espacios que no suelen considerarse como feminizados, sino también para plantear otros interrogantes. Por ejemplo, con respecto al ejercicio político en el movimiento estudiantil o a su participación –profundamente desigual- en el campo académico y en la producción de conocimiento científico. El primero de estos tópicos es abordado en el libro: cómo la política estudiantil en la facultad es conducida mayormente por mujeres. El segundo solo alcanza a ser esbozado y requiere de un mayor desarrollo. La gran disparidad que existe entre una amplia mayoría de mujeres estudiantes y graduadas (más del 80%) y una escasa minoría en el claustro docente (menos del 20%) es un hecho que necesita mayor explicación. En ese camino continuará mi investigación.</p>
-        
         <p class="preguntas-news">Sobre cuál es el papel que ocupan las mujeres en la educación superior, nos parece importante realizar otro cuestionamiento: ¿Qué tareas invisibles se encuentran “dentro” de esos papeles, que no son realizadas por los varones de la institución? ¿Podríamos pensar en estas tareas como “feminizadas”? (con requerimientos propios del cuidado y la sensibilidad).</p>
         <p><strong>Sofia: </strong>Si continuamos pensando en esas dos dimensiones -la política y la académica-, vemos que en el ámbito político las mujeres desempeñaron múltiples roles: fueron delegadas estudiantiles, consejeras directivas, condujeron el centro de estudiantes y otras agrupaciones políticas, e incluso hubo una decana que fue la primera mujer en el país en desempeñar ese cargo, Erminda Benítez de Lambruschini en 1954. Con lo cual, en principio, no se manifiestan roles discriminados por género en este plano. En cambio, en el ámbito académico las diferencias son más evidentes. La escasa presencia de mujeres en el claustro docente y en la dirección de institutos de investigación contrasta con su gran participación en cargos no remunerados, como ayudantes de cátedra y auxiliares en institutos de investigación. </p>
         <p class="preguntas-news">En su recopilación de testimonios identificaron situaciones de irregularidad en concursos universitarios de docencia e investigación. ¿Consideran que el reclamo estudiantil estuvo basado en denuncias de irregularidades, o también se basó en inequidades de género al contrastar las aptitudes de lxs aspirantes? </p>
@@ -857,27 +691,42 @@ let news = [
 
 /* INICIO Logica para renderizar las newsletter*/
 
-function renderizarNewsletters(news) {
-    //const imagen = document.querySelector('.tareas-terminadas');
-    let imgARenderizar = document.querySelectorAll('.new')
-    let newARenderizar = document.querySelectorAll('.link-newsletters');
 
-    let tituloARenderizar = document.querySelector('.heading-t2');
-   // console.log(tituloARenderizar);
-    let contenidoARenderizar = document.querySelector('.columna-news');
-   // console.log(contenidoARenderizar);
 
+
+const botones = document.querySelectorAll('.columna-1 a');
+console.log(botones[2].getAttribute('id'));
+    //quiero filtrar de este array y el array de news
+for (let i = 0; i < botones.length; i++) {
+    botones[i].addEventListener('click', e => {
+        // e.preventDefault();
+        const id = e.target.getAttribute("id");
+        console.log("Se ha clickeado el id "+id+ ' el titulo de la new es '+news[10].titulo);
+        if(id == news[i].id){
+    //             let imgARenderizar = document.querySelectorAll('.new')
+    // let newARenderizar = document.querySelectorAll('.link-newsletters');
+    // let tituloARenderizar = document.querySelector('.heading-t2');
+    // //console.log(tituloARenderizar);
+    // let contenidoARenderizar = document.querySelector('.columna-news');
+    // console.log(contenidoARenderizar);
     // limpiamos los nodos
-    tituloARenderizar.innerHTML = "";
-    contenidoARenderizar.innerHTML = "";
 
+    let main = document.querySelector('main');
+    console.log(main);
+    let nodoTitutlo = document.createElement('div');
+    main.appendChild(nodoTitutlo)
+    let nodoContenido = document.createElement('div')
+    main.appendChild(nodoContenido);
+    nodoTitutlo.innerHTML = "";
+    nodoContenido.innerHTML = "";
     //imgARenderizar.setAttribute("src", `${arrayNews.img}`)
-    tituloARenderizar.innerHTML += `<h2>${news[0].titulo}</h2>`;
-    contenidoARenderizar.innerHTML += `<p>${news[0].contenido}</p>`;
+    nodoTitutlo.innerHTML += `<h2>${news[i].titulo}</h2>`;
+    nodoContenido.innerHTML += `<p>${news[i].contenido}</p>`;
+        }
+        
+})};
 
-}
 
-renderizarNewsletters(news);
 
 /* FIN Logica para renderizar las newsletter*/
 
