@@ -37,23 +37,24 @@ a{
     font-weight: bolder;
     color: $color-green-femi;
     font-size: 42px;
-    line-height: 50px;
+    line-height: 45px;
     font-family: $font-heading;/*desde aca*/
     /*Prueba animacion titulos*/
     animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     position: absolute;
     overflow: hidden;
-    height: 42px;/*el height pega el titulo a la linea, regular en querys*/
+    /*el height pega el titulo a la linea, regular en querys*/
+    
 }
 
 @keyframes slide-top {
 0% {
     height: 0px;
-    transform: translateY(10%);
+    transform: translateY(-50%);
 }
 100% {
         
-    transform: translateY(-95%);
+    transform: translateY(-85%);
 }
 }
 // .heading-t2 {
@@ -85,7 +86,7 @@ p::selection, strong::selection, i::selection, br::selection,h1::selection, h2::
     
     .heading-t1, .heading-t2{
         font-size: 25px;
-        height: 34px;
+        height: 40px;
     }
 
     .index-text{

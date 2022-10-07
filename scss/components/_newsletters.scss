@@ -8,6 +8,9 @@
      //en las news pares el texto se va a acomodar a la izq
     .news{
         padding-bottom: 2%;
+        @media screen and (max-width: 992px) {
+            padding-bottom:15%;
+        }
         &:nth-child(2n+1) {
             .columna-1 {
                 order: -1;
@@ -116,6 +119,7 @@
             .columna-news {
                 padding: 5%;
                 .boton-news-div{
+                    
                     font-size: 2.5rem;
                     display: none;
                     bottom: 0;
@@ -128,16 +132,23 @@
                     @media screen and (min-width: 781px) {
                         font-size: 3.5rem;
                         left: 90%;
-                        }
+                    }
+                    i{
+                        color: $color-green-femi;
+                    }
                 }
                 .img img{
                     width: 73%;
                     float: right;
-                    margin-bottom: 2%;
-                    margin-left: 4%;
+                    margin: 0 0 4% 4%;
+                    border: 10px solid $color-green-femi;
+                    @media screen and (max-width: 920px) {
+                        border: 7px solid $color-green-femi;
+                    }
+                
                     @media screen and (max-width: 768px) {
                         width: 50%;
-                        }
+                    }
                 }
                 p{
                     text-align: justify;
