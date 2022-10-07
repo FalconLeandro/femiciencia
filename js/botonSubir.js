@@ -1,7 +1,6 @@
 /*INICIO logica boton subir en news */
 
 let subir = document.querySelector('.boton-news-div');
-let footer = document.querySelector('footer');
 
 function mostrarScroll(){
     let scrollTop = document.documentElement.scrollTop
