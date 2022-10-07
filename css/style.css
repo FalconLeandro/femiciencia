@@ -997,6 +997,11 @@ section.container div.row .columna-news .img img {
   margin-bottom: 2%;
   margin-left: 4%;
 }
+@media screen and (max-width: 768px) {
+  section.container div.row .columna-news .img img {
+    width: 50%;
+  }
+}
 section.container div.row .columna-news p {
   text-align: justify;
 }
