@@ -16,23 +16,21 @@
                 }
             }
             .columna-1 {
-                padding: -1px 5% 3% 5%;
-                background: $color-green-bg3;
+                background: #3FB6B0;
                 height: 500px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
+                justify-content: center;
                 align-items: center;
                 text-align: justify;
                 position: relative;
                 h6{
-                    position: absolute;
                     top: 2%;
                     left: 3%;
                     color: $color-green-background;
                 }
+                
                 h2.newsletters-heading-2 {
-                    padding-top: 4%;
                     @media screen and (max-width: 992px) {
                         padding-top: 5%;
                     }
@@ -49,6 +47,11 @@
                     text-decoration: none;
                     padding: 2%;
                     border: 1px solid white;
+                    margin: 0.8rem;
+                    &:hover{
+                        background-color:white;
+                        color: #3FB6B0;
+                    }
                 }
             }
             .imagen {
@@ -64,7 +67,7 @@
                     position: absolute;
                     height: 500px;
                     width: 100%;
-                    background: linear-gradient(1deg, black, transparent);
+                    
                 }
                 img {
                     width: 100%;
@@ -74,6 +77,7 @@
                         height: 250px;
                         }
                 }
+                
             }
         }
 
