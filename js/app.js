@@ -93,11 +93,11 @@ window.addEventListener('scroll', mostrarScroll);
 
 /*FIN logica boton subir en news */
 
-
+/*INICIO array de newsletters */
 let news = [  
     {
         id:0,
-        img: "/media/ilustraciones/astronomía.png",
+        img: "../media/ilustraciones/astronomía.png",
         titulo: "I - ASTRONOMÍA",
         contenido: `<p>Lo primero que hicimos cuando decidimos entrevistar a dos astrónomas contemporáneas fue rastrear en Google a sus colegas del pasado, porque honestamente nosotras tampoco las conocíamos. ¿Y adivinen qué? desde <strong>Hipatia de Alejandría</strong> (s. IV - V) - una de las primeras mujeres astrónomas documentada - no encontramos más femeneidades hasta mediados del siglo XVIII (por supuesto sin olvidar a <strong>Fátima de Madrid</strong> - X-XI).  Claro que esto no es casual, porque durante cientos de años pareciera ser que la historia de la ciencia estuvo únicamente escrita por varones. <br><br>
         ¿Dónde estaban las mujeres? ¿En sus casas, relegadas a tareas de cuidado? Esta sería una respuesta válida para la época, pero existieron mujeres que se dedicaron al campo de la astronomía. Por ejemplo: <strong>Maria Eimmart</strong> (contemporánea de Galileo Galilei), <strong>Caroline Lucrecia Herschel</strong> (1759 - 1848), primera astrónoma en cobrar un salario por su profesión, y <strong>Maria Mitchell</strong> (1818 - 1889), una de las pioneras en la lucha por el mismo salario que sus colegas varones - hasta ese momento, cobraba solo un tercio de la remuneración por el mismo trabajo. <br><br>
@@ -380,7 +380,7 @@ let news = [
     },
     {
         id:5,
-        img: "/media/ilustraciones/medicina.png",
+        img: "../media/ilustraciones/medicina.png",
         titulo: "VI - MEDICINA",
         contenido:`<p>Cuando empezamos a escribir este newsletter, lo primero que se nos vino a la mente, fue que a las mujeres y feminidades nos costó ganar nuestro espacio en la Medicina - bueno, como en casi todas las disciplinas-. De hecho, reafirmamos nuestro lugar con base en la lucha de muchxs que nos precedieron en la historia. <br><br>
         Históricamente relegadas a las tareas de cuidado, nos hicieron creer que el amor era base y fundamento para un destino ceñido a la custodia de otrxs. Como dice un libro de texto de 1848 (autor no encontrado) sobre obstetricia: <i>'La cabeza de la mujer era demasiado pequeña para el intelecto, pero lo suficientemente grande para el amor'.</i> -Increíble pero cierto: con bases de ese tipo, mujeres y feminidades no se consideraban aptas para la práctica de la Medicina y las escuelas tampoco las admitían. <br><br>                         
@@ -659,7 +659,7 @@ let news = [
     },
     {
         id: 10,
-        img: "/media/ilustraciones/apesardemisexo-web.jpg",
+        img: "../media/ilustraciones/apesardemisexo-web.jpg",
         titulo: "XI - A pesar de mi sexo",
         contenido: `<p class="first-child">La historia que vamos a contar inicia en el año 2021, cuando dos jóvenes investigadoras decidieron sentarse a escribir sobre la vida universitaria de las mujeres y su activismo político desde 1947. <br><br>
         <strong>“A pesar de mi sexo”</strong> terminó de imprimirse en abril de este 2022 y pertenece a la editorial de la Universidad Nacional de Rosario (UNR). Su prólogo, escrito por su gran madrina Dora Barrancos, nos advierte: “Estos apuntes desafían a las nuevas inscripciones feministas manteniendo la radicalidad de los orígenes –porque mientras haya patriarcado y capitalismo habrá que ser impertinentes– (...)”.<br><br>
@@ -688,6 +688,7 @@ let news = [
         <p>Equipo de <strong>Femiciencia</strong></p>`
     }
 ]
+/* FIN array de newsletters */
 
 /* INICIO Logica para renderizar las newsletter*/
 
@@ -713,21 +714,20 @@ function renderizarNew(news){
         const nodoTitulo = document.querySelector('.titulo');
         const nodoImagen = document.querySelector('.img');
         const nodoContenido = document.querySelector('.contenido');
-        console.log(nodoTitulo);
-        console.log(nodoContenido);
-        console.log(nodoImagen);
-        //accedo a la variable guardada en localStorage y la guardo para poner trabajar con ella
+        // console.log(nodoTitulo);
+        // console.log(nodoContenido);
+        // console.log(nodoImagen);
+    //accedo a la variable guardada en localStorage y la guardo para poner trabajar con ella
         let idBotonClickeado = parseInt(localStorage.getItem("idBotonClickeado"));
-        console.log(idBotonClickeado);
-        //borro los nodos
+        // console.log(idBotonClickeado);
+    //borro los nodos
         nodoTitulo.innerHTML = "";
         nodoContenido.innerHTML = "";
         nodoImagen.innerHTML = "";
-        //se va a renderizar la new que coincida con el id de boton
+    //se va a renderizar la new que coincida con el id de boton
         for (let i = 0; i < news.length; i++) {
-            console.log(news[i].id);
+            // console.log(news[i].id);
             if(idBotonClickeado == news[i].id){
-
             nodoTitulo.innerHTML += `${news[i].titulo}`;
             nodoContenido.innerHTML += `${news[i].contenido}`
             nodoImagen.innerHTML += `<img src=${news[i].img}>`;
