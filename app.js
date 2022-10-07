@@ -96,7 +96,7 @@ window.addEventListener('scroll', mostrarScroll);
 
 let news = [  
     {
-        id:10,
+        id:0,
         img: "/media/ilustraciones/astronomía.png",
         titulo: "I - ASTRONOMÍA",
         contenido: `<p>Lo primero que hicimos cuando decidimos entrevistar a dos astrónomas contemporáneas fue rastrear en Google a sus colegas del pasado, porque honestamente nosotras tampoco las conocíamos. ¿Y adivinen qué? desde <strong>Hipatia de Alejandría</strong> (s. IV - V) - una de las primeras mujeres astrónomas documentada - no encontramos más femeneidades hasta mediados del siglo XVIII (por supuesto sin olvidar a <strong>Fátima de Madrid</strong> - X-XI).  Claro que esto no es casual, porque durante cientos de años pareciera ser que la historia de la ciencia estuvo únicamente escrita por varones. <br><br>
@@ -136,7 +136,7 @@ let news = [
         <i>¡Gracias por leernos, nos vemos!</i></p>`
     },
     {
-        id:9,
+        id:1,
         img:"https://images.pexels.com/photos/1244705/pexels-photo-1244705.jpeg?cs=srgb&dl=pexels-dominika-roseclay-1244705.jpg&fm=jpg",
         titulo: "II - FILOSOFÍA",
         contenido: `<p>En esta entrega vamos a hablar de filósofas. Seguro, al pensar en esta ciencia crítica, te remontes a la Grecia antigua, donde esos barbudos canosos que viste en esculturas se paseaban semidesnudos cuestionándose sobre el origen del universo, el cosmos, la naturaleza o la vida después de la muerte. <br><br>
@@ -184,7 +184,7 @@ let news = [
         Equipo de <strong>FEMICIENCIA</strong></p>`
     },
     {
-        id:8,
+        id:2,
         img: "../media/ilustraciones/quimica.png",
         titulo: "III - QUÍMICA",
         contenido: `<p>En esta oportunidad, hablaremos sobre las mujeres y feminidades químicas de ayer y hoy. Sería un poco trillado comenzar este Newsletter hablando de <strong>Marie Sklodowska Curie</strong> (1867 - 1934) -pero adivinen qué: sí, arrancamos por ahí-. ¿Les suena ese nombre? Bueno, ELLA -así, con mayúsculas- fue la primera mujer en ganar no solo uno, sino dos premios Nobel y la única en recibirlos en dos disciplinas científicas distintas. Al primer Nobel lo ganó en la disciplina de física (1903) junto a su esposo Pierre Curie, mientras su segundo galardón fue para química (1911). Sin embargo, Marie Sklodowska Curie fue una privilegiada para la época, ya que las mujeres en ese momento tenían vedado el acceso al conocimiento. <br><br>
@@ -266,7 +266,7 @@ let news = [
         </p>`
     },
     {
-        id:7,
+        id:3,
         img:"https://images.pexels.com/photos/4427506/pexels-photo-4427506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         titulo: "IV - CIENCIA POLÍTICA",
         contenido: `<p>En este cuarto encuentro, queremos hablarles sobre aquella ciencia abocada al análisis y estudio de las relaciones de poder, los sistemas políticos y organizativos, las prácticas y teorías gubernamentales a nivel local, estatal, nacional e internacional. En resumen, queremos hablarles de la Ciencia Política -y más aún de mujeres y feminidades en esta ciencia-. <br><br>
@@ -332,7 +332,7 @@ let news = [
         Equipo de <strong>FEMICIENCIA</strong></p>`
     },
     {
-        id:6,
+        id:4,
         img: "https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         titulo: "V - ESPECIAL LGBTIQ+",
         contenido:`<p>Todos los 28 de junio se conmemora el Día Internacional del Orgullo LGBTIQ+. Año a año, el hito de la <strong>revuelta de Stonewall</strong> de 1969, es motivo de marchas, movilizaciones y diversos eventos en todos los países del mundo. En Argentina, la primera marcha del Orgullo se realizó el 2 de julio de 1992, con una organización mayoritariamente conformada por la Comunidad Homosexual Argentina (CHA), liderada por Carlos Jáuregui. Nota de color: la estación de subterráneo de la línea H en CABA de calles Pueyrredón y Santa Fe lleva su nombre. <br><br>
@@ -446,7 +446,7 @@ let news = [
         </p>`
     }, 
     {
-        id: 4,
+        id: 6,
         img:"../media/ilustraciones/antropología.png" ,
         titulo:"VII - Antropología",
         contenido: `<p class="first-child">Seguramente has escuchado hablar de la Antropología como la ciencia que estudia “al hombre” o al ser humano de forma integral. Si bien se inscribe en las ciencias sociales, esta disciplina posee una diversidad de ramas, cuya pertinencia va desde el ámbito sociocultural al de la salud.<br><br>
@@ -516,7 +516,7 @@ let news = [
         <p>Equipo de <strong>FEMICIENCIA</strong></p>`
     },
     {
-        id: 3,
+        id: 7,
         img:"../media/ilustraciones/brujas.png" ,
         titulo:"VIII -Brujas",
         contenido: ` <p class="first-child">Como sabrás, la temporada de fines de octubre y principios de noviembre se caracteriza por la llegada de una festividad algo controversial. Si, hablamos de Halloween (originalmente Samhain), esa celebración de origen celta que emigró hacia distintos países del continente americano, para luego popularizarse y adquirir el sinónimo de <i>“Noche de Brujas”.</i><br><br>
@@ -552,7 +552,7 @@ let news = [
         <strong> <i> Equipo de Femiciencia</i></strong>`
     },
     {
-        id: 2,
+        id: 8,
         img:"../media/ilustraciones/educación-ambiental.jpg" ,
         titulo:"IX - Educación Ambiental",
         contenido: `<p class="first-child">Como saben, los incendios forestales en Argentina coparon las agendas informativas de este último tiempo. A distancia y con angustia atravesada en la garganta, vivimos el minuto a minuto de la pérdida y el daño irreversible a nuestra flora y fauna nativas. Vimos también cajonear proyectos de ley, cuyas políticas públicas duermen en el senado con una comodidad casi envidiable. <strong>Por eso, este es un newsletter urgente.</strong><br><br>
@@ -603,7 +603,7 @@ let news = [
         <strong> <i> Equipo de Femiciencia</i></strong>`
     },
     {
-        id: 1,
+        id: 9,
         img: "../media/ilustraciones/historia.png",
         titulo: "X - Historia",
         contenido:`<p class="first-child">Antes de empezar, queremos contarte que al iniciar la búsqueda de referentxs en el tema, pusimos en el buscador de Google: <i>“Mujeres historiadoras”</i> , en español e inglés. Para sorpresa de nadie, en las sugerencias el buscador nos mostró el adjetivo<i> “hot” </i>-del inglés <i>“caliente”</i> -. Es decir, que las mujeres no solo debemos hacer demostraciones de genialidad en el mundo académico sino que, además, debemos estar <i>“buenas”</i>  y nuestros cuerpos deben corresponder a cánones de belleza casi inalcanzables. ¿No será mucho? <br> <br>
@@ -658,7 +658,7 @@ let news = [
         <i>Equipo de Femiciencia</i>`
     },
     {
-        id: 0,
+        id: 10,
         img: "/media/ilustraciones/apesardemisexo-web.jpg",
         titulo: "XI - A pesar de mi sexo",
         contenido: `<p class="first-child">La historia que vamos a contar inicia en el año 2021, cuando dos jóvenes investigadoras decidieron sentarse a escribir sobre la vida universitaria de las mujeres y su activismo político desde 1947. <br><br>
@@ -691,18 +691,62 @@ let news = [
 
 /* INICIO Logica para renderizar las newsletter*/
 
-
-
-
-const botones = document.querySelectorAll('.columna-1 a');
-console.log(botones[2].getAttribute('id'));
-    //quiero filtrar de este array y el array de news
+/* ------------------------- funcion para atrapar el evento de clickeado ------------------------- */
+function atraparIdBotonClickeado(){
+    //agarro todos los botones
+    const botones = document.querySelectorAll('.columna-1 a');
 for (let i = 0; i < botones.length; i++) {
     botones[i].addEventListener('click', e => {
-        // e.preventDefault();
+        //accedo al id que tiene el boton clickeado
         const id = e.target.getAttribute("id");
-        console.log("Se ha clickeado el id "+id+ ' el titulo de la new es '+news[10].titulo);
-        if(id == news[i].id){
+        //lo guardo en localStorage para usarlo en otro html
+        localStorage.setItem('idBotonClickeado', id);
+        location.href = '/pages/newsletter1 copy.html'
+    }
+    )}
+};
+
+/* ---------------- funcion para renderizar la new dependiendo donde se hace click --------------------- */
+
+function renderizarNew(news){
+    //agarro donde voy a renderizar
+        const nodoTitulo = document.querySelector('.titulo');
+        const nodoImagen = document.querySelector('.img');
+        const nodoContenido = document.querySelector('.contenido');
+        console.log(nodoTitulo);
+        console.log(nodoContenido);
+        console.log(nodoImagen);
+        //accedo a la variable guardada en localStorage y la guardo para poner trabajar con ella
+        let idBotonClickeado = parseInt(localStorage.getItem("idBotonClickeado"));
+        console.log(idBotonClickeado);
+        //borro los nodos
+        nodoTitulo.innerHTML = "";
+        nodoContenido.innerHTML = "";
+        nodoImagen.innerHTML = "";
+        //se va a renderizar la new que coincida con el id de boton
+        for (let i = 0; i < news.length; i++) {
+            console.log(news[i].id);
+            if(idBotonClickeado == news[i].id){
+
+            nodoTitulo.innerHTML += `${news[i].titulo}`;
+            nodoContenido.innerHTML += `${news[i].contenido}`
+            nodoImagen.innerHTML += `<img src=${news[i].img}>`;
+            }
+        }
+        
+};
+
+atraparIdBotonClickeado();
+renderizarNew(news);
+
+
+// /* FIN Logica para renderizar las newsletter*/
+
+
+
+
+
+
     //             let imgARenderizar = document.querySelectorAll('.new')
     // let newARenderizar = document.querySelectorAll('.link-newsletters');
     // let tituloARenderizar = document.querySelector('.heading-t2');
@@ -711,57 +755,45 @@ for (let i = 0; i < botones.length; i++) {
     // console.log(contenidoARenderizar);
     // limpiamos los nodos
 
-    let main = document.querySelector('main');
-    console.log(main);
-    let nodoTitutlo = document.createElement('div');
-    main.appendChild(nodoTitutlo)
-    let nodoContenido = document.createElement('div')
-    main.appendChild(nodoContenido);
-    nodoTitutlo.innerHTML = "";
-    nodoContenido.innerHTML = "";
+    // let main = document.querySelector('main');
+    // console.log(main);
+    // let nodoTitutlo = document.createElement('div');
+    // main.appendChild(nodoTitutlo)
+    // let nodoContenido = document.createElement('div')
+    // main.appendChild(nodoContenido);
+
     //imgARenderizar.setAttribute("src", `${arrayNews.img}`)
-    nodoTitutlo.innerHTML += `<h2>${news[i].titulo}</h2>`;
-    nodoContenido.innerHTML += `<p>${news[i].contenido}</p>`;
-        }
-        
-})};
+// /*Inicio text-changer*/
 
+// // const eliana = document.getElementById("eliana");
+// // const nabila = document.getElementById("nabila");
+// // const veronica = document.getElementById("veronica");
+// // const yamila = document.getElementById("yamila");
+// // const greicy = document.getElementById("greicy");
+// // const florencia = document.getElementById("florencia");
+// // const antonella = document.getElementById("antonella");
+// // const ana = document.getElementById("ana");
 
+// // var array = 
 
-/* FIN Logica para renderizar las newsletter*/
+// // var arrayText=[p1,p2,p3]
+// // var i = 0;
 
-
-/*Inicio text-changer*/
-
-// const eliana = document.getElementById("eliana");
-// const nabila = document.getElementById("nabila");
-// const veronica = document.getElementById("veronica");
-// const yamila = document.getElementById("yamila");
-// const greicy = document.getElementById("greicy");
-// const florencia = document.getElementById("florencia");
-// const antonella = document.getElementById("antonella");
-// const ana = document.getElementById("ana");
-
-// var array = 
-
-// var arrayText=[p1,p2,p3]
-// var i = 0;
-
-// texto.addEventListener("click", function( event ) {
+// // texto.addEventListener("click", function( event ) {
    
-//     if (i<=2) {
-//       eliana.innerHTML=arrayText[i];
-//       i++;
-//     } else {
-//       eliana.innerHTML=hi;
-//       window.location.hash = "#portfolio";
-//       i=0;
-//     }
+// //     if (i<=2) {
+// //       eliana.innerHTML=arrayText[i];
+// //       i++;
+// //     } else {
+// //       eliana.innerHTML=hi;
+// //       window.location.hash = "#portfolio";
+// //       i=0;
+// //     }
     
       
-//   }, false);
+// //   }, false);
 
-//inicio text changer
+// //inicio text changer
 
 
 
@@ -771,14 +803,21 @@ for (let i = 0; i < botones.length; i++) {
   
   
 
-    // texto.innerHTML=arrayText[i];
-    // i++;
-    // if (i==3) {
-    //   i=0;
-    // }
+//     // texto.innerHTML=arrayText[i];
+//     // i++;
+//     // if (i==3) {
+//     //   i=0;
+//     // }
     
 
 
+            // const nodoTitulo = document.querySelector('.titulo');
+            // const nodoContenido = document.querySelector('.contenido');
+            // console.log(nodoTitulo);
+            // console.log(nodoContenido);
+
+            // nodoTitulo.innerHTML += `<h2>${news[5].titulo}</h2>`;
+            // nodoContenido.innerHTML += `<p>${news[5].contenido}</p>`;
 
 
 
