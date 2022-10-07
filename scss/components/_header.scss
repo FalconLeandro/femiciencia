@@ -190,6 +190,7 @@ header{
                     nav {
                         #menu-burguer:checked ~ ul{
                             left: 0;
+                            height: 100vh;
                         }
                         #menu-burguer:checked ~ body{
                             overflow-y: hidden; // le saco el scroll a toda la pagina
@@ -211,7 +212,7 @@ header{
                         }
                         ul{
                             display: flex;
-                            padding: 28% 0%;
+                            padding: 15% 0%;
                             flex-direction: column;
                             justify-content: space-evenly;
                             align-items: center;

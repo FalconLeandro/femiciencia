@@ -1,6 +1,7 @@
-.news-div1 {
+.news-div1, .news-ind-div1 {
         @extend %sub-headings;
 }
+
 .news-container {
         margin: 10%;
         width: auto;
@@ -24,6 +25,9 @@
                 align-items: center;
                 text-align: justify;
                 position: relative;
+                @media screen and (max-width: 570px) {
+                    height: fit-content;
+                }
                 h6{
                     top: 2%;
                     left: 3%;
@@ -84,14 +88,14 @@
 }
 
 
-main {
-        .news-ind-div1 {
-            display: flex;
-            align-items: baseline;
-            margin-top: 1em;
-            border-bottom: 1em solid $color-violet-femi;
-            margin-bottom: 2%;
-        }
+
+        
+        //     // display: flex;
+        //     // align-items: baseline;
+        //     // margin-top: 1em;
+        //     // border-bottom: 1em solid $color-violet-femi;
+        //     // margin-bottom: 2%;
+
         section.container {
             // margin: 5%;
             width: auto;
@@ -99,11 +103,24 @@ main {
             div.row {
                 .columna-news {
                     padding: 5%;
-                    img{
+                    .boton-news-div{
+                        font-size: 5rem;
+                        display: none;
+                        bottom: 0;
+                        right: -60%;
+                        z-index: 0;
+                        @media screen and (max-width: 480px) {
+                        font-size: 2.5rem;
+                        }
+                    }
+                    .img img{
                         width: 73%;
                         float: right;
                         margin-bottom: 2%;
                         margin-left: 4%;
+                        @media screen and (max-width: 768px) {
+                            width: 50%;
+                            }
                     }
                     p{
                         text-align: justify;
@@ -124,19 +141,8 @@ main {
                     }
                 }
             }
-
-            .boton-news-div{
-                font-size: 5rem;
-                display: none;
-                bottom: 0;
-                right: -60%;
-                z-index: 0;
-                @media screen and (max-width: 480px) {
-                font-size: 2.5rem;
-                }
-                }
         }
-}
+
 .footer{
     position: relative;
     width: 100%;

@@ -33,7 +33,7 @@ a{
     margin-bottom: 2%
 }
 
-.heading-t1 {
+.heading-t1, .heading-t2 {
     font-weight: bolder;
     color: $color-green-femi;
     font-size: 42px;
@@ -56,13 +56,13 @@ a{
     transform: translateY(-95%);
 }
 }
-.heading-t2 {
-    font-weight: bolder;
-    color: $color-violet-femi;
-    font-size: 60px;
-    line-height: 0;
-    font-family: $font-heading;
-}
+// .heading-t2 {
+//     font-weight: bolder;
+//     color: $color-violet-femi;
+//     font-size: 60px;
+//     line-height: 0;
+//     font-family: $font-heading;
+// }
 .newsletters-heading-2, .integrantes-heading-2{
     font-family: $font-heading;
     font-size: 28px;
