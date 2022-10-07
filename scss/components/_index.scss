@@ -52,6 +52,7 @@
         .post-div2{
             padding: 10% 0 2%;           
             .row-post{
+                
                 width: 100%;
                 --bs-gutter-x: 5.5rem; //achica cada card-post 
                 @media all and (min-width: 768px) and (max-width: 982px) {
@@ -65,6 +66,7 @@
                     margin-bottom: 11%;
                     a {
                         img{
+                            border-radius: 15px;
                             width: 100%;
                             margin-top: 3%;
                             border: solid 4px $color-green-femi;
@@ -75,7 +77,7 @@
                                 background-color: #5CB235; 
                                 box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
                                 transform: translateY(-7px);
-                                color: #ffffff;
+                                color: white;
                             }
                         }
                     }

@@ -142,7 +142,7 @@ header{
                 align-items: center;
                 transition: all 0.5s ease-in-out;
                 li, li a{
-                    color: #D3E4CD;
+                    color: white;
                     @media all and (min-width: 980px) {
                     &:hover{
                         color: $color-violet-femi;
@@ -196,7 +196,7 @@ header{
                             overflow-y: hidden; // le saco el scroll a toda la pagina
                         }
                         #menu-burguer:checked ~ label .btn span {
-                            background: #D3E4CD;
+                            background: white;
                         }
                         label .btn{
                             display: block;
@@ -230,7 +230,7 @@ header{
                                 padding-left: 0px;
                                 a, a:not([href]):not([class]) { // esto es porque descargable no tiene href
                                     text-decoration: none;
-                                    color: #D3E4CD;
+                                    color: white;
                                     &:active{
                                         color: #874F9D;
                                     }
@@ -245,7 +245,7 @@ header{
                                     opacity: 0;
                                      // por default esta bloqueado
                                     transition: all 300ms ease-out;
-                                    border-top: 1px solid #D3E4CD!important;
+                                    border-top: 1px solid white!important;
                                     margin-top: unset; //no hereda el del ul (50px)
                                       //esto evita que se rompa cuando abre el submenu
                                     font-size: 0.8em;

@@ -10,7 +10,8 @@
         border: 3px solid $color-green-femi;
         box-shadow: none;
         &:hover{
-            background-color: inherit;
+            background-color: $color-green-femi;
+            color: white;
         }
 }
 

@@ -24,6 +24,12 @@ footer {
             font-size: 1.2rem;
             font-weight: bold;
         }
+        .coffe{
+            transition: all .5s ease-out;
+        }
+        .coffe:hover{
+            transform: scale(1.1);
+        }
         @media screen and (max-width: 480px) {
             p, a{
                 font-size: 15px;
@@ -63,6 +69,12 @@ footer {
             justify-content: space-evenly;
             @media all and (max-width: 480px) {
                 justify-content: space-between;
+             }
+             .insta{
+                transition: all .3s ease-out;
+                &:hover{
+                    transform: scale(1.1);
+                }
              }
             .wrap {
                 display: flex;
@@ -121,8 +133,11 @@ footer {
                 background: white;
                 margin-right: 10px;
                 border-radius: 10%;
-                transition: all .5s ease-in-out;
+                transition: all .3s ease-in-out;
                 cursor: pointer;
+                &:hover{
+                    transform: scale(1.1);
+                }
                 @media all and (max-width: 480px) {
                     width: 13px;
                     height: 13px;

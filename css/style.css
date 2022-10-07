@@ -301,7 +301,7 @@ header nav .desplegable:hover > .arrow {
   transition: all 0.5s ease-in-out;
 }
 .fixed li, .fixed li a {
-  color: #D3E4CD;
+  color: white;
 }
 @media all and (min-width: 980px) {
   .fixed li:hover, .fixed li a:hover {
@@ -357,7 +357,7 @@ header nav .desplegable:hover > .arrow {
     overflow-y: hidden;
   }
   header nav #menu-burguer:checked ~ label .btn span {
-    background: #D3E4CD;
+    background: white;
   }
   header nav label .btn {
     display: block;
@@ -399,7 +399,7 @@ header nav .desplegable:hover > .arrow {
   }
   header nav ul li a, header nav ul li a:not([href]):not([class]) {
     text-decoration: none;
-    color: #D3E4CD;
+    color: white;
   }
   header nav ul li a:active, header nav ul li a:not([href]):not([class]):active {
     color: #874F9D;
@@ -413,7 +413,7 @@ header nav .desplegable:hover > .arrow {
     display: none;
     opacity: 0;
     transition: all 300ms ease-out;
-    border-top: 1px solid #D3E4CD !important;
+    border-top: 1px solid white !important;
     margin-top: unset;
     font-size: 0.8em;
     padding-top: 10px;
@@ -500,6 +500,7 @@ header nav .desplegable:hover > .arrow {
   margin-bottom: 11%;
 }
 .index-post .post-div2 .row-post div a img {
+  border-radius: 15px;
   width: 100%;
   margin-top: 3%;
   border: solid 4px #3FB6B0;
@@ -511,7 +512,7 @@ header nav .desplegable:hover > .arrow {
   background-color: #5CB235;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   transform: translateY(-7px);
-  color: #ffffff;
+  color: white;
 }
 
 /*footer*/
@@ -541,6 +542,12 @@ footer .top-container a {
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
+}
+footer .top-container .coffe {
+  transition: all 0.5s ease-out;
+}
+footer .top-container .coffe:hover {
+  transform: scale(1.1);
 }
 @media screen and (max-width: 480px) {
   footer .top-container p, footer .top-container a {
@@ -572,6 +579,12 @@ footer .social-container {
   footer .social-container {
     justify-content: space-between;
   }
+}
+footer .social-container .insta {
+  transition: all 0.3s ease-out;
+}
+footer .social-container .insta:hover {
+  transform: scale(1.1);
 }
 footer .social-container .wrap {
   display: flex;
@@ -630,8 +643,11 @@ footer .social-container .button {
   background: white;
   margin-right: 10px;
   border-radius: 10%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
+}
+footer .social-container .button:hover {
+  transform: scale(1.1);
 }
 @media all and (max-width: 480px) {
   footer .social-container .button {
@@ -869,6 +885,7 @@ footer .logo-social {
   align-items: center;
   text-align: justify;
   position: relative;
+  border-radius: 15px;
 }
 @media screen and (max-width: 570px) {
   .news-container .news .columna-1 {
@@ -898,6 +915,7 @@ footer .logo-social {
   padding: 2%;
   border: 1px solid white;
   margin: 0.8rem;
+  border-radius: 5px;
 }
 .news-container .news .columna-1 .link-newsletters:hover {
   background-color: white;
@@ -924,6 +942,7 @@ footer .logo-social {
   width: 100%;
   height: 500px;
   object-fit: cover;
+  border-radius: 15px;
 }
 @media (max-width: 768px) {
   .news-container .news .imagen img {
@@ -1025,7 +1044,8 @@ h3 {
   border-top: 3px solid #3FB6B0;
 }
 .list-group-item:hover {
-  background-color: inherit;
+  background-color: #3FB6B0;
+  color: white;
 }
 
 body {
@@ -1079,9 +1099,13 @@ body {
 .notas .card .card-img-overlay a {
   color: #3FB6B0;
   display: block;
-  padding: 1%;
+  padding: 15px;
   border: 1px solid #3FB6B0;
   font-size: 15px;
+}
+.notas .card .card-img-overlay a:hover {
+  background-color: #3FB6B0;
+  color: white;
 }
 @media screen and (max-width: 980px) {
   .notas .card .card-img-overlay .card-title {
