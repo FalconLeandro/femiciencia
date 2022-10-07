@@ -372,6 +372,7 @@ header nav .desplegable:hover > .arrow {
 @media all and (max-width: 980px) {
   header nav #menu-burguer:checked ~ ul {
     left: 0;
+    height: 100vh;
   }
   header nav #menu-burguer:checked ~ body {
     overflow-y: hidden;
