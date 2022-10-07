@@ -25,9 +25,15 @@
             align-items: center;
             text-align: justify;
             position: relative;
-                border-radius: 15px;
+            border-left: 0;
+            border-radius: 15px;
+
             @media screen and (max-width: 570px) {
                 height: fit-content;
+            }
+            @media screen and (max-width: 920px) {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
             }
             h6{
                 top: 2%;
@@ -69,18 +75,22 @@
             @media screen and (max-width: 992px) {
                 width: 100%;
             }
-            div.layer {
-                position: absolute;
-                height: 500px;
-                width: 100%;
+            // div.layer {
+            //     position: absolute;
+            //     height: 500px;
+            //     width: 100%;
                 
-            }
+            // }
             img {
                 width: 100%;
                 height: 500px;
                 object-fit: cover;
                     border-radius: 15px;
-                @media (max-width: 768px){
+                    @media screen and (max-width: 920px) {
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                @media screen and (max-width: 768px){
                     height: 250px;
                     }
             }
