@@ -45,9 +45,13 @@
             a{
                 color: $color-green-femi;
                 display: block;
-                padding: 1%;
+                padding: 15px;
                 border: 1px solid $color-green-femi;
                 font-size: 15px;
+                &:hover{
+                    background-color:$color-green-femi ;
+                    color: white;
+                }
             }
             @media screen and (max-width: 980px) {
                 .card-title{
