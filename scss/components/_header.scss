@@ -11,7 +11,7 @@ header{
             text-align: center;
             h1{
                 a img{
-                    padding: 2% 5%;
+                    margin: 2% 9%;
                         @media all and (max-width: 980px) {
                             display: flex;
                         }
@@ -35,7 +35,7 @@ header{
                 .btn {
                     display: none;//no quiero q sea vea el boton desktop
                     position: absolute; // le doy absolute para q no rompa en resp
-                    width:38px;
+                    width:32px;
                     height:43px;
                     right: 2.5rem;
                     top: 3.3rem;
@@ -45,20 +45,20 @@ header{
                         display: block; //lo convierto en bloque
                         width: 100%; // ocupe el tamaño del papa(.btn) de 30px
                         height: 2px;
-                        background: #874F9D;
+                        background: #3FB6B0;
                         margin-top: 6px;
                         transition: all 300ms;
                         transform-origin: 0px 100%; // lo mantiene pegado en en el padre
                         /*transformacion de la cruz*/
                         &.linea1active {
-                            transform: rotate(45deg) translate(-4px, -2px);
+                            transform: rotate(38deg) translate(1px, -1px);
                         }
                         &.linea2active { //esta linea desaparece
                             opacity: 0;
                             margin-left: -30px;
                         }
                         &.linea3active{
-                            transform: rotate(-45deg) translate(-4px, 2px);
+                            transform: rotate(-38deg) translate(1px, 3px);
                         }
                         /* fin transformacion de la cruz*/
                     }
@@ -180,14 +180,15 @@ header{
                 header{
                     height: fit-content;
                     background-color: $color-green-background;
+                    box-shadow: 0 10px 20px rgb(63 182 176 / 19%), 0 6px 6px rgb(63 182 176 / 23%);
                     position: fixed;
                     top: 0;
                     z-index: 90;
                     transition: all .5s ease-in-out;
                     div h1 a img{
-                        width: 29%;
+                        width: 18%;
                         @media all and (max-width: 630px) {
-                            width: 33%;
+                            width: 18%;
                         }
                     }
                     nav {
@@ -203,15 +204,13 @@ header{
                         }
                         label .btn{
                             display: block;
-                            right: 1.5rem;
-                            top: 45px;
+                            right: 10%;
+                            top: 20%;
                             z-index: 99;
                             @media all and (max-width: 480px) {
-                                top: 10%;
+                                top: 17%;
                             }
-                            @media all and (max-width: 630px) {
-                                top: 20%;
-                            }
+                            
                         }
                         ul{
                             display: flex;

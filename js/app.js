@@ -732,8 +732,7 @@ function renderizarNew(news){
             nodoContenido.innerHTML += `${news[i].contenido}`
             nodoImagen.innerHTML += `<img src=${news[i].img}>`;
             }
-        }
-        
+        }      
 };
 
 atraparIdBotonClickeado();
