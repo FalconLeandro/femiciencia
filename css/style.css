@@ -96,7 +96,7 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
   }
   .heading-t1, .heading-t2 {
     font-size: 25px;
-    height: 40px;
+    height: 36px;
   }
   .index-text {
     text-align: justify;
@@ -123,7 +123,7 @@ p::selection, strong::selection, i::selection, br::selection, h1::selection, h2:
   }
   .heading-t1, .heading-t2 {
     font-size: 30px;
-    height: 35px;
+    height: 39px;
   }
   .a ul {
     margin-inline-start: 0px;
@@ -179,7 +179,7 @@ header .top-header {
   text-align: center;
 }
 header .top-header h1 a img {
-  padding: 2% 5%;
+  margin: 2% 9%;
 }
 @media all and (max-width: 980px) {
   header .top-header h1 a img {
@@ -198,7 +198,7 @@ header nav label {
 header nav label .btn {
   display: none;
   position: absolute;
-  width: 38px;
+  width: 32px;
   height: 43px;
   right: 2.5rem;
   top: 3.3rem;
@@ -210,7 +210,7 @@ header nav label .btn span {
   display: block;
   width: 100%;
   height: 2px;
-  background: #874F9D;
+  background: #3FB6B0;
   margin-top: 6px;
   transition: all 300ms;
   transform-origin: 0px 100%;
@@ -218,14 +218,14 @@ header nav label .btn span {
   /* fin transformacion de la cruz*/
 }
 header nav label .btn span.linea1active {
-  transform: rotate(45deg) translate(-4px, -2px);
+  transform: rotate(38deg) translate(1px, -1px);
 }
 header nav label .btn span.linea2active {
   opacity: 0;
   margin-left: -30px;
 }
 header nav label .btn span.linea3active {
-  transform: rotate(-45deg) translate(-4px, 2px);
+  transform: rotate(-38deg) translate(1px, 3px);
 }
 header nav ul {
   text-align: center;
@@ -334,18 +334,19 @@ header nav .desplegable:hover > .arrow {
   header {
     height: fit-content;
     background-color: #e7f6f5;
+    box-shadow: 0 10px 20px rgba(63, 182, 176, 0.19), 0 6px 6px rgba(63, 182, 176, 0.23);
     position: fixed;
     top: 0;
     z-index: 90;
     transition: all 0.5s ease-in-out;
   }
   header div h1 a img {
-    width: 29%;
+    width: 18%;
   }
 }
 @media all and (max-width: 980px) and (max-width: 630px) {
   header div h1 a img {
-    width: 33%;
+    width: 18%;
   }
 }
 @media all and (max-width: 980px) {
@@ -361,19 +362,14 @@ header nav .desplegable:hover > .arrow {
   }
   header nav label .btn {
     display: block;
-    right: 1.5rem;
-    top: 45px;
+    right: 10%;
+    top: 20%;
     z-index: 99;
   }
 }
 @media all and (max-width: 980px) and (max-width: 480px) {
   header nav label .btn {
-    top: 10%;
-  }
-}
-@media all and (max-width: 980px) and (max-width: 630px) {
-  header nav label .btn {
-    top: 20%;
+    top: 17%;
   }
 }
 @media all and (max-width: 980px) {
@@ -539,9 +535,11 @@ footer .top-container p {
   font-size: 1.2rem;
 }
 footer .top-container a {
+  letter-spacing: 1px;
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
+  font-family: "Roboto", sans-serif;
 }
 footer .top-container .coffe {
   transition: all 0.5s ease-out;
@@ -570,14 +568,14 @@ footer .social-container {
   color: white;
   width: 100%;
   align-items: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
   justify-content: space-evenly;
 }
 @media all and (max-width: 480px) {
   footer .social-container {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 footer .social-container .insta {
@@ -607,7 +605,7 @@ footer .social-container .parent {
 footer .social-container .parent .text {
   font-size: 17px;
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: all 0.5s ease-in-out;
@@ -653,6 +651,7 @@ footer .social-container .button:hover {
   footer .social-container .button {
     width: 13px;
     height: 13px;
+    margin-right: 0px;
   }
 }
 footer .social-container .button:before {
@@ -725,6 +724,8 @@ footer .rigths-container {
   color: white;
 }
 footer .rigths-container .license {
+  font-size: x-small;
+  font-family: "Roboto", sans-serif;
   width: 100%;
   display: inline;
   margin-bottom: 1%;
@@ -792,12 +793,15 @@ footer .logo-social {
   margin-bottom: 15%;
 }
 .team .team_member {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #3FB6B0;
   margin-top: 20%;
   width: 300px;
   padding: 20px;
   line-height: 20px;
-  color: #8e8b8b;
+  color: #D3E4CD;
   position: relative;
   cursor: pointer;
 }
@@ -807,18 +811,18 @@ footer .logo-social {
   }
 }
 .team .team_member h3 {
-  color: #D3E4CD;
+  color: white;
   font-size: 26px;
   margin-top: 85px;
 }
 .team .team_member p.role {
-  color: white;
+  color: #D3E4CD;
   margin: 12px 0;
   font-size: 12px;
   text-transform: uppercase;
 }
 .team .team_member p {
-  color: #D3E4CD;
+  color: white;
 }
 .team .team_member .team_img {
   position: absolute;
@@ -874,6 +878,7 @@ footer .logo-social {
   }
 }
 .news-container .news:nth-child(2n+1) .columna-1 {
+  justify-content: space-evenly;
   order: -1;
 }
 @media screen and (max-width: 992px) {
@@ -1106,7 +1111,7 @@ body {
   }
 }
 .notas .card img {
-  opacity: 30%;
+  opacity: 25%;
   height: 100%;
   width: 100%;
 }
@@ -1137,7 +1142,7 @@ body {
   color: #3FB6B0;
   display: block;
   padding: 15px;
-  border: 1px solid #3FB6B0;
+  border: 3px solid #3FB6B0;
   font-size: 15px;
 }
 .notas .card .card-img-overlay a:hover {

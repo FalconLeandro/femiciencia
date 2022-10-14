@@ -13,6 +13,7 @@
         }
         &:nth-child(2n+1) {
             .columna-1 {
+                justify-content: space-evenly;
                 order: -1;
                 @media screen and (max-width: 992px) {
                     order: inherit;

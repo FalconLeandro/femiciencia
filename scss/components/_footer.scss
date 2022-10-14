@@ -20,9 +20,11 @@ footer {
         }
         a{
             // background-color: #21CDB2;
+            letter-spacing: 1px;
             color: white;
             font-size: 1.2rem;
             font-weight: bold;
+            font-family:"Roboto", sans-serif ;
         }
         .coffe{
             transition: all .5s ease-out;
@@ -63,12 +65,12 @@ footer {
             color: white;
             width: 100%;
             align-items: center;
-            font-family: "Open Sans", sans-serif;
+            font-family: "Roboto", sans-serif;
             letter-spacing: 2px;
             text-transform: uppercase;
             justify-content: space-evenly;
             @media all and (max-width: 480px) {
-                justify-content: space-between;
+                justify-content: space-around;
              }
              .insta{
                 transition: all .3s ease-out;
@@ -94,7 +96,7 @@ footer {
                 .text {
                     font-size: 17px;
                     color: white;
-                    font-family: 'Open Sans', sans-serif;
+                    font-family: 'Roboto', sans-serif;
                     letter-spacing: 2px;
                     text-transform: uppercase;
                     transition: all .5s ease-in-out;
@@ -141,6 +143,7 @@ footer {
                 @media all and (max-width: 480px) {
                     width: 13px;
                     height: 13px;
+                    margin-right: 0px;
                     }
                     &:before {
                         position: absolute;
@@ -222,6 +225,8 @@ footer {
             align-items: center;
             color: white;
             .license{
+                font-size: x-small;
+                font-family: "Roboto", sans-serif;
                 :nth-child(2){
                     display: flex;
                     margin-top: 3%;
