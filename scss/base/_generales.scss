@@ -8,7 +8,7 @@
 }
 
 
-body{
+body {
     background-color: $color-green-background;
 }
 
@@ -17,15 +17,17 @@ p {
     font-size: 15px;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
-    &:hover{
+
+    &:hover {
         color: inherit;
     }
 }
 
-.contacto-heading, .heading-post {
+.contacto-heading,
+.heading-post {
     font-family: $font-heading;
     color: $color-violet-femi;
     font-size: 32px;
@@ -33,30 +35,34 @@ a{
     margin-bottom: 2%
 }
 
-.heading-t1, .heading-t2 {
+.heading-t1,
+.heading-t2 {
     font-weight: bolder;
     color: $color-green-femi;
     font-size: 42px;
     line-height: 45px;
-    font-family: $font-heading;/*desde aca*/
+    font-family: $font-heading;
+    /*desde aca*/
     /*Prueba animacion titulos*/
     animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     position: absolute;
     overflow: hidden;
     /*el height pega el titulo a la linea, regular en querys*/
-    
+
 }
 
 @keyframes slide-top {
-0% {
-    height: 0px;
-    transform: translateY(-50%);
+    0% {
+        height: 0px;
+        transform: translateY(-50%);
+    }
+
+    100% {
+
+        transform: translateY(-85%);
+    }
 }
-100% {
-        
-    transform: translateY(-85%);
-}
-}
+
 // .heading-t2 {
 //     font-weight: bolder;
 //     color: $color-violet-femi;
@@ -64,60 +70,81 @@ a{
 //     line-height: 0;
 //     font-family: $font-heading;
 // }
-.newsletters-heading-2, .integrantes-heading-2{
+.newsletters-heading-2,
+.integrantes-heading-2 {
     font-family: $font-heading;
     font-size: 28px;
     // color: $color-green-yellow-femi;
     color: white;
 }
 
-p::selection, strong::selection, i::selection, br::selection,h1::selection, h2::selection, .heart::selection, a::selection, img::selection{
+p::selection,
+strong::selection,
+i::selection,
+br::selection,
+h1::selection,
+h2::selection,
+.heart::selection,
+a::selection,
+img::selection {
     background-color: $color-violet-femi;
     color: $color-lilac-background;
 }
 
 /*General media queries*/
 /*Main headings & texts size: mobile*/
-@media screen and (max-width: 480px){
+@media screen and (max-width: 480px) {
     .contacto-heading {
         font-size: 25px;
-        text-align: center; 
-    }  
-    
-    .heading-t1, .heading-t2{
+        text-align: center;
+    }
+
+    .heading-t1,
+    .heading-t2 {
         font-size: 25px;
         height: 36px;
     }
 
-    .index-text{
-        text-align: justify;
+    .index-text {
+        text-align: initial;
         font-size: 15px;
     }
-    .text-integrante>p, .newsletter-div>p {
+
+    .text-integrante>p,
+    .newsletter-div>p {
         font-size: 16px;
     }
-    .integrantes-heading-2{
+
+    .integrantes-heading-2 {
         font-size: 25px;
     }
-    .newsletters-heading-2{
+
+    .newsletters-heading-2 {
         font-size: 20px;
     }
 }
 
 /*Main headings & texts size: tablet*/
-@media screen and (min-width: 481px) and (max-width: 630px){
-    .integrantes-heading, .contacto-heading, .heading-post {
+@media screen and (min-width: 481px) and (max-width: 630px) {
+
+    .integrantes-heading,
+    .contacto-heading,
+    .heading-post {
         font-size: 25px;
-        text-align: center; 
+        text-align: center;
     }
-    
-    .newsletters-heading-2, .integrantes-heading-2{
+
+    .newsletters-heading-2,
+    .integrantes-heading-2 {
         font-size: 25px;
     }
-    .heading-t1, .heading-t2{
+
+    .heading-t1,
+    .heading-t2 {
         font-size: 30px;
         height: 39px;
     }
+
     .a ul {
         margin-inline-start: 0px;
     }

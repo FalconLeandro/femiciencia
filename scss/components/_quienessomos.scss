@@ -1,7 +1,7 @@
 /*quienes somos*/
 
 main {
-  
+
   .equipo-div1 {
     @extend %sub-headings;
   }
@@ -31,9 +31,10 @@ main {
   //     }
   // }
 }
-.main-equipo{
+
+.main-equipo {
   @media only screen and (max-width: 768px) {
-    margin: 35% 0!important;
+    margin: 35% 0 !important;
 
   }
 }
@@ -74,14 +75,14 @@ main {
     color: #D3E4CD;
     position: relative;
     cursor: pointer;
-    
+
     @media only screen and (max-width: 768px) {
       margin-top: 35%;
-  
+
     }
 
-    
-    
+
+
     h3 {
       color: white;
       font-size: 26px;
@@ -131,12 +132,15 @@ main {
 
   }
 }
-.back{
+
+.back {
   display: none;
 }
-.card-front-show{
+
+.card-front-show {
   display: none;
 }
-.card-back-show{
-  display: block!important;
+
+.card-back-show {
+  display: block !important;
 }
