@@ -51,7 +51,7 @@ header {
 
                     /*transformacion de la cruz*/
                     &.linea1active {
-                        transform: rotate(38deg) translate(1px, -1px);
+                        transform: rotate(45deg) translate(1px, -4px);
                     }
 
                     &.linea2active {
@@ -61,7 +61,7 @@ header {
                     }
 
                     &.linea3active {
-                        transform: rotate(-38deg) translate(1px, 3px);
+                        transform: rotate(-45deg) translate(1px, 4px);
                     }
 
                     /* fin transformacion de la cruz*/

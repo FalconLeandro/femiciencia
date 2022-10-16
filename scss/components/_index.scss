@@ -22,7 +22,7 @@
 
 .index-div1 {
     @extend %sub-headings;
-    @media all and (max-width: 480px) {
+    @media all and (max-width: 980px) {
         margin-top: 0%;
     }
 }
