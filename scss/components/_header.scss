@@ -8,7 +8,8 @@ header {
         text-align: center;
 
         h1 {
-            a img {
+            a 
+            img {
                 margin: 2% 9%;
 
                 @media all and (max-width: 980px) {
@@ -17,6 +18,10 @@ header {
             }
         }
 
+    }
+
+    #alert{
+        cursor: pointer;
     }
 
     /*menu nav*/

@@ -208,6 +208,9 @@ header .top-header h1 a img {
     display: flex;
   }
 }
+header #alert {
+  cursor: pointer;
+}
 header nav {
   /*boton burguer*/
 }
@@ -464,7 +467,7 @@ header nav ul li a:not([href]):not([class]):active {
 @media all and (max-width: 980px) {
   .banner {
     height: 56vh;
-    background-image: url(../../media/ilustraciones/brujas.png);
+    background-image: url("../../media/ilustraciones/brujas.png");
     background-size: cover;
   }
 }
@@ -861,7 +864,7 @@ footer .logo-social {
 }
 @media only screen and (max-width: 768px) {
   .team .team_member {
-    margin-top: 35%;
+    margin-top: 60%;
   }
 }
 .team .team_member h3 {

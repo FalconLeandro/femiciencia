@@ -22,13 +22,13 @@ alertNoContent.addEventListener('click', function(){
         title:'Sección en construcción',
         text: 'Próximamente disponible',
         icon: 'info',
-        iconColor: '#4FAC24',
+        iconColor: '#3FB6B0',
         confirmButtonText: '¡OK!',
-        confirmButtonColor: '#4FAC24',
+        confirmButtonColor: '#3FB6B0',
         color: '#874F9D',
-        background: '#D3E4CD',
+        background: 'white',
         showCloseButton: true,
-        closeButtonColor: '#4FAC24'
+        closeButtonColor: '#3FB6B0'
     })
 })
 /*FIN alerta de descargable*/
