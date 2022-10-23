@@ -1150,11 +1150,13 @@ body {
 .notas {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .notas .card {
   margin: 5%;
-  height: 250px;
-  width: 40%;
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
   border: solid 4px #3FB6B0;
 }
 @media screen and (max-width: 720px) {
@@ -1164,13 +1166,14 @@ body {
   }
 }
 .notas .card img {
+  left: auto;
   opacity: 25%;
   height: 100%;
-  width: 100%;
+  width: max-content;
+  align-self: center;
 }
 .notas .card .card-img-overlay {
   height: 100%;
-  width: 100%;
   font-family: Inter, sans-serif;
   text-align: center;
   display: flex;

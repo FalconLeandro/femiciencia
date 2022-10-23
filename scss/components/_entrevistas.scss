@@ -5,11 +5,12 @@
 .notas {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
     .card {
         margin: 5%;
-        height: 250px;
-        width: 40%;
+        height: 300px;
+        width: 400px;
+        overflow: hidden;
         border: solid 4px $color-green-femi;
 
         @media screen and (max-width: 720px) {
@@ -19,14 +20,15 @@
         }
 
         img {
+            left: auto;
             opacity: 25%;
             height: 100%;
-            width: 100%;
+            width: max-content;
+            align-self: center;
         }
 
         .card-img-overlay {
             height: 100%;
-            width: 100%;
             font-family: Inter, sans-serif;
             text-align: center;
             display: flex;
