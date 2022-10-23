@@ -212,7 +212,6 @@ header {
 @media all and (max-width: 980px) {
     header {
         height: fit-content;
-        background-color: $color-green-background;
         box-shadow: 0 10px 20px rgb(63 182 176 / 19%), 0 6px 6px rgb(63 182 176 / 23%);
         position: fixed;
         top: 0;
